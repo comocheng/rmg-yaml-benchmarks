@@ -4,8 +4,8 @@
 #SBATCH --error=results/gas_phase_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20       
-#SBATCH --mem=120G                
+#SBATCH --cpus-per-task=2       
+#SBATCH --mem=80G                
 #SBATCH --time=08:00:00           
 #SBATCH --partition=west
 
