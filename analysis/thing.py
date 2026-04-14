@@ -1,3 +1,5 @@
+# functions from rmg for inspiration 
+
 def process_profile_stats(stats_file, log_file):
     import pstats
 

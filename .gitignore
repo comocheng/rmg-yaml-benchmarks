@@ -1,65 +1,12 @@
-# incomplete inputs
-ethane_pyrolysis_oxidation/
-ch4_o2/
+analysis/test_yaml_writer
+analysis/thing.py
+
+results/
+
+results/**/species/gas_phase/*
 
 
-# Species PNG images (hundreds per run)
-results/**/species/
 
-# Solver CSV and PNG profiles
-results/**/solver/
-
-# Intermediate chemkin files (keep only final chem.inp)
-results/**/chemkin/chem0*.inp
-results/**/chemkin/chem_edge*.inp
-
-# RMS files
-results/**/rms/
-
-# HTML output and plots (large, not needed for benchmarking)
-results/**/output.html
-results/**/output_edge.html
-results/**/plot/
-
-# Kinetics database copy RMG makes
-results/**/kinetics_database/
-
-# Seed folder
-results/**/seed/
-
-# SLURM logs and error files
-results/**/*.log
-results/**/*.err
-
-# Raw cProfile files (large — we keep the processed report instead)
-results/**/*.profile
-
-# ── Files we DO want to keep ─────────────────────────────────
-
-# The yaml files — these are the whole point of the benchmark
-!results/**/cantera/*.yaml
-
-# Final chemkin files (for comparison with yaml)
-!results/**/chemkin/chem.inp
-!results/**/chemkin/chem_annotated.inp
-!results/**/chemkin/species_dictionary.txt
-!results/**/chemkin/tran.dat
-
-# RMG run statistics
-!results/**/statistics.xls
-
-# Analysis outputs
-!results/**/*.txt
-!results/**/*.dot
-!results/**/*.pdf
-
-# Job tracking
-!results/**/job_ids.txt
-
-# Placeholder to keep empty results folder tracked
-!results/.gitkeep
-
-# ── Standard Python/editor clutter ──────────────────────────
 __pycache__/
 *.pyc
 *.pyo

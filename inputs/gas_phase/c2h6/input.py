@@ -17,7 +17,6 @@ database(
     ],
     seedMechanisms = [
     'BurkeH2O2inN2',
-    'Klippenstein_Glarborg2016',
     ], 
     kineticsDepositories = ['training'], 
     kineticsFamilies = 'default',
@@ -34,7 +33,7 @@ species(
 species(
     label='O2',
     reactive=True,
-    structure=SMILES("O=O"),  # corrected from [O][O]
+    structure=SMILES("[O][O]"),  
 )
 
 # Bath gas
@@ -122,6 +121,10 @@ simulator(
     rtol=1e-6,
 )
 
+generatedSpeciesConstraints(
+    maximumCarbeneRadicals=2,
+)
+
 model(
     toleranceKeepInEdge=0.0001,
     toleranceMoveToCore=0.05,      
@@ -134,7 +137,7 @@ pressureDependence(
     method='modified strong collision', 
     maximumGrainSize=(0.5,'kcal/mol'),
     minimumNumberOfGrains=250,
-    temperatures=(300,3000,'K',8),
+    temperatures=(300,2000,'K',8),
     pressures=(0.001,100,'bar',5),
     interpolation=('Chebyshev', 6, 4),
 )
@@ -145,6 +148,6 @@ options(
     generatePlots=True,             
     generatePESDiagrams=True,
     saveEdgeSpecies=True,
-    verboseComments=True,
+    verboseComments=True, #might not want the output plots, pes diagrams, html -> for later decision 
     saveSimulationProfiles=True,    
 )
