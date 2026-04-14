@@ -33,7 +33,7 @@ species(
 species(
     label='O2',
     reactive=True,
-    structure=SMILES("O=O"),
+    structure=SMILES("[O][O]"),
 )
 
 
@@ -126,6 +126,10 @@ model(
     toleranceInterruptSimulation=0.05,
     maximumEdgeSpecies=2000,
     filterReactions=True,
+)
+
+generatedSpeciesConstraints(
+    maximumCarbeneRadicals=2,
 )
 
 pressureDependence(

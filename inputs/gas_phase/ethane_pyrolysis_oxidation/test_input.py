@@ -1,15 +1,5 @@
 #input file modified for a 5-10 minute run, intended to test the output structure 
 
-# =============================================================================
-# Ethane Pyrolysis / Oxidation — QUICK STRUCTURAL TEST INPUT
-# Goal: finish in ~5-10 minutes to confirm RMG output file structure
-# NOT for benchmarking — model settings are intentionally loose/small
-# Full benchmark input: input.py
-# =============================================================================
-
-# =============================================================================
-# DATABASE
-# =============================================================================
 database(
     thermoLibraries=[
         'primaryThermoLibrary',
@@ -32,10 +22,6 @@ database(
     kineticsEstimator='rate rules',
 )
 
-# =============================================================================
-# SPECIES
-# =============================================================================
-
 species(
     label='ethane',
     reactive=True,
@@ -45,7 +31,7 @@ species(
 species(
     label='O2',
     reactive=True,
-    structure=SMILES("O=O"),
+    structure=SMILES("[O][O]"),
 )
 
 species(
@@ -96,9 +82,6 @@ species(
     structure=SMILES("C=O"),
 )
 
-# =============================================================================
-# REACTION SYSTEMS
-# =============================================================================
 
 # Reactor 1: High temperature, low pressure
 simpleReactor(
@@ -126,28 +109,24 @@ simpleReactor(
     terminationTime=(1.0, 's'),
 )
 
-# =============================================================================
-# SIMULATOR SETTINGS
-# =============================================================================
 simulator(
     atol=1e-6,
     rtol=1e-6,
 )
 
-# =============================================================================
-# MODEL SETTINGS — intentionally loose for fast termination
-# =============================================================================
+#loose for fast termination
 model(
-    toleranceKeepInEdge=0.01,       # much looser than production (0.0001)
-    toleranceMoveToCore=0.5,        # much looser than production (0.05)
+    toleranceKeepInEdge=0.01,
+    toleranceMoveToCore=0.5,
     toleranceInterruptSimulation=0.5,
     maximumEdgeSpecies=200,
     filterReactions=True,
 )
 
-# =============================================================================
-# PRESSURE DEPENDENCE
-# =============================================================================
+generatedSpeciesConstraints(
+    maximumCarbeneRadicals=2,
+)
+
 pressureDependence(
     method='modified strong collision',
     maximumGrainSize=(0.5, 'kcal/mol'),
@@ -157,9 +136,6 @@ pressureDependence(
     interpolation=('Chebyshev', 6, 4),
 )
 
-# =============================================================================
-# OPTIONS
-# =============================================================================
 options(
     units='si',
     generateOutputHTML=False,

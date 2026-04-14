@@ -1,9 +1,8 @@
 analysis/test_yaml_writer
 analysis/thing.py
 
-results/
+results/gas_phase/ethane_pyrolysis_oxidation_test
 
-results/**/species/gas_phase/*
 
 
 
