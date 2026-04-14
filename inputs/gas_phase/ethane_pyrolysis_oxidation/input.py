@@ -3,21 +3,20 @@
 #high T low P reactor and intermediate T high P reactor
 database(
     thermoLibraries=[
-        'primaryThermoLibrary',         
-        'primaryH2O2',                  # H2O2, HO2 — critical for chain branching
-        'Klippenstein_Glarborg2016',    # Primary C0-C2 thermo, well-validated for ethane
-        'thermo_DFT_CCSDTF12_BAC',      # High-accuracy DFT thermo for C1-C2 radicals
-        'DFT_QCI_thermo',               # Additional small radicals and oxygenated species
-        'FFCM1(-)',                     # Supplemental C0-C2 coverage
+        'primaryThermoLibrary',
+        'Klippenstein_Glarborg2016',
+        'thermo_DFT_CCSDTF12_BAC',
+        'DFT_QCI_thermo',
+        'FFCM1(-)',
     ],
     reactionLibraries=[
-        ('BurkeH2O2inN2',               False),   # H2/O2 base kinetics
-        ('FFCM1(-)',                   False),   # Optimized C0-C2 rates
-        ('Klippenstein_Glarborg2016', False),   # C0-C2 validated kinetics
+        ('BurkeH2O2inN2',               False),
+        ('FFCM1(-)',                   False),
+        ('Klippenstein_Glarborg2016', False),
     ],
     seedMechanisms=[
-        'BurkeH2O2inN2',                  # Pre-populate H/O radical pool from start
-        'Klippenstein_Glarborg2016',    # Pre-populate C0-C2 combustion backbone
+        'BurkeH2O2inN2',
+        'Klippenstein_Glarborg2016',
     ],
     kineticsDepositories=['training'],
     kineticsFamilies='default',
