@@ -1,0 +1,25 @@
+branch: yaml_writer_addition
+remote_used: upstream
+remote_branch_used: upstream/yaml_writer_addition
+commit_hash: 09f98d048c4586a487181fbcc15044ffd6af2c87
+short_hash: 09f98d048
+commit_date: 2026-04-09 23:24:21 -0400
+commit_message: Fix species rename from thermo library for reaction-generated species
+upstream_yaml_writer_addition_hash: 09f98d048c4586a487181fbcc15044ffd6af2c87
+origin_yaml_writer_addition_hash: a5936e7a488f971e29f86f586b18d3e93e0f8106
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/ch4_o2
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_001
+prep_slurm_job_id: 6394708
+prep_slurm_node: c3082
+
+rmg_slurm_job_id: 6394782
+analysis_slurm_job_id: 6394786
+actual_rmg_slurm_job_id: 6394782
+actual_rmg_slurm_node: d0022
+actual_rmg_started_at: 2026-04-29T13:09:52-04:00
+actual_rmg_finished_at: 2026-04-29T14:28:38-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6394786
+analysis_finished_at: 2026-04-29T14:28:57-04:00
