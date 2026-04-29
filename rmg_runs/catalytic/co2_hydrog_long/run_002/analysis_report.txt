@@ -1,0 +1,330 @@
+====================================================================================================
+RMG YAML BENCHMARK ANALYSIS REPORT
+====================================================================================================
+
+RUN INFO
+----------------------------------------------------------------------------------------------------
+Run directory:       /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002
+Benchmark:           catalytic/co2_hydrog_long
+SLURM job id:        
+SLURM node:          
+Profile file:        /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/RMG.profile
+Total profile time:  6938.068 s
+
+RMG GIT INFO
+----------------------------------------------------------------------------------------------------
+branch: yaml_writer_addition
+commit_hash: 09f98d048c4586a487181fbcc15044ffd6af2c87
+short_hash: 09f98d048
+commit_date: 2026-04-09 23:24:21 -0400
+commit_message: Fix species rename from thermo library for reaction-generated species
+rmg_path: /home/lucey.da/RMG-Py
+
+PROFILE GRAPH OUTPUT
+----------------------------------------------------------------------------------------------------
+Graph status:        success
+DOT file:            /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/RMG.profile.dot
+PDF file:            /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/RMG.profile.dot.pdf
+
+WRITER CPU TIME SUMMARY
+----------------------------------------------------------------------------------------------------
+yaml_write_cumulative_s: 3824.872263427001
+yaml_write_self_s: 20.226355622
+chemkin_write_cumulative_s: 0.0
+chemkin_write_self_s: 0.0
+all_output_cumulative_s: 6410.109544616001
+all_output_self_s: 1.620015408
+yaml_to_chemkin_write_time_ratio: None
+
+CHEMICAL EQUIVALENCE SUMMARY
+----------------------------------------------------------------------------------------------------
+yaml_file: 
+chemkin_file: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/chemkin/chem_edge0093-surface.inp
+species_dictionary: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/chemkin/species_edge_dictionary.txt
+transport_file: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/chemkin/tran.dat
+yaml_loads: False
+chemkin_converts: False
+chemkin_loads: False
+yaml_species_count: None
+chemkin_species_count: None
+species_count_match: False
+yaml_reaction_count: None
+chemkin_reaction_count: None
+reaction_count_match: False
+yaml_phase_names: 
+chemkin_phase_names: 
+yaml_surface_phase_count: None
+yaml_gas_phase_count: None
+chemically_equivalent_basic: False
+chemical_equivalence_notes: YAML did not load in Cantera. Chemkin did not convert/load through Cantera.
+
+YAML ERROR
+----------------------------------------------------------------------------------------------------
+No YAML file found.
+
+CHEMKIN ERROR
+----------------------------------------------------------------------------------------------------
+
+usage: ck2yaml.py [-h] [-p] [-q] [-v] [--input INPUT] [--thermo THERMO]
+                  [--transport TRANSPORT] [--surface SURFACE] [--extra EXTRA]
+                  [--name NAME] [--single-intermediate-temperature]
+                  [--no-validate] [--output OUTPUT]
+ck2yaml.py: error: unrecognized arguments: --dictionary /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_002/chemkin/species_edge_dictionary.txt
+
+
+CATEGORY PROFILE SUMMARY
+----------------------------------------------------------------------------------------------------
+Category                           Self s     Self %        Cum s      Cum %        Calls    Funcs
+----------------------------------------------------------------------------------------------------
+other                            6361.792     91.69%    35458.120    511.07%   6286482957     3287
+all_output                          1.620      0.02%     6410.110     92.39%      1889087       16
+reaction_generation               156.025      2.25%     4567.747     65.84%     28689932       39
+yaml_writer                        20.226      0.29%     3824.872     55.13%      5842164       56
+thermo                            118.660      1.71%     1467.138     21.15%       943466       78
+html_output                         2.806      0.04%     1153.712     16.63%       130358        8
+model_enlarge                       9.254      0.13%      917.015     13.22%          326        2
+copying                           203.148      2.93%      483.907      6.97%    246898696       39
+database                           53.266      0.77%      395.591      5.70%     28903828       95
+kinetics                           11.270      0.16%       76.998      1.11%       109476       11
+
+TOP 75 FUNCTIONS BY CUMULATIVE TIME
+----------------------------------------------------------------------------------------------------
+       Cum s      Cum %       Self s     Self %        Calls Category                 Function
+----------------------------------------------------------------------------------------------------
+    6968.469    100.44%        1.229      0.02%          404 other                    ~:0:<built-in method builtins.exec>
+    6968.469    100.44%     3198.069     46.09%            1 other                    main.py:797:execute
+    2718.643     39.18%        0.002      0.00%           57 all_output               main.py:2121:save_everything
+    2643.714     38.10%       35.977      0.52%           57 other                    util.py:110:notify
+    1241.071     17.89%        0.002      0.00%          243 other                    __init__.py:248:dump
+    1241.068     17.89%        1.631      0.02%          243 other                    __init__.py:215:dump_all
+    1239.419     17.86%        0.124      0.00%          243 other                    representer.py:26:represent
+    1228.636     17.71%        0.001      0.00%           57 all_output               output.py:1358:update
+    1228.635     17.71%        0.025      0.00%           57 all_output               output.py:1320:save_output
+    1228.589     17.71%        0.669      0.01%          114 all_output               output.py:47:save_output_html
+    1211.511     17.46%        0.041      0.00%           57 yaml_writer              yaml_cantera2.py:80:update
+    1211.470     17.46%        0.352      0.01%           57 yaml_writer              yaml_cantera2.py:87:save_cantera_files
+    1207.974     17.41%        0.129      0.00%          114 yaml_writer              yaml_cantera2.py:153:save_cantera_model
+    1141.655     16.45%        0.446      0.01%          243 other                    serializer.py:46:serialize
+    1140.711     16.44%       18.247      0.26%     15929089 other                    ~:0:<method 'join' of 'str' objects>
+    1138.534     16.41%        0.001      0.00%          114 html_output              environment.py:1275:render
+    1126.954     16.24%       63.482      0.91%     14085371 other                    serializer.py:78:serialize_node
+    1068.403     15.40%      122.725      1.77%     15849559 other                    runtime.py:262:call
+    1019.809     14.70%       31.579      0.46%     16326414 other                    emitter.py:111:emit
+     916.021     13.20%        9.238      0.13%          160 model_enlarge            model.py:649:enlarge
+     783.897     11.30%       31.779      0.46%     14085371 other                    emitter.py:232:expect_node
+     704.733     10.16%      466.320      6.72%      3822770 other                    adjlist.py:887:to_adjacency_list
+     634.916      9.15%        0.612      0.01%           57 reaction_generation      react.py:99:react_all
+     634.279      9.14%        0.081      0.00%           57 reaction_generation      react.py:42:react
+     634.195      9.14%        0.109      0.00%       125579 reaction_generation      react.py:77:_react_species_star
+     634.085      9.14%        0.201      0.00%       125579 reaction_generation      react.py:82:react_species
+     633.804      9.14%        0.725      0.01%       125579 reaction_generation      database.py:501:generate_reactions_from_families
+     520.491      7.50%        3.547      0.05%      2952166 other                    emitter.py:409:expect_block_mapping_simple_value
+     393.246      5.67%      337.394      4.86%     11845300 other                    emitter.py:626:analyze_scalar
+     379.470      5.47%       15.092      0.22%     14085371 other                    emitter.py:469:process_tag
+     378.079      5.45%      154.934      2.23%       136157 other                    common.py:186:ensure_independent_atom_ids
+     363.106      5.23%       14.124      0.20%     11845300 other                    emitter.py:494:choose_scalar_style
+     357.585      5.15%       16.006      0.23%     11845300 other                    emitter.py:266:expect_scalar
+     330.106      4.76%       12.828      0.18%     11845300 other                    emitter.py:515:process_scalar
+     265.742      3.83%        0.398      0.01%         1846 reaction_generation      model.py:862:process_new_reactions
+     265.473      3.83%        0.647      0.01%        12945 reaction_generation      model.py:504:make_new_reaction
+     258.627      3.73%      123.539      1.78%    102633323 copying                  copy.py:128:deepcopy
+     249.923      3.60%       15.503      0.22%        48999 other                    model.py:307:make_new_species
+     223.689      3.22%        0.150      0.00%         7864 thermo                   model.py:956:generate_thermo
+     215.968      3.11%        0.006      0.00%         4084 thermo                   thermoengine.py:174:submit
+     215.963      3.11%       10.870      0.16%         4084 thermo                   thermoengine.py:148:evaluator
+     210.252      3.03%       86.013      1.24%     16588391 reaction_generation      family.py:1940:_generate_reactions
+     208.323      3.00%        3.353      0.05%      2326112 other                    parse.py:863:quote
+     204.031      2.94%        7.934      0.11%      2326112 other                    parse.py:939:quote_from_bytes
+     201.668      2.91%      160.237      2.31%       817963 other                    emitter.py:854:write_single_quoted
+     194.038      2.80%       19.128      0.28%         5489 thermo                   thermo.py:1256:get_thermo_data
+     193.438      2.79%        0.026      0.00%         4084 thermo                   thermoengine.py:107:generate_thermo_data
+     191.526      2.76%        6.162      0.09%       125579 reaction_generation      database.py:550:react_molecules
+     186.533      2.69%      119.584      1.72%      2326112 other                    parse.py:957:<listcomp>
+     184.715      2.66%       16.343      0.24%      9041688 reaction_generation      family.py:1759:generate_reactions
+     162.004      2.34%        0.018      0.00%         9462 other                    model.py:547:<listcomp>
+     148.364      2.14%       43.159      0.62%     33573346 copying                  copy.py:227:_deepcopy_dict
+     144.009      2.08%      143.604      2.07%    570053257 other                    ~:0:<method 'format' of 'str' objects>
+     131.429      1.89%      127.302      1.83%   1992581972 other                    ~:0:<built-in method builtins.len>
+     129.281      1.86%        6.512      0.09%      3815692 other                    emitter.py:395:expect_block_mapping_key
+     125.739      1.81%        5.180      0.07%      3053213 other                    emitter.py:292:expect_flow_sequence_item
+     115.611      1.67%       94.110      1.36%     11027337 other                    emitter.py:1080:write_plain
+     113.425      1.63%       77.997      1.12%          944 thermo                   thermo.py:1553:get_thermo_data_for_surface_species
+     100.239      1.44%       17.668      0.25%      4956251 other                    emitter.py:437:check_simple_key
+      99.433      1.43%        0.680      0.01%       472372 other                    textwrap.py:386:fill
+      98.429      1.42%        0.404      0.01%       472372 other                    textwrap.py:361:fill
+      98.363      1.42%        2.065      0.03%       404950 other                    filtration.py:55:filter_structures
+      97.914      1.41%        0.504      0.01%       472372 other                    textwrap.py:347:wrap
+      97.640      1.41%       15.669      0.23%     14085371 other                    representer.py:33:represent_data
+      97.633      1.41%        0.679      0.01%      1524539 other                    representer.py:206:represent_dict
+      97.633      1.41%       10.507      0.15%      1524539 other                    representer.py:103:represent_mapping
+      97.618      1.41%        0.297      0.00%       715532 other                    representer.py:191:represent_list
+      97.618      1.41%        3.801      0.05%       715532 other                    representer.py:85:represent_sequence
+      91.525      1.32%        4.976      0.07%       136157 reaction_generation      common.py:272:find_degenerate_reactions
+      88.829      1.28%        0.097      0.00%         9429 database                 family.py:1897:calculate_degeneracy
+      75.781      1.09%       23.289      0.34%       404950 reaction_generation      filtration.py:416:mark_unreactive_structures
+      74.927      1.08%        4.932      0.07%           57 other                    main.py:2115:save_profiler_info
+      74.922      1.08%        4.411      0.06%       921224 other                    base.py:1033:descend_tree
+      70.222      1.01%       58.673      0.85%      9039452 other                    base.py:950:match_node_to_structure
+      69.313      1.00%       36.213      0.52%           57 other                    cProfile.py:55:snapshot_stats
+
+TOP 75 FUNCTIONS BY SELF TIME
+----------------------------------------------------------------------------------------------------
+      Self s     Self %        Cum s      Cum %        Calls Category                 Function
+----------------------------------------------------------------------------------------------------
+    3198.069     46.09%     6968.469    100.44%            1 other                    main.py:797:execute
+     466.320      6.72%      704.733     10.16%      3822770 other                    adjlist.py:887:to_adjacency_list
+     337.394      4.86%      393.246      5.67%     11845300 other                    emitter.py:626:analyze_scalar
+     160.237      2.31%      201.668      2.91%       817963 other                    emitter.py:854:write_single_quoted
+     154.934      2.23%      378.079      5.45%       136157 other                    common.py:186:ensure_independent_atom_ids
+     143.604      2.07%      144.009      2.08%    570053257 other                    ~:0:<method 'format' of 'str' objects>
+     127.302      1.83%      131.429      1.89%   1992581972 other                    ~:0:<built-in method builtins.len>
+     123.539      1.78%      258.627      3.73%    102633323 copying                  copy.py:128:deepcopy
+     122.725      1.77%     1068.403     15.40%     15849559 other                    runtime.py:262:call
+     119.584      1.72%      186.533      2.69%      2326112 other                    parse.py:957:<listcomp>
+      94.110      1.36%      115.611      1.67%     11027337 other                    emitter.py:1080:write_plain
+      86.013      1.24%      210.252      3.03%     16588391 reaction_generation      family.py:1940:_generate_reactions
+      77.997      1.12%      113.425      1.63%          944 thermo                   thermo.py:1553:get_thermo_data_for_surface_species
+      66.986      0.97%       66.986      0.97%   1123690718 other                    ~:0:<method '__getitem__' of 'dict' objects>
+      63.482      0.91%     1126.954     16.24%     14085371 other                    serializer.py:78:serialize_node
+      58.673      0.85%       70.222      1.01%      9039452 other                    base.py:950:match_node_to_structure
+      55.583      0.80%       55.739      0.80%    546576813 other                    ~:0:<built-in method builtins.isinstance>
+      43.159      0.62%      148.364      2.14%     33573346 copying                  copy.py:227:_deepcopy_dict
+      43.086      0.62%       43.086      0.62%       165452 other                    ~:0:<built-in method posix.stat>
+      40.241      0.58%       55.137      0.79%       472372 other                    textwrap.py:238:_wrap_chunks
+      36.213      0.52%       69.313      1.00%           57 other                    cProfile.py:55:snapshot_stats
+      35.977      0.52%     2643.714     38.10%           57 other                    util.py:110:notify
+      35.481      0.51%       38.852      0.56%     11845300 other                    representer.py:77:represent_scalar
+      34.974      0.50%       34.974      0.50%       472841 other                    ~:0:<method 'split' of 're.Pattern' objects>
+      32.575      0.47%       52.112      0.75%       102403 database                 family.py:1338:apply_recipe
+      31.779      0.46%      783.897     11.30%     14085371 other                    emitter.py:232:expect_node
+      31.579      0.46%     1019.809     14.70%     16326414 other                    emitter.py:111:emit
+      27.357      0.39%       27.357      0.39%           57 other                    ~:0:<method 'getstats' of '_lsprof.Profiler' objects>
+      26.624      0.38%       34.951      0.50%      4956251 other                    emitter.py:580:prepare_tag
+      26.223      0.38%       31.467      0.45%     34039893 copying                  copy.py:243:_keep_alive
+      23.795      0.34%       23.795      0.34%    232702008 other                    ~:0:<method 'get' of 'dict' objects>
+      23.289      0.34%       75.781      1.09%       404950 reaction_generation      filtration.py:416:mark_unreactive_structures
+      22.928      0.33%       30.877      0.45%     25930671 other                    resolver.py:143:resolve
+      21.438      0.31%       45.872      0.66%     32652828 other                    emitter.py:120:need_more_events
+      21.054      0.30%       21.078      0.30%         3968 other                    surfaces.py:638:write_to_png
+      21.014      0.30%       24.290      0.35%      2315329 other                    filtration.py:123:get_octet_deviation
+      19.128      0.28%      194.038      2.80%         5489 thermo                   thermo.py:1256:get_thermo_data
+      18.247      0.26%     1140.711     16.44%     15929089 other                    ~:0:<method 'join' of 'str' objects>
+      18.045      0.26%       18.045      0.26%    227858690 other                    ~:0:<built-in method builtins.id>
+      17.668      0.25%      100.239      1.44%      4956251 other                    emitter.py:437:check_simple_key
+      16.343      0.24%      184.715      2.66%      9041688 reaction_generation      family.py:1759:generate_reactions
+      16.006      0.23%      357.585      5.15%     11845300 other                    emitter.py:266:expect_scalar
+      15.669      0.23%       97.640      1.41%     14085371 other                    representer.py:33:represent_data
+      15.503      0.22%      249.923      3.60%        48999 other                    model.py:307:make_new_species
+      15.341      0.22%       18.260      0.26%     13939556 other                    emitter.py:800:write_indicator
+      15.092      0.22%      379.470      5.47%     14085371 other                    emitter.py:469:process_tag
+      15.028      0.22%       15.685      0.23%     48689376 other                    ~:0:<method 'sort' of 'list' objects>
+      14.124      0.20%      363.106      5.23%     11845300 other                    emitter.py:494:choose_scalar_style
+      13.587      0.20%       13.587      0.20%    158461802 other                    ~:0:<method 'append' of 'list' objects>
+      12.828      0.18%       18.824      0.27%      3822770 other                    adjlist.py:936:<listcomp>
+      12.828      0.18%      330.106      4.76%     11845300 other                    emitter.py:515:process_scalar
+      12.808      0.18%       17.516      0.25%      8066489 other                    emitter.py:133:need_events
+      12.807      0.18%       17.575      0.25%     16588391 database                 family.py:1978:<listcomp>
+      12.795      0.18%       12.795      0.18%     50826522 other                    ~:0:<built-in method builtins.hasattr>
+      12.733      0.18%       12.733      0.18%     54083702 other                    ~:0:<method 'items' of 'dict' objects>
+      12.083      0.17%       14.219      0.20%     14085371 other                    serializer.py:60:anchor_node
+      11.656      0.17%       11.656      0.17%     94440343 other                    ~:0:<method 'write' of '_io.TextIOWrapper' objects>
+      10.870      0.16%      215.963      3.11%         4084 thermo                   thermoengine.py:148:evaluator
+      10.743      0.15%       11.942      0.17%       974171 reaction_generation      family.py:1724:_match_reactant_to_template
+      10.507      0.15%       97.633      1.41%      1524539 other                    representer.py:103:represent_mapping
+      10.411      0.15%       10.439      0.15%        13075 kinetics                 family.py:2539:get_kinetics_from_depository
+      10.202      0.15%       12.265      0.18%      3982288 other                    numeric.py:67:zeros_like
+       9.764      0.14%        9.764      0.14%    106129940 other                    ~:0:<method 'pop' of 'list' objects>
+       9.735      0.14%       10.925      0.16%     14085371 other                    emitter.py:146:increase_indent
+       9.238      0.13%      916.021     13.20%          160 model_enlarge            model.py:649:enlarge
+       8.685      0.13%       12.111      0.17%      3822770 other                    adjlist.py:1029:<listcomp>
+       8.448      0.12%       17.976      0.26%     31707338 other                    utils.py:90:from_obj
+       8.212      0.12%       25.225      0.36%     13762601 other                    __init__.py:173:search
+       7.934      0.11%      204.031      2.94%      2326112 other                    parse.py:939:quote_from_bytes
+       7.702      0.11%       13.903      0.20%      6602635 other                    emitter.py:814:write_indent
+       7.699      0.11%       10.663      0.15%      3822770 other                    adjlist.py:1030:<listcomp>
+       7.649      0.11%       10.676      0.15%     14167979 other                    __init__.py:272:_compile
+       7.563      0.11%       10.768      0.16%     14085371 other                    representer.py:136:ignore_aliases
+       7.559      0.11%        7.559      0.11%           56 other                    ~:0:<method 'writerows' of '_csv.writer' objects>
+       7.498      0.11%       10.378      0.15%      3822770 other                    adjlist.py:1033:<listcomp>
+
+YAML_WRITER FUNCTIONS
+----------------------------------------------------------------------------------------------------
+    1211.511 s    17.46% cumulative |        0.041 s     0.00% self |         57 calls | yaml_cantera2.py:80:update
+    1211.470 s    17.46% cumulative |        0.352 s     0.01% self |         57 calls | yaml_cantera2.py:87:save_cantera_files
+    1207.974 s    17.41% cumulative |        0.129 s     0.00% self |        114 calls | yaml_cantera2.py:153:save_cantera_model
+      37.956 s     0.55% cumulative |        0.007 s     0.00% self |         57 calls | yaml_rms.py:278:update
+      37.948 s     0.55% cumulative |        0.001 s     0.00% self |         57 calls | yaml_rms.py:60:write_rms
+      22.333 s     0.32% cumulative |        0.007 s     0.00% self |         57 calls | yaml_cantera1.py:418:update
+      21.909 s     0.32% cumulative |        0.011 s     0.00% self |         57 calls | yaml_cantera1.py:85:write_cantera
+      17.123 s     0.25% cumulative |        2.118 s     0.03% self |        114 calls | yaml_cantera2.py:176:generate_cantera_data
+       9.050 s     0.13% cumulative |        2.103 s     0.03% self |     472320 calls | yaml_cantera2.py:407:reaction_to_dict_list
+       6.173 s     0.09% cumulative |        0.946 s     0.01% self |     472320 calls | yaml_cantera2.py:601:get_reaction_equation
+       5.621 s     0.08% cumulative |        0.003 s     0.00% self |         57 calls | yaml_rms.py:66:get_mech_dict
+       5.591 s     0.08% cumulative |        0.584 s     0.01% self |      39440 calls | yaml_rms.py:109:obj_to_dict
+       4.601 s     0.07% cumulative |        3.576 s     0.05% self |      50268 calls | yaml_rms.py:102:get_radicals
+       4.469 s     0.06% cumulative |        3.537 s     0.05% self |     165738 calls | yaml_cantera2.py:306:species_to_dict
+       4.418 s     0.06% cumulative |        0.009 s     0.00% self |         57 calls | yaml_rms.py:96:<listcomp>
+       4.217 s     0.06% cumulative |        3.640 s     0.05% self |     472320 calls | yaml_cantera2.py:603:<listcomp>
+       2.133 s     0.03% cumulative |        0.014 s     0.00% self |      11882 calls | yaml_rms.py:143:<listcomp>
+       2.033 s     0.03% cumulative |        0.016 s     0.00% self |      11882 calls | yaml_rms.py:144:<listcomp>
+       1.373 s     0.02% cumulative |        1.215 s     0.02% self |    2081680 calls | yaml_cantera2.py:617:get_label
+       1.360 s     0.02% cumulative |        0.031 s     0.00% self |         57 calls | yaml_cantera1.py:265:get_mech_dict_surface
+       0.823 s     0.01% cumulative |        0.298 s     0.00% self |     472320 calls | yaml_cantera2.py:604:<listcomp>
+       0.776 s     0.01% cumulative |        0.509 s     0.01% self |      11882 calls | yaml_cantera1.py:322:reaction_to_dicts
+       0.641 s     0.01% cumulative |        0.010 s     0.00% self |         57 calls | yaml_rms.py:94:<listcomp>
+       0.555 s     0.01% cumulative |        0.004 s     0.00% self |         57 calls | yaml_rms.py:95:<listcomp>
+       0.546 s     0.01% cumulative |        0.006 s     0.00% self |         57 calls | yaml_cantera1.py:284:<listcomp>
+       0.541 s     0.01% cumulative |        0.213 s     0.00% self |       3919 calls | yaml_cantera1.py:355:species_to_dict
+       0.466 s     0.01% cumulative |        0.335 s     0.00% self |     204198 calls | yaml_cantera1.py:51:_convert_anymap_to_dict
+       0.415 s     0.01% cumulative |        0.049 s     0.00% self |      37941 calls | yaml_cantera1.py:73:<dictcomp>
+       0.190 s     0.00% cumulative |        0.144 s     0.00% self |     502016 calls | yaml_cantera2.py:329:<lambda>
+       0.156 s     0.00% cumulative |        0.025 s     0.00% self |      90137 calls | yaml_cantera1.py:79:<genexpr>
+       0.132 s     0.00% cumulative |        0.034 s     0.00% self |        114 calls | yaml_cantera2.py:245:<listcomp>
+       0.091 s     0.00% cumulative |        0.091 s     0.00% self |     331476 calls | yaml_cantera2.py:335:<lambda>
+       0.064 s     0.00% cumulative |        0.064 s     0.00% self |     165738 calls | yaml_cantera2.py:329:<dictcomp>
+       0.044 s     0.00% cumulative |        0.005 s     0.00% self |       3919 calls | yaml_rms.py:131:<listcomp>
+       0.028 s     0.00% cumulative |        0.007 s     0.00% self |        114 calls | yaml_cantera2.py:276:<listcomp>
+       0.026 s     0.00% cumulative |        0.013 s     0.00% self |      11882 calls | yaml_rms.py:139:<listcomp>
+       0.019 s     0.00% cumulative |        0.019 s     0.00% self |     165738 calls | yaml_cantera2.py:207:<lambda>
+       0.017 s     0.00% cumulative |        0.015 s     0.00% self |      29833 calls | yaml_cantera2.py:266:<genexpr>
+       0.017 s     0.00% cumulative |        0.008 s     0.00% self |      11882 calls | yaml_rms.py:140:<listcomp>
+       0.016 s     0.00% cumulative |        0.004 s     0.00% self |         57 calls | yaml_cantera1.py:199:get_phases_with_surface
+       0.014 s     0.00% cumulative |        0.014 s     0.00% self |       2253 calls | transport.py:122:to_cantera
+       0.012 s     0.00% cumulative |        0.012 s     0.00% self |      11882 calls | yaml_rms.py:145:<listcomp>
+       0.005 s     0.00% cumulative |        0.003 s     0.00% self |         57 calls | yaml_cantera1.py:218:<listcomp>
+       0.005 s     0.00% cumulative |        0.002 s     0.00% self |         57 calls | yaml_cantera1.py:229:<listcomp>
+       0.003 s     0.00% cumulative |        0.003 s     0.00% self |       1723 calls | yaml_cantera1.py:111:<genexpr>
+       0.002 s     0.00% cumulative |        0.000 s     0.00% self |          1 calls | yaml_cantera2.py:76:__init__
+       0.002 s     0.00% cumulative |        0.000 s     0.00% self |          1 calls | yaml_rms.py:273:__init__
+       0.002 s     0.00% cumulative |        0.000 s     0.00% self |          1 calls | yaml_cantera1.py:412:__init__
+       0.001 s     0.00% cumulative |        0.001 s     0.00% self |         57 calls | yaml_rms.py:67:<listcomp>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |         57 calls | yaml_cantera1.py:278:<listcomp>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |         57 calls | yaml_cantera1.py:232:<listcomp>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |         57 calls | yaml_cantera1.py:223:<listcomp>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |       2253 calls | yaml_cantera1.py:228:<lambda>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |       1666 calls | yaml_cantera1.py:215:<lambda>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |         57 calls | yaml_cantera2.py:137:__init__
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |         57 calls | yaml_cantera2.py:136:MixedModel
+
+CHEMKIN_WRITER FUNCTIONS
+----------------------------------------------------------------------------------------------------
+No functions found for category chemkin_writer.
+
+ALL_OUTPUT FUNCTIONS
+----------------------------------------------------------------------------------------------------
+    2718.643 s    39.18% cumulative |        0.002 s     0.00% self |         57 calls | main.py:2121:save_everything
+    1228.636 s    17.71% cumulative |        0.001 s     0.00% self |         57 calls | output.py:1358:update
+    1228.635 s    17.71% cumulative |        0.025 s     0.00% self |         57 calls | output.py:1320:save_output
+    1228.589 s    17.71% cumulative |        0.669 s     0.01% self |        114 calls | output.py:47:save_output_html
+       2.264 s     0.03% cumulative |        0.002 s     0.00% self |        173 calls | subprocess.py:417:check_output
+       1.993 s     0.03% cumulative |        0.815 s     0.01% self |    1852822 calls | output.py:132:csssafe
+       1.218 s     0.02% cumulative |        0.043 s     0.00% self |       2964 calls | compiler.py:1503:visit_Output
+       0.042 s     0.00% cumulative |        0.011 s     0.00% self |      13680 calls | compiler.py:1455:_output_child_to_const
+       0.040 s     0.00% cumulative |        0.040 s     0.00% self |         57 calls | output.py:109:<listcomp>
+       0.020 s     0.00% cumulative |        0.000 s     0.00% self |          9 calls | util.py:116:make_output_subdirectory
+       0.014 s     0.00% cumulative |        0.005 s     0.00% self |       8322 calls | compiler.py:1448:_output_const_repr
+       0.006 s     0.00% cumulative |        0.004 s     0.00% self |       5358 calls | compiler.py:1476:_output_child_pre
+       0.005 s     0.00% cumulative |        0.003 s     0.00% self |       5358 calls | compiler.py:1492:_output_child_post
+       0.003 s     0.00% cumulative |        0.000 s     0.00% self |          1 calls | output.py:1354:__init__
+       0.001 s     0.00% cumulative |        0.001 s     0.00% self |         57 calls | output.py:107:<listcomp>
+       0.000 s     0.00% cumulative |        0.000 s     0.00% self |          1 calls | nodes.py:303:Output
