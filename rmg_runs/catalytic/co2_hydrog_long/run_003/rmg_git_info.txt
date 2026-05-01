@@ -1,0 +1,25 @@
+branch: yaml_writer_addition
+remote_used: upstream
+remote_branch_used: upstream/yaml_writer_addition
+commit_hash: 99dd96650ffd62dd6d5d67586d0ae35ee1ce27a1
+short_hash: 99dd96650
+commit_date: 2026-04-30 23:41:01 -0400
+commit_message: [yaml_cantera2] Emit duplicate-pressure PLOG as one reaction, not split duplicates
+upstream_yaml_writer_addition_hash: 99dd96650ffd62dd6d5d67586d0ae35ee1ce27a1
+origin_yaml_writer_addition_hash: a5936e7a488f971e29f86f586b18d3e93e0f8106
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/co2_hydrog_long
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_003
+prep_slurm_job_id: 6469787
+prep_slurm_node: d0143
+
+rmg_slurm_job_id: 6470572
+analysis_slurm_job_id: 6470573
+actual_rmg_slurm_job_id: 6470572
+actual_rmg_slurm_node: d0143
+actual_rmg_started_at: 2026-05-01T12:04:22-04:00
+actual_rmg_finished_at: 2026-05-01T13:48:10-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6470573
+analysis_finished_at: 2026-05-01T13:48:23-04:00
