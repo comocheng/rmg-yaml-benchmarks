@@ -1,0 +1,25 @@
+branch: yaml_writer_addition
+remote_used: upstream
+remote_branch_used: upstream/yaml_writer_addition
+commit_hash: 7fbfdf0248df3e9c22d5e58d2c30a6917dc8c612
+short_hash: 7fbfdf024
+commit_date: 2026-05-01 13:31:44 -0400
+commit_message: [yaml_cantera1] Add saveEdgeSpecies support
+upstream_yaml_writer_addition_hash: 7fbfdf0248df3e9c22d5e58d2c30a6917dc8c612
+origin_yaml_writer_addition_hash: a5936e7a488f971e29f86f586b18d3e93e0f8106
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/co2_hydrog_long
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_004
+prep_slurm_job_id: 6479655
+prep_slurm_node: c0621
+
+rmg_slurm_job_id: 6480050
+analysis_slurm_job_id: 6480051
+actual_rmg_slurm_job_id: 6480050
+actual_rmg_slurm_node: d0143
+actual_rmg_started_at: 2026-05-01T15:49:12-04:00
+actual_rmg_finished_at: 2026-05-01T17:39:54-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6480051
+analysis_finished_at: 2026-05-01T17:40:37-04:00
