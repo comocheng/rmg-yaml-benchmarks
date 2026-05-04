@@ -1,0 +1,25 @@
+branch: yaml_writer_addition
+remote_used: upstream
+remote_branch_used: upstream/yaml_writer_addition
+commit_hash: b3728b1060d1354452e8e9a11065a9693230cfe4
+short_hash: b3728b106
+commit_date: 2026-05-03 22:21:19 -0400
+commit_message: Fix yaml_cantera1Test test (generator name)
+upstream_yaml_writer_addition_hash: b3728b1060d1354452e8e9a11065a9693230cfe4
+origin_yaml_writer_addition_hash: a5936e7a488f971e29f86f586b18d3e93e0f8106
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: gas_phase/ethane_pyrolysis_oxidation
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_007
+prep_slurm_job_id: 6527980
+prep_slurm_node: c0618
+
+rmg_slurm_job_id: 6528003
+analysis_slurm_job_id: 6528004
+actual_rmg_slurm_job_id: 6528003
+actual_rmg_slurm_node: c0618
+actual_rmg_started_at: 2026-05-04T08:56:51-04:00
+actual_rmg_finished_at: 2026-05-04T14:46:43-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6528004
+analysis_finished_at: 2026-05-04T14:47:02-04:00
