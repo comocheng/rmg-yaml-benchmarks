@@ -1,0 +1,25 @@
+branch: yaml_writer_addition
+remote_used: upstream
+remote_branch_used: upstream/yaml_writer_addition
+commit_hash: b3728b1060d1354452e8e9a11065a9693230cfe4
+short_hash: b3728b106
+commit_date: 2026-05-03 22:21:19 -0400
+commit_message: Fix yaml_cantera1Test test (generator name)
+upstream_yaml_writer_addition_hash: b3728b1060d1354452e8e9a11065a9693230cfe4
+origin_yaml_writer_addition_hash: a5936e7a488f971e29f86f586b18d3e93e0f8106
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/co2_hydrog_long
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_008
+prep_slurm_job_id: 6527578
+prep_slurm_node: c0613
+
+rmg_slurm_job_id: 6527601
+analysis_slurm_job_id: 6527603
+actual_rmg_slurm_job_id: 6527601
+actual_rmg_slurm_node: c0613
+actual_rmg_started_at: 2026-05-04T08:48:51-04:00
+actual_rmg_finished_at: 2026-05-04T10:41:39-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6527603
+analysis_finished_at: 2026-05-04T10:42:16-04:00
