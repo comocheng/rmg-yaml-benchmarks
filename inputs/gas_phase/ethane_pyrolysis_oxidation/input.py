@@ -143,10 +143,14 @@ pressureDependence(
 
 options(
     units='si',
-    generateOutputHTML=False,
+    generateOutputHTML={'saveInterval':-1, 'saveEdge':True},
     generatePlots=False,
     generatePESDiagrams=False,
     saveEdgeSpecies=True,
     verboseComments=True,
     saveSimulationProfiles=True,
+    generateChemkin={'verboseComments':True},
+    generateRMSYAML={'saveInterval':1},
+    generateCanteraYAML1={'verboseComments':True, 'saveEdge':False},
+    generateCanteraYAML2={'verboseComments':True, 'saveEdge':False},
 )

@@ -83,8 +83,12 @@ model(
 
 options(
     units='si',
-    generateOutputHTML=True,
+    generateOutputHTML={'saveInterval':-1, 'saveEdge':True},
     generatePlots=False, # Enable to make plots of core and edge size etc. But takes a lot of the total runtime!
     saveEdgeSpecies=True,
     saveSimulationProfiles=True,
+    generateChemkin={'verboseComments':True},
+    generateRMSYAML={'saveInterval':1},
+    generateCanteraYAML1={'verboseComments':True, 'saveEdge':False},
+    generateCanteraYAML2={'verboseComments':True, 'saveEdge':False},
 )
