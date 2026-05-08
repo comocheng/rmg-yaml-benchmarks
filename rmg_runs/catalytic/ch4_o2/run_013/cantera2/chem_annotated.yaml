@@ -1,0 +1,2431 @@
+description: RMG-Py Generated Mechanism
+generator: 'RMG-Py CanteraWriter2 at /Users/daniellelucey/RMG-Py/rmgpy/yaml_cantera2.py
+  (git commit: 4a87784)'
+cantera-version: '3.1'
+units: {length: m, time: s, quantity: mol, activation-energy: J/mol}
+elements:
+- {symbol: D, atomic-weight: 2.014101715758443}
+- {symbol: T, atomic-weight: 3.0160490423440933}
+- {symbol: CI, atomic-weight: 13.003353960812092}
+- {symbol: OI, atomic-weight: 17.999159172177315}
+- {symbol: X, atomic-weight: 195.083}
+phases:
+- name: gas
+  thermo: ideal-gas
+  elements: [Ar, Br, C, CI, Cl, D, F, H, He, I, N, Ne, O, OI, S, Si, T, X]
+  species: [N2, Ar, He, Ne, CH4(1), O2(2), H2(4), H2O(10), CO2(11), CH3OH(44), formic_acid(56)]
+  kinetics: gas
+  reactions: declared-species
+  transport: mixture-averaged
+- name: surface
+  thermo: ideal-surface
+  adjacent-phases: [gas]
+  elements: [Ar, Br, C, CI, Cl, D, F, H, He, I, N, Ne, O, OI, S, Si, T, X]
+  species: [vacantX(3), HX(5), OX(6), CH3X(7), HOX(8), H2OX(9), CO2X(12), OCX(13),
+    CX(15), CH2X(16), CHX(17), CH4X(22), XOCH3(25), H2X(28), XCH2XO(30), CH2OX(31),
+    XCHXO(36), XCHO(37), CH3OHX(45), XCH2OH(46), XCHOH(47), XCOH(54), formic_acidXX(57),
+    HCOOHX(58), 'O[CH](O)[Pt](66)', HOCOXX(73), XCOOH(74), HC(O)XO(114), XOC(OH)O(149)]
+  kinetics: surface
+  reactions: declared-species
+  site-density: 2.4829999999999998e-05
+species:
+- name: N2
+  composition: {N: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [3.53101, -0.000123661, -5.02999e-07, 2.43531e-09, -1.40881e-12, -1046.98, 2.96747]
+    - [2.95258, 0.0013969, -4.92632e-07, 7.8601e-11, -4.60755e-15, -923.949, 5.87189]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: linear, well-depth: 97.53030619382686, diameter: 3.621000000000001,
+    polarizability: 1.760000000000001, rotational-relaxation: 4.0, note: GRI-Mech}
+- name: Ar
+  composition: {Ar: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 4.37967]
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 4.37967]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: atom, well-depth: 136.50054988458677, diameter: 3.3300000000000005,
+    note: GRI-Mech}
+- name: He
+  composition: {He: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 0.928724]
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 0.928724]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: atom, well-depth: 10.2, diameter: 2.5760000000000005,
+    note: NOx2018}
+- name: Ne
+  composition: {Ne: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 3.35532]
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 3.35532]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: atom, well-depth: 148.6, diameter: 3.758, note: Epsilon
+      & sigma estimated with fixed Lennard Jones Parameters. This is the fallback
+      method! Try improving transport databases!}
+- name: CH4(1)
+  composition: {H: 4, C: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 1084.1178897101286, 5000.0]
+    data:
+    - [4.205416684633066, -0.005355590254627177, 2.511238250111796e-05, -2.137635320163276e-08,
+      5.9752670131915595e-12, -10161.943368029231, -0.9212844871470729]
+    - [0.9082573996547298, 0.011454099528933412, -4.571746006222714e-06, 8.291934667300837e-10,
+      -5.66316365457203e-14, -9719.970790335326, 13.993141571614126]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: nonlinear, well-depth: 141.400440100105, diameter: 3.746000000000001,
+    polarizability: 2.6000000000000014, rotational-relaxation: 13.0, note: GRI-Mech}
+- name: O2(2)
+  composition: {O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 1074.5559874666221, 5000.0]
+    data:
+    - [3.5373217113695397, -0.0012157081866178787, 5.3161744753665525e-06, -4.894429543084893e-09,
+      1.4584485293487145e-12, -1038.5884568564704, 4.6836844075736]
+    - [3.1538247849326697, 0.001678037130877558, -7.699705205295331e-07, 1.5127459750571054e-10,
+      -1.0878170489110307e-14, -1040.8190172537113, 6.167535803814269]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: linear, well-depth: 107.40032560095216, diameter: 3.458000000000001,
+    polarizability: 1.6000000000000008, rotational-relaxation: 3.8, note: GRI-Mech}
+- name: vacantX(3)
+  composition: {X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 3000.0]
+    data:
+    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: OX(6)
+  composition: {O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.294475701, 0.0144162624, -2.61322704e-05, 2.19005957e-08, -6.9801942e-12,
+      -16461.9234, -0.199445623]
+    - [2.90244691, -0.000338584457, 6.43372619e-07, -3.6632666e-10, 6.90093884e-14,
+      -17049.7471, -15.2559728]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CH4X(22)
+  composition: {H: 4, C: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [4.85496247, -0.00554134984, 3.01198105e-05, -2.99225917e-08, 1.00502514e-11,
+      -11709.6278, -9.25620913]
+    - [9.54139378, -0.0104025134, 1.837774e-05, -9.6676513e-09, 1.71211379e-12, -13447.5614,
+      -35.5638434]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CH3X(7)
+  composition: {H: 3, C: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.044454906, 0.0194367665, -1.91028733e-05, 1.11269371e-08, -2.73735895e-12,
+      -6388.03762, -0.173375969]
+    - [8.65704524, -0.00790307778, 1.40100438e-05, -7.40016074e-09, 1.31516592e-12,
+      -8635.98517, -44.3352558]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: HX(5)
+  composition: {H: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-2.07570125, 0.0173580835, -2.60920784e-05, 1.89282268e-08, -5.38835643e-12,
+      -3166.18959, 8.15361518]
+    - [2.72248139, -0.00106817206, 1.9865379e-06, -1.12048461e-09, 2.09811636e-13,
+      -4218.23896, -15.320747]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CH2X(16)
+  composition: {H: 2, C: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-2.23006757, 0.0292222928, -4.33154923e-05, 3.31428193e-08, -9.96471308e-12,
+      -222.255986, 8.30173205]
+    - [6.83459954, -0.00514926339, 9.15491022e-06, -4.84917377e-09, 8.63766547e-13,
+      -2258.97684, -36.2215373]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CHX(17)
+  composition: {H: 1, C: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-2.66805027, 0.0290693485, -4.82653552e-05, 3.87589256e-08, -1.19749384e-11,
+      -2918.15541, 9.72941427]
+    - [4.90429859, -0.00263865042, 4.71729273e-06, -2.51267002e-09, 4.49659283e-13,
+      -4464.40812, -26.7107945]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: HOX(8)
+  composition: {H: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.42359828, 0.0157830409, -2.91659307e-05, 2.50432531e-08, -8.04088046e-12,
+      -18999.3029, -3.15230478]
+    - [5.03574444, -0.00134422013, 2.25915779e-06, -1.08547653e-09, 1.77875516e-13,
+      -19634.4169, -20.0345222]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CX(15)
+  composition: {C: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-1.94350915, 0.0197767398, -3.36336641e-05, 2.69027201e-08, -8.27959229e-12,
+      7000.56568, 7.17469909]
+    - [2.81347137, -0.000693951702, 1.30307929e-06, -7.38700347e-10, 1.38795827e-13,
+      6060.0273, -15.5738286]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: XCHOH(47)
+  composition: {H: 2, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.500706212, 0.0203875126, -1.83412371e-05, 8.05213048e-09, -1.17601762e-12,
+      -26303.9895, 7.4226431]
+    - [8.40355286, -0.00656451064, 1.17183592e-05, -6.25846821e-09, 1.12274887e-12,
+      -28634.206, -37.9680665]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: XCOH(54)
+  composition: {H: 1, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.281392618, 0.0236060988, -3.32958929e-05, 2.35937581e-08, -6.59988036e-12,
+      -30449.908, -2.84937962]
+    - [7.57277703, -0.00316578469, 5.61811938e-06, -2.96831946e-09, 5.2868399e-13,
+      -32111.8815, -38.8297167]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: OCX(13)
+  composition: {C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.42895, 0.0140374509, -2.2117892e-05, 1.78659581e-08, -5.71478802e-12, -34568.8484,
+      -7.78265517]
+    - [5.48656312, -0.00168118543, 3.0903031e-06, -1.71186643e-09, 3.15864598e-13,
+      -35481.5495, -27.6788365]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: H2OX(9)
+  composition: {H: 2, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.72971388, 0.00871051652, -1.29131826e-05, 1.07295e-08, -3.39433689e-12, -32612.6997,
+      -6.04479516]
+    - [5.8549628, -0.00328847412, 5.56990501e-06, -2.73008086e-09, 4.55898028e-13,
+      -33304.6343, -21.3518349]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: H2O(10)
+  composition: {H: 2, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 1130.229527376887, 5000.0]
+    data:
+    - [4.0576350324382435, -0.0007879268259766038, 2.908745359555667e-06, -1.4751533432712154e-09,
+      2.128292857644156e-13, -30281.58660142529, -0.31136116480217385]
+    - [2.8432560092133228, 0.0027510764450291783, -7.81026468417208e-07, 1.072424842465603e-10,
+      -5.79382842272479e-15, -29958.615252484073, 5.910388340788128]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: nonlinear, well-depth: 572.4019516813576, diameter: 2.6050000000000004,
+    dipole: 1.8440000000000003, rotational-relaxation: 4.0, note: GRI-Mech}
+- name: H2(4)
+  composition: {H: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 1959.0704060489752, 5000.0]
+    data:
+    - [3.4353639487680128, 0.0002127118156028557, -2.7862835897145624e-07, 3.402697677898988e-10,
+      -7.760384389606823e-14, -1031.3598307378923, -3.9084166738022317]
+    - [2.788183431931728, 0.0005876180754751174, 1.5902112168376917e-07, -5.527605114100645e-11,
+      4.343266442811977e-15, -596.1546540947348, 0.11262832427188434]
+    note: 'Thermo library: primaryThermoLibrary'
+  transport: {model: gas, geometry: linear, well-depth: 38.00012796964137, diameter: 2.92,
+    polarizability: 0.7900000000000004, rotational-relaxation: 280.0, note: GRI-Mech}
+- name: CO2(11)
+  composition: {C: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 978.2164204728674, 5000.0]
+    data:
+    - [3.2808442401967555, 0.0025018599604604585, 8.08190860070739e-06, -1.2051019791178848e-08,
+      4.665419379298039e-12, -48400.8303130066, 6.00081542611513]
+    - [4.674275261049278, 0.002609626909889396, -9.856820966410659e-07, 1.9571201879038625e-10,
+      -1.498347168380767e-14, -48951.217304546415, -2.110780236384027]
+    note: 'Thermo library: thermo_DFT_CCSDTF12_BAC'
+  transport: {model: gas, geometry: linear, well-depth: 244.00106224424113, diameter: 3.763,
+    polarizability: 2.650000000000001, rotational-relaxation: 2.1, note: GRI-Mech}
+- name: XCHO(37)
+  composition: {H: 1, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.33925015, 0.0156187879, -1.78706053e-05, 1.16103367e-08, -3.20827392e-12,
+      -28040.1952, -4.27823196]
+    - [7.47250182, -0.00425652358, 7.67240272e-06, -4.1509429e-09, 7.52057428e-13,
+      -29601.8735, -35.2777491]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: HOCOXX(73)
+  composition: {H: 1, C: 1, O: 2, X: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 932.0652544914789, 5000.0]
+    data:
+    - [3.3547338696278186, 0.00501514685339938, 2.9379796892972218e-05, -4.730216795991219e-08,
+      1.9887259296636703e-11, -52083.87270299059, -11.387531369414988]
+    - [10.256923815177712, -0.0011078130034184565, 1.4174749179896675e-06, -2.5360003657663844e-10,
+      1.2879554306264064e-14, -54391.22454069365, -49.67646244570719]
+    note: 'Gas phase thermo for HOCO from Thermo library: thermo_DFT_CCSDTF12_BAC.
+      Adsorption correction: + Thermo group additivity estimation: adsorptionPt111(C=*RO-*)'
+  sites: 2
+- name: XCOOH(74)
+  composition: {H: 1, C: 1, O: 2, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.359051461, 0.0250172545, -3.09587526e-05, 2.00287012e-08, -5.26520494e-12,
+      -57731.9467, 3.52735255]
+    - [9.16264817, -0.00470146235, 8.43555601e-06, -4.53366378e-09, 8.17971447e-13,
+      -59883.6653, -40.5975157]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: formic_acid(56)
+  composition: {H: 2, C: 1, O: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 993.7308824616091, 5000.0]
+    data:
+    - [3.7624049304973135, -0.0009438468378144913, 3.3877835485811036e-05, -4.049830375414929e-08,
+      1.4398636824274389e-11, -46821.21013990247, 7.632763374908396]
+    - [5.645004078054891, 0.007551817910748831, -3.2085124698884127e-06, 6.589185800658705e-10,
+      -5.050548313872655e-14, -47989.002804893214, -5.431050136426511]
+    note: 'Thermo library: thermo_DFT_CCSDTF12_BAC'
+  transport: {model: gas, geometry: nonlinear, well-depth: 481.8, diameter: 3.626000000000001,
+    dipole: 1.7000000000000006, rotational-relaxation: 1.0, note: NOx2018}
+- name: XCH2OH(46)
+  composition: {H: 3, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.373829188, 0.0233977003, -1.95735792e-05, 7.62721113e-09, -7.42114703e-13,
+      -29384.2663, 6.57911397]
+    - [10.3141499, -0.00856871933, 1.51855306e-05, -8.02279311e-09, 1.42722033e-12,
+      -32196.7714, -47.9896307]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: XCHXO(36)
+  composition: {H: 1, C: 1, O: 1, X: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.873097043, 0.0193259085, -2.43372823e-05, 1.61326691e-08, -4.3452672e-12,
+      -24557.5801, -2.94044233]
+    - [7.63455521, -0.00373566071, 6.72665116e-06, -3.63437732e-09, 6.57956785e-13,
+      -26201.7814, -36.7791287]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 2
+- name: CO2X(12)
+  composition: {C: 1, O: 2, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.00959799, 0.0133597565, -1.62303912e-05, 1.10029585e-08, -3.14484723e-12,
+      -52781.8299, -2.58903014]
+    - [6.98298591, -0.00309871776, 5.62883251e-06, -3.07847525e-09, 5.62449215e-13,
+      -54033.4894, -27.6481272]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: O[CH](O)[Pt](66)
+  composition: {H: 3, C: 1, O: 2, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 806.5054080110434, 5000.0]
+    data:
+    - [2.99426452475854, 0.025506559922353216, -4.042109665959635e-05, 3.934850139682784e-08,
+      -1.512733216735009e-11, -52535.737264871204, -8.444822767691566]
+    - [3.807709269950307, 0.01459812238630075, -7.347930480806886e-06, 1.4417567032347805e-09,
+      -1.0113751464882507e-13, -52443.38610877319, -10.808312765116119]
+    note: 'Gas phase thermo for O[CH]O from Thermo library: thermo_DFT_CCSDTF12_BAC
+      + radical(OCJO). Adsorption correction: + Thermo group additivity estimation:
+      adsorptionPt111(C-*R2OR)'
+  sites: 1
+- name: CH3OH(44)
+  composition: {H: 4, C: 1, O: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 1035.749181724867, 5000.0]
+    data:
+    - [3.8400621022696124, 0.0013824204066135077, 1.9166717581634933e-05, -2.015686407671425e-08,
+      6.3910218016679525e-12, -25608.308707872922, 5.909781499911083]
+    - [2.791843147788007, 0.011582784916219805, -4.515519114172271e-06, 8.212066677179746e-10,
+      -5.670632179635165e-14, -25721.16743738466, 9.410614887004398]
+    note: 'Thermo library: thermo_DFT_CCSDTF12_BAC'
+  transport: {model: gas, geometry: nonlinear, well-depth: 481.802091582003, diameter: 3.626000000000001,
+    rotational-relaxation: 1.0, note: GRI-Mech}
+- name: HCOOHX(58)
+  composition: {H: 2, C: 1, O: 2, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.35698005, 0.016581795, -8.93246966e-06, -5.9659096e-10, 1.65711542e-12, -53694.2403,
+      -0.543199062]
+    - [11.0477913, -0.0072427437, 1.29091018e-05, -6.88021503e-09, 1.2328955e-12,
+      -56097.556, -45.4728471]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: formic_acidXX(57)
+  composition: {H: 2, C: 1, O: 2, X: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [100.0, 949.0879885101498, 5000.0]
+    data:
+    - [3.401196244915814, 0.0020026669085049472, 4.623629016503994e-05, -6.425902686297858e-08,
+      2.5254519399815498e-11, -54251.88823197163, -12.02675371504058]
+    - [9.85372019059073, 0.0032114630884164078, -5.647784939812092e-07, 1.478414966244086e-10,
+      -1.693141541908992e-14, -56755.935667407044, -49.55862058616274]
+    note: 'Gas phase thermo for formic_acid from Thermo library: thermo_DFT_CCSDTF12_BAC.
+      Adsorption correction: + Thermo group additivity estimation: adsorptionPt111(C-*R2O-*)'
+  sites: 2
+- name: XOC(OH)O(149)
+  composition: {H: 1, C: 1, O: 3, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.01328212, 0.0326276222, -3.70609785e-05, 2.09604143e-08, -4.66693351e-12,
+      -77148.9241, -4.75360743]
+    - [12.8523534, -0.00570824836, 1.02858082e-05, -5.56715984e-09, 1.01065309e-12,
+      -80105.9462, -64.4494097]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: H2X(28)
+  composition: {H: 2, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [3.86406413, 0.000753456449, -1.65571442e-06, 1.55223217e-09, -4.4678226e-13,
+      -1689.27505, -8.85806531]
+    - [4.06879652, -0.000495806734, 6.59234335e-07, -1.72597715e-10, 7.62965383e-15,
+      -1700.70035, -9.71917749]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CH3OHX(45)
+  composition: {H: 4, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [3.05737703, 0.0128624334, 4.84927639e-06, -1.35997111e-08, 5.96900307e-12,
+      -31062.1321, -12.4359019]
+    - [13.1134924, -0.0114087964, 2.0203011e-05, -1.06647877e-08, 1.89545946e-12,
+      -34019.5663, -65.2666455]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: XOCH3(25)
+  composition: {H: 3, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.63812716, 0.011236545, 3.66483568e-06, -1.11206508e-08, 4.85717369e-12, -20003.4033,
+      -2.01845704]
+    - [10.2529575, -0.00948030603, 1.6901234e-05, -9.01198807e-09, 1.61413339e-12,
+      -22550.4985, -47.3210723]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: CH2OX(31)
+  composition: {H: 2, C: 1, O: 1, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [4.152111, -0.000548713399, 1.6858931e-05, -1.83357871e-08, 6.29630397e-12,
+      -21001.0697, -11.442038]
+    - [8.40512532, -0.00690216938, 1.2352155e-05, -6.6236299e-09, 1.19136449e-12,
+      -22482.1487, -34.8417937]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+- name: XCH2XO(30)
+  composition: {H: 2, C: 1, O: 1, X: 2}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.336104022, 0.0226483369, -2.39239155e-05, 1.37256579e-08, -3.24031427e-12,
+      -21398.5316, -1.88215814]
+    - [9.52489548, -0.0065073405, 1.16586275e-05, -6.25680688e-09, 1.12649338e-12,
+      -23748.0774, -48.4225553]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 2
+- name: HC(O)XO(114)
+  composition: {H: 1, C: 1, O: 2, X: 1}
+  thermo:
+    model: NASA7
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.6545242, 0.0153991982, -1.01838393e-05, 1.7530405e-09, 5.79614481e-13, -45905.8194,
+      -11.0811323]
+    - [10.1836282, -0.00548155633, 9.9350472e-06, -5.42476495e-09, 9.90183951e-13,
+      -47988.5042, -49.9790695]
+    note: 'Thermo library: surfaceThermoPt111'
+  sites: 1
+reactions:
+- equation: H2(4) + CO2(11) <=> formic_acid(56)
+  rate-constant: {A: 1510.0000000000002, b: 1.23, Ea: 309198.0}
+  note: 'Source: Template family 1,3_Insertion_CO2 | Matched reaction 0 H2 + CO2 <=>
+    CH2O2 in 1,3_Insertion_CO2/training; This reaction matched rate rule [Root_N-5CbCdCsHN->Cs_4CbCdCsHN->H_N-5CbCdHN->Cd];
+    family: 1,3_Insertion_CO2'
+- equation: vacantX(3) + vacantX(3) + O2(2) <=> OX(6) + OX(6)
+  type: interface-Arrhenius
+  rate-constant: {A: 189000000000.00003, b: -0.5, Ea: 0.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + CH4(1) <=> CH4X(22)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.008, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Adsorption_vdW | Matched reaction 11 CH4
+    + X <=> CH4X in Surface_Adsorption_vdW/training; This reaction matched rate rule
+    [Adsorbate;VacantSite]; family: Surface_Adsorption_vdW; metal: None'
+- equation: HX(5) + CH3X(7) <=> vacantX(3) + vacantX(3) + CH4(1)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.3e+17, b: 0.0, Ea: 50000.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + CH4X(22) <=> HX(5) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.54e+17, b: 0.087, Ea: 55800.000000000015}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 12 CH4*
+    + X_4 <=> CH3* + H* in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [CH4;VacantSite]; family: Surface_Dissociation_vdW; metal: None'
+- equation: HX(5) + CH2X(16) <=> vacantX(3) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.09e+18, b: 0.0, Ea: 0.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: CH2X(16) + CH4X(22) <=> CH3X(7) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + CH2X(16) <=> HX(5) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.31e+18, b: 0.0, Ea: 58900.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: CHX(17) + CH4X(22) <=> CH2X(16) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#CH]; Euclidian distance = 2.23606797749979;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: CH2X(16) + CH2X(16) <=> CHX(17) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 72713.72673676761}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*=CH-H]; Euclidian distance = 2.23606797749979; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction'
+- equation: vacantX(3) + OX(6) + CH4(1) <=> HOX(8) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 500000000.00000006, b: 0.7, Ea: 42000.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + HOX(8) <=> OX(6) + HX(5)
+  type: interface-Arrhenius
+  rate-constant: {A: 7390000000000000.0, b: 0.0, Ea: 77300.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: OX(6) + CH4X(22) <=> HOX(8) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 5.62e+20, b: -0.101, Ea: 92700.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Matched reaction 21 CH4*
+    + O* <=> CH3* + OH_4* in Surface_Abstraction_vdW/training; This reaction matched
+    rate rule [C-R;*=O]; family: Surface_Abstraction_vdW; metal: None'
+- equation: HOX(8) + CH2X(16) <=> OX(6) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Matched reaction 24 CH2X_1
+    + HOX_3 <=> CH3X_4 + OX_5 in Surface_Abstraction/training; This reaction matched
+    rate rule [O;*-CH2-H]; family: Surface_Abstraction; metal: None'
+- equation: HOX(8) + CHX(17) <=> OX(6) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.4e+18, b: 0.101, Ea: 42439.032030443515}
+  note: 'Source: Template family Surface_Abstraction | Matched reaction 26 CHX_1 +
+    HOX_3 <=> CH2X_4 + OX_5 in Surface_Abstraction/training; This reaction matched
+    rate rule [O;*=CH-H]; family: Surface_Abstraction; metal: None; Ea raised from
+    42.4 to 42.4 kJ/mol to match endothermicity of reaction.'
+- equation: vacantX(3) + CHX(17) <=> HX(5) + CX(15)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.09e+18, b: 0.0, Ea: 51700.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: HOX(8) + CX(15) <=> OX(6) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.43e+17, b: -0.312, Ea: 118900.0}
+  note: 'Source: Template family Surface_Abstraction | Matched reaction 28 CX_1 +
+    HOX_3 <=> CHX_4 + OX_5 in Surface_Abstraction/training; This reaction matched
+    rate rule [O;*#C-H]; family: Surface_Abstraction; metal: None'
+- equation: CX(15) + CH4X(22) <=> CHX(17) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*$C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: CX(15) + CH3X(7) <=> CHX(17) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 9.894e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [Abstracting;*-C-H]
+    for rate rule [C$*;*-CH2-H]; Euclidian distance = 2.8284271247461903; Multiplied
+    by reaction path degeneracy 3.0; family: Surface_Abstraction'
+- equation: CX(15) + CH2X(16) <=> CHX(17) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 60241.98508898375}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C$*;*=CH-H]; Euclidian distance = 2.23606797749979; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction'
+- equation: vacantX(3) + XCHOH(47) <=> HOX(8) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.46e+20, b: -0.213, Ea: 54300.00000000001}
+  note: 'Source: Template family Surface_Dissociation | Estimated using an average
+    for rate rule [C-O;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation'
+- equation: vacantX(3) + XCOH(54) <=> HOX(8) + CX(15)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.46e+20, b: -0.213, Ea: 154102.25644123188}
+  note: 'Source: Template family Surface_Dissociation | Estimated using an average
+    for rate rule [C-O;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation'
+- equation: vacantX(3) + XCHOH(47) <=> HX(5) + XCOH(54)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.71e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Dissociation | Estimated using template [C-H;VacantSite]
+    for rate rule [CHR;VacantSite]; Euclidian distance = 1.0; family: Surface_Dissociation'
+- equation: HOX(8) + XCOH(54) <=> OX(6) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.4e+18, b: 0.101, Ea: 53248.56100562541}
+  note: 'Source: Template family Surface_Abstraction | From training reaction 26 used
+    for C#*;*OH; Exact match found for rate rule [C#*;*OH]; Euclidian distance = 0;
+    family: Surface_Abstraction; Ea raised from 48.7 to 53.2 kJ/mol to match endothermicity
+    of reaction.'
+- equation: XCOH(54) + CH4X(22) <=> XCHOH(47) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: CH2X(16) + XCHOH(47) <=> XCOH(54) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 69615.76914683515}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*=C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: XCOH(54) + CH2X(16) <=> CHX(17) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 102397.95758993247}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C#*;*=CH-H]; Euclidian distance = 2.23606797749979; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction'
+- equation: CX(15) + XCHOH(47) <=> CHX(17) + XCOH(54)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 2.43e+17, b: -0.312, Ea: 118900.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C$*;Donating]
+    for rate rule [C$*;*=C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: CX(15) + XCHOH(47) <=> CHX(17) + XCOH(54)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 57144.0274990513}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C$*;*=C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: vacantX(3) + OCX(13) <=> OX(6) + CX(15)
+  type: interface-Arrhenius
+  rate-constant: {A: 3700000000000000.0, b: 0.0, Ea: 236500.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + XCOH(54) <=> HX(5) + OCX(13)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 57468.32677332538}
+  note: 'Source: Template family Surface_Dissociation_Beta | Exact match found for
+    rate rule [O-H;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation_Beta'
+- equation: OX(6) + XCOH(54) <=> HOX(8) + OCX(13)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Beta | Exact match found for
+    rate rule [O;R-O-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta'
+- equation: XCOH(54) + CH2X(16) <=> OCX(13) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 52007.59908340803}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: CHX(17) + XCOH(54) <=> OCX(13) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 119551.10413053898}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C#*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: CX(15) + XCOH(54) <=> OCX(13) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 20322.633816065267}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C$*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: XCOH(54) + XCOH(54) <=> OCX(13) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 127421.59098063766}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C#*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: vacantX(3) + HOX(8) + CH4(1) <=> H2OX(9) + CH3X(7)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 1.0, b: 0.0, Ea: 10000.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + H2OX(9) <=> HX(5) + HOX(8)
+  type: interface-Arrhenius
+  rate-constant: {A: 1150000000000000.0, b: 0.0, Ea: 101400.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: OX(6) + H2OX(9) <=> HOX(8) + HOX(8)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.0e+16, b: 0.0, Ea: 90500.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: HOX(8) + CH4X(22) <=> H2OX(9) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.672e+18, b: 0.0, Ea: 60448.309667716676}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O-H]; Euclidian distance =
+    2.23606797749979; Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_Single_vdW'
+- equation: H2OX(9) + CH2X(16) <=> HOX(8) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; Multiplied by
+    reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2OX(9) + CHX(17) <=> HOX(8) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 135422.9731503135}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*#CH]; Euclidian distance = 2.0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2OX(9) + CX(15) <=> HOX(8) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*$C]; Euclidian distance = 1.0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2OX(9) + CHX(17) <=> HX(5) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [AdsorbateVdW;*#CH]; Euclidian distance = 2.0;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2OX(9) + XCOH(54) <=> HOX(8) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 145990.33930359856}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*#C]; Euclidian distance = 1.0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Abstraction_vdW; Ea raised from 143.8 to
+    146.0 kJ/mol to match endothermicity of reaction.'
+- equation: H2OX(9) + CX(15) <=> HX(5) + XCOH(54)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [AdsorbateVdW;*$C]; Euclidian distance = 1.0;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + H2O(10) <=> H2OX(9)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.75, b: 0.0, Ea: 0.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + vacantX(3) + H2O(10) <=> HX(5) + HOX(8)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 152586.51323411913}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Estimated using
+    template [O-H;VacantSite1;VacantSite2] for rate rule [H2O;VacantSite1;VacantSite2];
+    Euclidian distance = 1.0; family: Surface_Adsorption_Dissociative'
+- equation: vacantX(3) + vacantX(3) + H2(4) <=> HX(5) + HX(5)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.046, b: 0.0, Ea: 0.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: H2(4) + CX(15) <=> CH2X(16)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.04, b: 0.0, Ea: 29700.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: vacantX(3) + vacantX(3) + CO2(11) <=> OX(6) + OCX(13)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.01, b: 0.0, Ea: 41840.0}
+  note: 'Source: Template family Surface_Adsorption_Dissociative_Double | Estimated
+    using template [Adsorbate;VacantSite1;VacantSite2] for rate rule [CO2;VacantSite1;VacantSite2];
+    Euclidian distance = 2.0; family: Surface_Adsorption_Dissociative_Double'
+- equation: vacantX(3) + XCHO(37) <=> OX(6) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 195337.236455939}
+  note: 'Source: Template family Surface_Dissociation_Double | Exact match found for
+    rate rule [C=O;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation_Double'
+- equation: vacantX(3) + XCHOH(47) <=> HX(5) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 63358.43946823298}
+  note: 'Source: Template family Surface_Dissociation_Beta | Exact match found for
+    rate rule [O-H;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation_Beta'
+- equation: OX(6) + XCHOH(47) <=> HOX(8) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Beta | Exact match found for
+    rate rule [O;R-O-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta'
+- equation: CH2X(16) + XCHOH(47) <=> XCHO(37) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 73302.62190345858}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: CHX(17) + XCHOH(47) <=> XCHO(37) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 140846.12695058953}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C#*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: CX(15) + XCHOH(47) <=> CHX(17) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 41617.65663611584}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C$*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: XCOH(54) + XCHOH(47) <=> XCHO(37) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 148716.61380068818}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C#*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: OCX(13) + CH4X(22) <=> XCHO(37) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.5, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [C-R;*=C=R]; Euclidian distance = 1.0; Multiplied
+    by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + CH2X(16) <=> OCX(13) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 61233.685696389715}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: HX(5) + OCX(13) <=> vacantX(3) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.14e+17, b: 0.0, Ea: 95520.48893907486}
+  note: 'Source: Template family Surface_Dissociation | Matched reaction 26 OCX_3
+    + HX_5 <=> CXHO_1 + Ni_4 in Surface_Dissociation/training; This reaction matched
+    rate rule [C-H;VacantSite]; family: Surface_Dissociation; metal: None'
+- equation: CHX(17) + XCHO(37) <=> OCX(13) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 87819.95895962213}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C#*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: CX(15) + XCHO(37) <=> OCX(13) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 48761.94404860587}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C$*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: OX(6) + XCHO(37) <=> HOX(8) + OCX(13)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.298e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction | Matched reaction 39 OX_1 +
+    HCOX_3 <=> HOX_4 + COX_5 in Surface_Abstraction/training; This reaction matched
+    rate rule [C=*;*OH]; family: Surface_Abstraction; metal: None'
+- equation: XCHO(37) + XCOH(54) <=> OCX(13) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 90917.91654955456}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C#*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: OCX(13) + XCHOH(47) <=> XCHO(37) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 170011.63662073872}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: OCX(13) + XCOH(54) <=> OCX(13) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 148716.6138006882}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: HOX(8) + XCHO(37) <=> H2OX(9) + OCX(13)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.261e+17, b: 0.0, Ea: 28945.602708810562}
+  note: 'Source: Template family Surface_Abstraction_vdW | Matched reaction 40 OH_2*
+    + HCO* <=> H2O* + CO* in Surface_Abstraction_vdW/training; This reaction matched
+    rate rule [O-R;*=C=R]; family: Surface_Abstraction_vdW; metal: None'
+- equation: HOCOXX(73) <=> OX(6) + XCOH(54)
+  type: interface-Arrhenius
+  rate-constant: {A: 4220000000000.0, b: 0.0, Ea: 104000.0}
+  note: 'Source: Template family Surface_Bidentate_Dissociation | From training reaction
+    1 used for Combined; Exact match found for rate rule [Combined]; Euclidian distance
+    = 0; family: Surface_Bidentate_Dissociation'
+- equation: vacantX(3) + XCOOH(74) <=> OX(6) + XCOH(54)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 213747.50394325244}
+  note: 'Source: Template family Surface_Dissociation_Double | Exact match found for
+    rate rule [C=O;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation_Double'
+- equation: HOX(8) + OCX(13) <=> vacantX(3) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 402000000000000.0, b: 0.0, Ea: 11500.0}
+  note: 'Source: Template family Surface_Dissociation | Matched reaction 1 OCX_3 +
+    HOX_5 <=> HOCXO_1 + Ni_4 in Surface_Dissociation/training; This reaction matched
+    rate rule [C-OH;VacantSite]; family: Surface_Dissociation; metal: None'
+- equation: OCX(13) + XCHOH(47) <=> CHX(17) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*=C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: CX(15) + XCOOH(74) <=> OCX(13) + XCOH(54)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.43e+17, b: -0.312, Ea: 118900.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C$*;Donating]
+    for rate rule [C$*;*C-OH]; Euclidian distance = 3.0; family: Surface_Abstraction'
+- equation: H2OX(9) + OCX(13) <=> HX(5) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using an average
+    for rate rule [AdsorbateVdW;*=C=R]; Euclidian distance = 0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + XCOOH(74) <=> HOCOXX(73)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.0e+17, b: 0.0, Ea: 45690.26387282193}
+  note: 'Source: Template family Surface_Monodentate_to_Bidentate | From training
+    reaction 1 used for Monodentate;VacantSite; Exact match found for rate rule [Monodentate;VacantSite];
+    Euclidian distance = 0; family: Surface_Monodentate_to_Bidentate; Ea raised from
+    0.0 to 45.7 kJ/mol to match endothermicity of reaction.'
+- equation: vacantX(3) + vacantX(3) + formic_acid(56) <=> OX(6) + XCHOH(47)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.005, b: 0.0, Ea: 41840.0}
+  note: 'Source: Template family Surface_Adsorption_Dissociative_Double | Estimated
+    using template [Adsorbate;VacantSite1;VacantSite2] for rate rule [OC;VacantSite1;VacantSite2];
+    Euclidian distance = 1.0; family: Surface_Adsorption_Dissociative_Double'
+- equation: vacantX(3) + vacantX(3) + formic_acid(56) <=> HOX(8) + XCHO(37)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.0075, b: 0.0, Ea: 5000.0}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Estimated using
+    template [Adsorbate;VacantSite1;VacantSite2] for rate rule [O-C;VacantSite1;VacantSite2];
+    Euclidian distance = 2.0; family: Surface_Adsorption_Dissociative'
+- equation: vacantX(3) + vacantX(3) + formic_acid(56) <=> HX(5) + XCOOH(74)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.05, b: 0.0, Ea: 25038.124757429556}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Exact match found
+    for rate rule [C-H;VacantSite1;VacantSite2]; Euclidian distance = 0; family: Surface_Adsorption_Dissociative'
+- equation: vacantX(3) + XCH2OH(46) <=> HOX(8) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.46e+20, b: -0.213, Ea: 88283.53663070574}
+  note: 'Source: Template family Surface_Dissociation | From training reaction 4 used
+    for C-OH;VacantSite; Exact match found for rate rule [C-OH;VacantSite]; Euclidian
+    distance = 0; family: Surface_Dissociation'
+- equation: XCHOH(47) + CH4X(22) <=> CH3X(7) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: CH2X(16) + XCH2OH(46) <=> XCHOH(47) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 45258.38645391082}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C=*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: vacantX(3) + XCH2OH(46) <=> HX(5) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.42e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Dissociation | Estimated using template [C-H;VacantSite]
+    for rate rule [CH2R;VacantSite]; Euclidian distance = 1.0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Dissociation'
+- equation: CH2X(16) + XCHOH(47) <=> CHX(17) + XCH2OH(46)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*=C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: CH2X(16) + XCHOH(47) <=> CHX(17) + XCH2OH(46)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 81496.95382894596}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*=CH-H]; Euclidian distance = 2.23606797749979; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction'
+- equation: CX(15) + XCH2OH(46) <=> CHX(17) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 39022.5156300189}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C$*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: HOX(8) + XCHOH(47) <=> OX(6) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | From training reaction 24 used
+    for C=*;*OH; Exact match found for rate rule [C=*;*OH]; Euclidian distance = 0;
+    family: Surface_Abstraction'
+- equation: XCHOH(47) + XCHOH(47) <=> XCOH(54) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 78398.9962390135}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*=C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: XCHOH(47) + XCHOH(47) <=> XCHO(37) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 95616.76640791171}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: CX(15) + XCH2OH(46) <=> XCOH(54) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.43e+17, b: -0.312, Ea: 118900.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C$*;Donating]
+    for rate rule [C$*;*-C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: XCOH(54) + XCHOH(47) <=> OCX(13) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 74321.74358786113}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: H2OX(9) + CH2X(16) <=> HX(5) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [AdsorbateVdW;*=C-2R]; Euclidian distance = 1.0;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2OX(9) + XCHOH(47) <=> HOX(8) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; Multiplied by
+    reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + XCHOH(47) <=> OCX(13) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 70016.91278856806}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: XCOOH(74) + CH2X(16) <=> OCX(13) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*C-OH]; Euclidian distance = 3.0; family: Surface_Abstraction'
+- equation: OX(6) + CHX(17) <=> XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 6.54e+17, b: 0.0, Ea: 142000.0}
+  note: 'Source: Template family Surface_Bidentate_Dissociation | Matched reaction
+    6 CHX_3 + OX_4 <=> HCO_2X in Surface_Bidentate_Dissociation/training; This reaction
+    matched rate rule [Combined]; family: Surface_Bidentate_Dissociation; metal: None'
+- equation: vacantX(3) + vacantX(3) + XCHOH(47) <=> HX(5) + XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.8566666666666665e+21, b: 0.0, Ea: 46000.0}
+  note: 'Source: Template family Surface_Dissociation_to_Bidentate | From training
+    reaction 1 used for Combined;VacantSite1;VacantSite2; Exact match found for rate
+    rule [Combined;VacantSite1;VacantSite2]; Euclidian distance = 0; family: Surface_Dissociation_to_Bidentate'
+- equation: vacantX(3) + XCHO(37) <=> XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.0e+17, b: 0.0, Ea: 28819.104533958976}
+  note: 'Source: Template family Surface_Monodentate_to_Bidentate | Matched reaction
+    3 HXCO + Pt_4 <=> HXCXO in Surface_Monodentate_to_Bidentate/training; This reaction
+    matched rate rule [Monodentate;VacantSite]; family: Surface_Monodentate_to_Bidentate;
+    metal: None; Ea raised from 0.0 to 28.8 kJ/mol to match endothermicity of reaction.'
+- equation: XCOH(54) + XCHXO(36) <=> CHX(17) + HOCOXX(73)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.4e+18, b: 0.101, Ea: 42400.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C#*;Donating]
+    for rate rule [C#*;*R-O]; Euclidian distance = 1.0; family: Surface_Abstraction'
+- equation: vacantX(3) + CO2(11) <=> CO2X(12)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.005, b: 0.0, Ea: 0.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: OX(6) + OCX(13) <=> vacantX(3) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.7e+17, b: 0.0, Ea: 117600.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: HOX(8) + OCX(13) <=> HX(5) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 1000000000000000.0, b: 0.0, Ea: 38700.0}
+  note: 'Source: Library Surface/CPOX_Pt/Deutschmann2006_adjusted'
+- equation: HX(5) + CO2X(12) <=> vacantX(3) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 6.25e+20, b: -0.475, Ea: 117200.0}
+  note: 'Source: Template family Surface_Dissociation_Beta_vdW | Matched reaction
+    45 CO2_2* + H* <=> COOH* + X_5 in Surface_Dissociation_Beta_vdW/training; This
+    reaction matched rate rule [O-H;VacantSite]; family: Surface_Dissociation_Beta_vdW;
+    metal: None'
+- equation: OX(6) + XCOOH(74) <=> HOX(8) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 31892.727067445423}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [O;R-O-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta_vdW'
+- equation: XCOOH(74) + CH3X(7) <=> CO2X(12) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 108509.25873336292}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCOOH(74) + CH2X(16) <=> CO2X(12) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 123532.84527799976}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HOX(8) + XCOOH(74) <=> H2OX(9) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 505.9309694433182}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Exact match
+    found for rate rule [OH;R-O-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCOOH(74) + XCHOH(47) <=> CO2X(12) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 145846.98978245285}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: OCX(13) + XCOOH(74) <=> CO2X(12) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 220241.85999527993}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: vacantX(3) + O[CH](O)[Pt](66) <=> HOX(8) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.92e+20, b: -0.213, Ea: 62357.97115103842}
+  note: 'Source: Template family Surface_Dissociation | From training reaction 4 used
+    for C-OH;VacantSite; Exact match found for rate rule [C-OH;VacantSite]; Euclidian
+    distance = 0; Multiplied by reaction path degeneracy 2.0; family: Surface_Dissociation;
+    Ea raised from 58.3 to 62.4 kJ/mol to match endothermicity of reaction.'
+- equation: XCHOH(47) + XCHOH(47) <=> CHX(17) + O[CH](O)[Pt](66)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*=C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: CX(15) + O[CH](O)[Pt](66) <=> XCOH(54) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.86e+17, b: -0.312, Ea: 118900.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C$*;Donating]
+    for rate rule [C$*;*-C-OH]; Euclidian distance = 4.0; Multiplied by reaction path
+    degeneracy 2.0; family: Surface_Abstraction'
+- equation: H2OX(9) + XCHOH(47) <=> HX(5) + O[CH](O)[Pt](66)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [AdsorbateVdW;*=C-2R]; Euclidian distance = 1.0;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCOOH(74) + XCHOH(47) <=> OCX(13) + O[CH](O)[Pt](66)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*C-OH]; Euclidian distance = 3.0; family: Surface_Abstraction'
+- equation: CH2X(16) + O[CH](O)[Pt](66) <=> XCHOH(47) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.78e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*-C-OH]; Euclidian distance = 4.0; Multiplied by reaction path
+    degeneracy 2.0; family: Surface_Abstraction'
+- equation: vacantX(3) + vacantX(3) + CH3OH(44) <=> HOX(8) + CH3X(7)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.0075, b: 0.0, Ea: 5000.0}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Estimated using
+    template [Adsorbate;VacantSite1;VacantSite2] for rate rule [O-C;VacantSite1;VacantSite2];
+    Euclidian distance = 2.0; family: Surface_Adsorption_Dissociative'
+- equation: vacantX(3) + vacantX(3) + CH3OH(44) <=> HX(5) + XCH2OH(46)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.0495, b: 0.0, Ea: 59367.047782180794}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Exact match found
+    for rate rule [CH3OH;VacantSite1;VacantSite2]; Euclidian distance = 0; Multiplied
+    by reaction path degeneracy 1.5; family: Surface_Adsorption_Dissociative'
+- equation: vacantX(3) + HCOOHX(58) <=> OX(6) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.641e+16, b: 0.0, Ea: 241213.35590675473}
+  note: 'Source: Template family Surface_Dissociation_Double_vdW | Matched reaction
+    35 HCOOH* + X_4 <=> HCOH* + O* in Surface_Dissociation_Double_vdW/training; This
+    reaction matched rate rule [OC;VacantSite]; family: Surface_Dissociation_Double_vdW;
+    metal: None'
+- equation: vacantX(3) + HCOOHX(58) <=> HOX(8) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.781e+17, b: 0.0, Ea: 157271.10805120406}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 34 HCOOH_2*
+    + X_4 <=> HCO* + OH_2* in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [C-OH;VacantSite]; family: Surface_Dissociation_vdW; metal: None'
+- equation: CHX(17) + HCOOHX(58) <=> XCHO(37) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.0375211367384003e+17, b: 0.4473447135332649, Ea: 108075.84545342732}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using average
+    of templates [AdsorbateVdW;*C] + [C-R;Adsorbate1] for rate rule [C-OH;*#CH]; Euclidian
+    distance = 3.605551275463989; family: Surface_Abstraction_vdW'
+- equation: CX(15) + HCOOHX(58) <=> XCHO(37) + XCOH(54)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.405e+20, b: -0.101, Ea: 92700.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [C-R;Adsorbate1] for rate rule [C-OH;*$C]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_vdW'
+- equation: HCOOHX(58) + CH3X(7) <=> XCOOH(74) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 58750.22178856647}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*C-3R]; Euclidian distance
+    = 2.23606797749979; family: Surface_Abstraction_Single_vdW'
+- equation: CH2X(16) + HCOOHX(58) <=> XCOOH(74) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_vdW'
+- equation: HX(5) + XCOOH(74) <=> vacantX(3) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.308e+18, b: 0.0, Ea: 70434.29992477236}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 13 COOH*
+    + H* <=> HCOOH* + X_4 in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [C-H;VacantSite]; family: Surface_Dissociation_vdW; metal: None'
+- equation: CHX(17) + HCOOHX(58) <=> XCOOH(74) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#CH]; Euclidian distance = 2.23606797749979;
+    family: Surface_Abstraction_vdW'
+- equation: CX(15) + HCOOHX(58) <=> CHX(17) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*$C]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_vdW'
+- equation: OX(6) + HCOOHX(58) <=> HOX(8) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.405e+20, b: -0.101, Ea: 92700.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | From training reaction
+    21 used for C-R;*=O; Exact match found for rate rule [C-R;*=O]; Euclidian distance
+    = 0; family: Surface_Abstraction_vdW'
+- equation: XCOH(54) + HCOOHX(58) <=> XCOOH(74) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#C]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_vdW'
+- equation: HOX(8) + HCOOHX(58) <=> H2OX(9) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O-H]; Euclidian distance =
+    2.23606797749979; family: Surface_Abstraction_Single_vdW'
+- equation: OCX(13) + HCOOHX(58) <=> XCHO(37) + XCOOH(74)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [C-OH;*=C=R]; Euclidian distance = 3.0; family:
+    Surface_Abstraction_vdW'
+- equation: OCX(13) + HCOOHX(58) <=> XCHO(37) + XCOOH(74)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [C-R;*=C=R]; Euclidian distance = 1.0; family:
+    Surface_Abstraction_vdW'
+- equation: XCOOH(74) + XCOOH(74) <=> CO2X(12) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 159545.26850333615}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: vacantX(3) + formic_acid(56) <=> HCOOHX(58)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Adsorption_vdW | Estimated using an average
+    for rate rule [O-H;VacantSite]; Euclidian distance = 0; family: Surface_Adsorption_vdW'
+- equation: CH2X(16) + HCOOHX(58) <=> XCHO(37) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-OH;*=C-2R]; Euclidian distance = 3.1622776601683795;
+    family: Surface_Abstraction_vdW'
+- equation: XCHOH(47) + HCOOHX(58) <=> XCOOH(74) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + O[CH](O)[Pt](66) <=> HX(5) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.5978752365723407e+18, b: 0.8733136449768377, Ea: 91493.33019125971}
+  note: 'Source: Template family Surface_Dissociation_Beta_vdW | From training reaction
+    31 used for O-H;VacantSite; Exact match found for rate rule [O-H;VacantSite];
+    Euclidian distance = 0; Multiplied by reaction path degeneracy 2.0; family: Surface_Dissociation_Beta_vdW'
+- equation: OX(6) + O[CH](O)[Pt](66) <=> HOX(8) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [O;R-O-H]; Euclidian distance = 0; Multiplied by reaction path degeneracy
+    2.0; family: Surface_Abstraction_Beta_vdW'
+- equation: CH3X(7) + O[CH](O)[Pt](66) <=> HCOOHX(58) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 71333.69749694438}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: CH2X(16) + O[CH](O)[Pt](66) <=> HCOOHX(58) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 72143.09886295057}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HOX(8) + O[CH](O)[Pt](66) <=> H2OX(9) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Exact match
+    found for rate rule [OH;R-O-H]; Euclidian distance = 0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCHOH(47) + O[CH](O)[Pt](66) <=> HCOOHX(58) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 94457.24336740373}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_vdW'
+- equation: OCX(13) + O[CH](O)[Pt](66) <=> XCHO(37) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 168852.1135802308}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_vdW'
+- equation: XCHOH(47) + HCOOHX(58) <=> XCHO(37) + O[CH](O)[Pt](66)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-OH;*=C-2R]; Euclidian distance = 3.1622776601683795;
+    family: Surface_Abstraction_vdW'
+- equation: XCOOH(74) + O[CH](O)[Pt](66) <=> HCOOHX(58) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 122369.70726691763}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: formic_acidXX(57) <=> OX(6) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 4220000000000.0, b: 0.0, Ea: 104000.0}
+  note: 'Source: Template family Surface_Bidentate_Dissociation | From training reaction
+    1 used for Combined; Exact match found for rate rule [Combined]; Euclidian distance
+    = 0; family: Surface_Bidentate_Dissociation'
+- equation: HOCOXX(73) + CH4X(22) <=> formic_acidXX(57) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: CH2X(16) + formic_acidXX(57) <=> HOCOXX(73) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 88208.98452429922}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: vacantX(3) + formic_acidXX(57) <=> HX(5) + HOCOXX(73)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.3750000000000003e+17, b: 0.0, Ea: 72000.0}
+  note: 'Source: Template family Surface_Dissociation | From training reaction 60
+    used for C-H_Bidentate;VacantSite; Exact match found for rate rule [C-H_Bidentate;VacantSite];
+    Euclidian distance = 0; family: Surface_Dissociation'
+- equation: HOCOXX(73) + CH2X(16) <=> CHX(17) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 83804.7422124684}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*=CH-H]; Euclidian distance = 2.23606797749979; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction'
+- equation: CX(15) + formic_acidXX(57) <=> CHX(17) + HOCOXX(73)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 75737.24287651537}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C$*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: OX(6) + formic_acidXX(57) <=> HOX(8) + HOCOXX(73)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.298e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction | From training reaction 39 used
+    for O;*-C-H; Exact match found for rate rule [O;*-C-H]; Euclidian distance = 0;
+    family: Surface_Abstraction'
+- equation: HOCOXX(73) + XCHOH(47) <=> XCOH(54) + formic_acidXX(57)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*R-O]; Euclidian distance = 1.0; family: Surface_Abstraction'
+- equation: HOCOXX(73) + XCHOH(47) <=> XCOH(54) + formic_acidXX(57)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 80706.78462253592}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*=C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: HOCOXX(73) + XCHOH(47) <=> XCHO(37) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 101479.79635523891}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: XCOH(54) + HOCOXX(73) <=> OCX(13) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 80184.77353518842}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: H2OX(9) + HOCOXX(73) <=> HOX(8) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; Multiplied by
+    reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + HOCOXX(73) <=> OCX(13) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 72324.70117209048}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: vacantX(3) + vacantX(3) + formic_acid(56) <=> formic_acidXX(57)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.83, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Adsorption_Bidentate | From training reaction
+    1 used for Adsorbate;VacantSite1;VacantSite2; Exact match found for rate rule
+    [Adsorbate;VacantSite1;VacantSite2]; Euclidian distance = 0; family: Surface_Adsorption_Bidentate'
+- equation: XCHOH(47) + formic_acidXX(57) <=> HOCOXX(73) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 96992.21161647757}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: vacantX(3) + formic_acidXX(57) <=> HOX(8) + XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.46e+20, b: -0.213, Ea: 92674.80587161152}
+  note: 'Source: Template family Surface_Dissociation | From training reaction 4 used
+    for C-OH;VacantSite; Exact match found for rate rule [C-OH;VacantSite]; Euclidian
+    distance = 0; family: Surface_Dissociation'
+- equation: XCHXO(36) + XCHOH(47) <=> CHX(17) + formic_acidXX(57)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*R-O]; Euclidian distance = 1.0; family: Surface_Abstraction'
+- equation: XCHXO(36) + XCHOH(47) <=> CHX(17) + formic_acidXX(57)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*=C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: CX(15) + formic_acidXX(57) <=> XCOH(54) + XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.43e+17, b: -0.312, Ea: 118900.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C$*;Donating]
+    for rate rule [C$*;*-C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: H2OX(9) + XCHXO(36) <=> HX(5) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [AdsorbateVdW;*=C-2R]; Euclidian distance = 1.0;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCHXO(36) + XCOOH(74) <=> OCX(13) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*C-OH]; Euclidian distance = 3.0; family: Surface_Abstraction'
+- equation: CH2X(16) + formic_acidXX(57) <=> XCHXO(36) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*-C-OH]; Euclidian distance = 4.0; family: Surface_Abstraction'
+- equation: vacantX(3) + vacantX(3) + O[CH](O)[Pt](66) <=> HX(5) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.713333333333333e+21, b: 0.0, Ea: 46000.0}
+  note: 'Source: Template family Surface_Dissociation_to_Bidentate | From training
+    reaction 1 used for Combined;VacantSite1;VacantSite2; Exact match found for rate
+    rule [Combined;VacantSite1;VacantSite2]; Euclidian distance = 0; Multiplied by
+    reaction path degeneracy 2.0; family: Surface_Dissociation_to_Bidentate'
+- equation: XCHXO(36) + O[CH](O)[Pt](66) <=> XCHOH(47) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.78e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*-C-OH]; Euclidian distance = 4.0; Multiplied by reaction path
+    degeneracy 2.0; family: Surface_Abstraction'
+- equation: vacantX(3) + HCOOHX(58) <=> formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.0e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_vdW_to_Bidentate | From training reaction
+    1 used for Combined;VacantSite; Exact match found for rate rule [Combined;VacantSite];
+    Euclidian distance = 0; Multiplied by reaction path degeneracy 2.0; family: Surface_vdW_to_Bidentate'
+- equation: HOCOXX(73) + HCOOHX(58) <=> XCOOH(74) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_vdW'
+- equation: XCHXO(36) + HCOOHX(58) <=> XCHO(37) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-OH;*=C-2R]; Euclidian distance = 3.1622776601683795;
+    family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + XOC(OH)O(149) <=> OX(6) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.733e+16, b: 0.0, Ea: 227705.4079759764}
+  note: 'Source: Template family Surface_Dissociation | From training reaction 28
+    used for O-C=O;VacantSite; Exact match found for rate rule [O-C=O;VacantSite];
+    Euclidian distance = 0; family: Surface_Dissociation'
+- equation: vacantX(3) + XOC(OH)O(149) <=> HOX(8) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 5.140126096132323e+18, b: 0.8289867884322139, Ea: 48950.14940433856}
+  note: 'Source: Template family Surface_Dissociation_Beta_vdW | From training reaction
+    23 used for Combined;VacantSite; Exact match found for rate rule [Combined;VacantSite];
+    Euclidian distance = 0; family: Surface_Dissociation_Beta_vdW'
+- equation: OCX(13) + XOC(OH)O(149) <=> CO2X(12) + XCOOH(74)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 136376.1273724437}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [Abstracting;Donating]; Euclidian distance = 0; family: Surface_Abstraction_Beta_vdW'
+- equation: XOC(OH)O(149) + CH2X(16) <=> CO2X(12) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 92326.61600721485}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [Abstracting;Donating]; Euclidian distance = 0; family: Surface_Abstraction_Beta_vdW'
+- equation: XOC(OH)O(149) + XCHOH(47) <=> CO2X(12) + O[CH](O)[Pt](66)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 120474.01452522473}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [Abstracting;Donating]; Euclidian distance = 0; family: Surface_Abstraction_Beta_vdW'
+- equation: OX(6) + HCOOHX(58) <=> HX(5) + XOC(OH)O(149)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.391307173911379e+20, b: -0.1875, Ea: 155550.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using an average
+    for rate rule [AdsorbateVdW;*=O]; Euclidian distance = 0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + XOC(OH)O(149) <=> CO2X(12) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 98876.4406485185}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Exact match
+    found for rate rule [Abstracting;Donating]; Euclidian distance = 0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: H2X(28) + CH2X(16) <=> HX(5) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [H-H;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2X(28) + CHX(17) <=> HX(5) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [H-H;*#CH]; Euclidian distance = 2.23606797749979;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2X(28) + CX(15) <=> HX(5) + CHX(17)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [H-H;*$C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: OX(6) + H2X(28) <=> HX(5) + HOX(8)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.782614347822758e+20, b: -0.1875, Ea: 155550.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=O] for rate rule [H-H;*=O]; Euclidian distance = 1.0; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2X(28) + XCOH(54) <=> HX(5) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [H-H;*#C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + H2(4) <=> H2X(28)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.008, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Adsorption_vdW | Estimated using template
+    [Adsorbate;VacantSite] for rate rule [H2;VacantSite]; Euclidian distance = 2.0;
+    family: Surface_Adsorption_vdW'
+- equation: H2X(28) + OCX(13) <=> HX(5) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [H-H;*=C=R]; Euclidian distance = 1.0; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2X(28) + XCHOH(47) <=> HX(5) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [H-H;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: H2X(28) + HOCOXX(73) <=> HX(5) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [H-H;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + CH3OHX(45) <=> HOX(8) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 145617.2077682272}
+  note: 'Source: Template family Surface_Dissociation_vdW | Exact match found for
+    rate rule [C-OH;VacantSite]; Euclidian distance = 0; family: Surface_Dissociation_vdW'
+- equation: CHX(17) + CH3OHX(45) <=> XCHOH(47) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.0375211367384003e+17, b: 0.4473447135332649, Ea: 108075.84545342732}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using average
+    of templates [AdsorbateVdW;*C] + [C-R;Adsorbate1] for rate rule [C-OH;*#CH]; Euclidian
+    distance = 3.605551275463989; family: Surface_Abstraction_vdW'
+- equation: CX(15) + CH3OHX(45) <=> XCOH(54) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.405e+20, b: -0.101, Ea: 92700.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [C-R;Adsorbate1] for rate rule [C-OH;*$C]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_vdW'
+- equation: OCX(13) + CH3OHX(45) <=> XCOOH(74) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [C-OH;*=C=R]; Euclidian distance = 3.0; family:
+    Surface_Abstraction_vdW'
+- equation: CH3X(7) + CH3OHX(45) <=> XCH2OH(46) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 100656.20601652096}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*C-3R]; Euclidian distance
+    = 2.23606797749979; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Single_vdW'
+- equation: CH2X(16) + CH3OHX(45) <=> CH3X(7) + XCH2OH(46)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-OH;*=C-2R]; Euclidian distance = 3.1622776601683795;
+    family: Surface_Abstraction_vdW'
+- equation: CH2X(16) + CH3OHX(45) <=> CH3X(7) + XCH2OH(46)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: HX(5) + XCH2OH(46) <=> vacantX(3) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.783e+17, b: 0.0, Ea: 49207.52460497797}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 33 CH2OH*
+    + H* <=> CH3OH_1* + X_4 in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [CH3R;VacantSite]; family: Surface_Dissociation_vdW; metal: None'
+- equation: CHX(17) + CH3OHX(45) <=> CH2X(16) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#CH]; Euclidian distance = 2.23606797749979;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: CX(15) + CH3OHX(45) <=> CHX(17) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*$C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: OX(6) + CH3OHX(45) <=> HOX(8) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.215e+20, b: -0.101, Ea: 92700.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | From training reaction
+    21 used for C-R;*=O; Exact match found for rate rule [C-R;*=O]; Euclidian distance
+    = 0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: XCOH(54) + CH3OHX(45) <=> XCHOH(47) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: HOX(8) + CH3OHX(45) <=> H2OX(9) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 31804.51568423763}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O-H]; Euclidian distance =
+    2.23606797749979; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Single_vdW'
+- equation: OCX(13) + CH3OHX(45) <=> XCHO(37) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.1, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [C-R;*=C=R]; Euclidian distance = 1.0; Multiplied
+    by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: XCOOH(74) + XCH2OH(46) <=> CO2X(12) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 129230.30118949672}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCHOH(47) + CH3OHX(45) <=> XCH2OH(46) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: XCHOH(47) + CH3OHX(45) <=> CH3X(7) + O[CH](O)[Pt](66)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-OH;*=C-2R]; Euclidian distance = 3.1622776601683795;
+    family: Surface_Abstraction_vdW'
+- equation: XCH2OH(46) + O[CH](O)[Pt](66) <=> HCOOHX(58) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 92054.7399530782}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: vacantX(3) + CH3OH(44) <=> CH3OHX(45)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Adsorption_vdW | Estimated using an average
+    for rate rule [O-H;VacantSite]; Euclidian distance = 0; family: Surface_Adsorption_vdW'
+- equation: XCHO(37) + CH3OHX(45) <=> HCOOHX(58) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 118546.48087590319}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-OH;*C=R]; Euclidian distance
+    = 3.605551275463989; family: Surface_Abstraction_Single_vdW'
+- equation: HCOOHX(58) + XCH2OH(46) <=> XCOOH(74) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 87394.01577204556}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*C-3R]; Euclidian distance
+    = 2.23606797749979; family: Surface_Abstraction_Single_vdW'
+- equation: XCHXO(36) + CH3OHX(45) <=> formic_acidXX(57) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-OH;*=C-2R]; Euclidian distance = 3.1622776601683795;
+    family: Surface_Abstraction_vdW'
+- equation: HOCOXX(73) + CH3OHX(45) <=> formic_acidXX(57) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: XOC(OH)O(149) + CH3X(7) <=> CO2X(12) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 106655.582142546}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Exact match
+    found for rate rule [Abstracting;Donating]; Euclidian distance = 0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: OX(6) + CH4X(22) <=> HX(5) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 9.565228695645516e+20, b: -0.1875, Ea: 155550.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using an average
+    for rate rule [AdsorbateVdW;*=O]; Euclidian distance = 0; Multiplied by reaction
+    path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + XOCH3(25) <=> OX(6) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.864e+18, b: 0.0, Ea: 193935.5381490308}
+  note: 'Source: Template family Surface_Dissociation | From training reaction 36
+    used for O-C;VacantSite; Exact match found for rate rule [O-C;VacantSite]; Euclidian
+    distance = 0; family: Surface_Dissociation'
+- equation: vacantX(3) + vacantX(3) + CH3OH(44) <=> HX(5) + XOCH3(25)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 119702.28512608247}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Exact match found
+    for rate rule [O-H;VacantSite1;VacantSite2]; Euclidian distance = 0; family: Surface_Adsorption_Dissociative'
+- equation: HX(5) + XOCH3(25) <=> vacantX(3) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.349e+17, b: 0.0, Ea: 112887.85056436119}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 25 CH3O*
+    + H* <=> CH3OH_2* + X_4 in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [O-H;VacantSite]; family: Surface_Dissociation_vdW; metal: None'
+- equation: OX(6) + CH3OHX(45) <=> HOX(8) + XOCH3(25)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.1355049650484472e+16, b: 0.1856333987911567, Ea: 161188.36958933502}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-C;*=O] for rate rule [O-C-3R;*=O]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: OX(6) + CH3OHX(45) <=> HOX(8) + XOCH3(25)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.07e+20, b: -0.274, Ea: 218400.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | From training reaction
+    34 used for O-R;*=O; Exact match found for rate rule [O-R;*=O]; Euclidian distance
+    = 0; family: Surface_Abstraction_vdW'
+- equation: XOCH3(25) + CH4X(22) <=> CH3X(7) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.672e+18, b: 0.0, Ea: 82827.19348280996}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_Single_vdW'
+- equation: CH2X(16) + CH3OHX(45) <=> CH3X(7) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: CHX(17) + CH3OHX(45) <=> CH2X(16) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*#CH]; Euclidian distance = 2.0; family: Surface_Abstraction_vdW'
+- equation: HOX(8) + CH3OHX(45) <=> H2OX(9) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 106921.11618490674}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [O-H;*O-H]; Euclidian distance =
+    2.8284271247461903; family: Surface_Abstraction_Single_vdW'
+- equation: CX(15) + CH3OHX(45) <=> CHX(17) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*$C]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: XCHOH(47) + CH3OHX(45) <=> XCH2OH(46) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: XCOH(54) + CH3OHX(45) <=> XCHOH(47) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 124676.39364995126}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*#C]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW;
+    Ea raised from 123.5 to 124.7 kJ/mol to match endothermicity of reaction.'
+- equation: XCHO(37) + XOCH3(25) <=> OCX(13) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 6.572e+16, b: 0.0, Ea: 36664.43009782672}
+  note: 'Source: Template family Surface_Abstraction_vdW | Matched reaction 45 CH3O*
+    + HCO* <=> CH3OH* + CO* in Surface_Abstraction_vdW/training; This reaction matched
+    rate rule [O-R;*=C=R]; family: Surface_Abstraction_vdW; metal: None'
+- equation: HOCOXX(73) + CH3OHX(45) <=> formic_acidXX(57) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: HCOOHX(58) + XOCH3(25) <=> XCOOH(74) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 12277.415271376436}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_Single_vdW'
+- equation: XOCH3(25) + CH3OHX(45) <=> XCH2OH(46) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 54183.399499330924}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Single_vdW'
+- equation: XCOOH(74) + XOCH3(25) <=> CO2X(12) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 74890.63274220415}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XOCH3(25) + O[CH](O)[Pt](66) <=> HCOOHX(58) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 37715.07150578563}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: vacantX(3) + CH2OX(31) <=> OX(6) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.641e+16, b: 0.0, Ea: 241213.35590675473}
+  note: 'Source: Template family Surface_Dissociation_Double_vdW | From training reaction
+    35 used for OC;VacantSite; Exact match found for rate rule [OC;VacantSite]; Euclidian
+    distance = 0; family: Surface_Dissociation_Double_vdW'
+- equation: CH2OX(31) + CH3X(7) <=> XCHO(37) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 35335.87655481747}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*C-3R]; Euclidian distance
+    = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Single_vdW'
+- equation: CH2X(16) + CH2OX(31) <=> XCHO(37) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: HX(5) + XCHO(37) <=> vacantX(3) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.932e+17, b: 0.0, Ea: 88342.4714657905}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 30 HCO*
+    + H* <=> CH2O* + X_4 in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [CH2R;VacantSite]; family: Surface_Dissociation_vdW; metal: None; Ea
+    raised from 45.3 to 88.3 kJ/mol to match endothermicity of reaction.'
+- equation: CHX(17) + CH2OX(31) <=> XCHO(37) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#CH]; Euclidian distance = 2.23606797749979;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: CX(15) + CH2OX(31) <=> CHX(17) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*$C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: OX(6) + CH2OX(31) <=> HOX(8) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.81e+20, b: -0.101, Ea: 92700.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | From training reaction
+    21 used for C-R;*=O; Exact match found for rate rule [C-R;*=O]; Euclidian distance
+    = 0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCOH(54) + CH2OX(31) <=> XCHO(37) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*C] for rate rule [C-R;*#C]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: HOX(8) + CH2OX(31) <=> H2OX(9) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O-H]; Euclidian distance =
+    2.23606797749979; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Single_vdW'
+- equation: OCX(13) + CH2OX(31) <=> XCHO(37) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C=R] for rate rule [C-R;*=C=R]; Euclidian distance = 1.0; Multiplied
+    by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + XCOOH(74) <=> CO2X(12) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 176483.30548094178}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HX(5) + CH2OX(31) <=> vacantX(3) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 3.234e+19, b: 0.0, Ea: 79117.98073741555}
+  note: 'Source: Template family Surface_Dissociation_Beta_vdW | Matched reaction
+    31 CH2O_2* + H* <=> CH2OH* + X_5 in Surface_Dissociation_Beta_vdW/training; This
+    reaction matched rate rule [O-H;VacantSite]; family: Surface_Dissociation_Beta_vdW;
+    metal: None'
+- equation: OX(6) + XCH2OH(46) <=> HOX(8) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 57838.69879410605}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [O;R-O-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta_vdW'
+- equation: CH3X(7) + XCH2OH(46) <=> CH2OX(31) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 130585.64405818132}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: CH2X(16) + XCH2OH(46) <=> CH2OX(31) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 154050.20146230757}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HOX(8) + XCH2OH(46) <=> H2OX(9) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 1155.2364201732717}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Exact match
+    found for rate rule [OH;R-O-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCHOH(47) + XCH2OH(46) <=> CH2OX(31) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 176364.34596676065}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: OCX(13) + XCH2OH(46) <=> XCHO(37) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 250759.21617958773}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: XCHO(37) + XCH2OH(46) <=> CH2OX(31) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 198559.6908057602}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: CH2OX(31) + XCHOH(47) <=> XCHO(37) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCOOH(74) + XCH2OH(46) <=> CH2OX(31) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 181621.65382815458}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCH2OH(46) + XCH2OH(46) <=> CH2OX(31) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 151306.68651431514}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCHO(37) + O[CH](O)[Pt](66) <=> CH2OX(31) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 139307.74424452326}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCOOH(74) + CH2OX(31) <=> XCHO(37) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 105885.65476625109}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*C=R]; Euclidian distance =
+    2.23606797749979; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Single_vdW'
+- equation: HOCOXX(73) + CH2OX(31) <=> XCHO(37) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: CH2OX(31) + XOCH3(25) <=> XCHO(37) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Single_vdW'
+- equation: CH2OX(31) + XCH2OH(46) <=> XCHO(37) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 63979.67053829652}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*C-3R]; Euclidian distance
+    = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Single_vdW'
+- equation: HX(5) + CH2OX(31) <=> vacantX(3) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 6.167e+17, b: 0.0, Ea: 34807.704470009165}
+  note: 'Source: Template family Surface_Dissociation_Beta_vdW | Matched reaction
+    24 CH2O* + H* <=> CH3O_1* + X_5 in Surface_Dissociation_Beta_vdW/training; This
+    reaction matched rate rule [CH3;VacantSite]; family: Surface_Dissociation_Beta_vdW;
+    metal: None; Ea raised from 23.2 to 34.8 kJ/mol to match endothermicity of reaction.'
+- equation: OX(6) + XOCH3(25) <=> HOX(8) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 108551.77636579057}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [O;R-C-H] for rate rule [O;R-CH3]; Euclidian distance = 1.0; Multiplied by reaction
+    path degeneracy 3.0; family: Surface_Abstraction_Beta_vdW'
+- equation: CH3X(7) + XOCH3(25) <=> CH2OX(31) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 76245.9756108888}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance
+    = 2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: CH2X(16) + XOCH3(25) <=> CH2OX(31) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 78933.60096163847}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance =
+    2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HOX(8) + XOCH3(25) <=> H2OX(9) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 26438.36983859873}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [OH;R-C-H] for rate rule [OH;R-CH3]; Euclidian distance = 1.0; Multiplied
+    by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCHOH(47) + XOCH3(25) <=> CH2OX(31) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 101247.7454660916}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance =
+    2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_vdW'
+- equation: OCX(13) + XOCH3(25) <=> XCHO(37) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 175642.61567891864}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance =
+    2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_vdW'
+- equation: XCHO(37) + XOCH3(25) <=> CH2OX(31) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 144220.02235846772}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance
+    = 2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCOOH(74) + XOCH3(25) <=> CH2OX(31) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 127281.98538086201}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance
+    = 2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCH2OH(46) + XOCH3(25) <=> CH2OX(31) + CH3OHX(45)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 96967.01806702257}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance
+    = 2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XCH2OH(46) + XOCH3(25) <=> CH2OX(31) + CH3OHX(45)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 96967.01806702257}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: XOCH3(25) + XOCH3(25) <=> CH2OX(31) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 42627.34961973005}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance
+    = 2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: OX(6) + CH2X(16) <=> XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 2.2e+18, b: 0.0, Ea: 115000.0}
+  note: 'Source: Template family Surface_Bidentate_Dissociation | Matched reaction
+    7 CH2X_3 + OX_4 <=> H2CO_2X in Surface_Bidentate_Dissociation/training; This reaction
+    matched rate rule [Combined]; family: Surface_Bidentate_Dissociation; metal: None'
+- equation: XCOH(54) + XCH2XO(30) <=> HOCOXX(73) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.4e+18, b: 0.101, Ea: 42400.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C#*;Donating]
+    for rate rule [C#*;*R-O]; Euclidian distance = 1.0; family: Surface_Abstraction'
+- equation: HX(5) + XCH2XO(30) <=> vacantX(3) + vacantX(3) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.22e+16, b: 0.0, Ea: 29000.0}
+  note: 'Source: Template family Surface_Dissociation_to_Bidentate | Matched reaction
+    3 H2CO_2X + H_X <=> H2COH_X + Pt_5 + Pt_6 in Surface_Dissociation_to_Bidentate/training;
+    This reaction matched rate rule [Combined;VacantSite1;VacantSite2]; family: Surface_Dissociation_to_Bidentate;
+    metal: None'
+- equation: XCHXO(36) + CH4X(22) <=> XCH2XO(30) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1181919539546109.8, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_vdW'
+- equation: CH2X(16) + XCH2XO(30) <=> XCHXO(36) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 35927.37076328122}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C=*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: vacantX(3) + XCH2XO(30) <=> HX(5) + XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.75e+16, b: 0.0, Ea: 2000.0}
+  note: 'Source: Template family Surface_Dissociation | Matched reaction 62 H2CO_2X
+    + Ni_4 <=> HCO_2X + HX_5 in Surface_Dissociation/training; This reaction matched
+    rate rule [C-H_Bidentate;VacantSite]; family: Surface_Dissociation; metal: None'
+- equation: CHX(17) + XCH2XO(30) <=> XCHXO(36) + CH2X(16)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.4e+18, b: 0.101, Ea: 42400.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C#*;Donating]
+    for rate rule [C#*;*R-O]; Euclidian distance = 1.0; family: Surface_Abstraction'
+- equation: CX(15) + XCH2XO(30) <=> CHX(17) + XCHXO(36)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 29691.499939389298}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C$*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: HOX(8) + XCHXO(36) <=> OX(6) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 45412.89938804711}
+  note: 'Source: Template family Surface_Abstraction | From training reaction 24 used
+    for C=*;*OH; Exact match found for rate rule [C=*;*OH]; Euclidian distance = 0;
+    family: Surface_Abstraction; Ea raised from 42.7 to 45.4 kJ/mol to match endothermicity
+    of reaction.'
+- equation: XCOH(54) + XCH2XO(30) <=> XCHXO(36) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 50769.48618986366}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C#*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: XCHXO(36) + XCHOH(47) <=> XCHO(37) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 143028.41370084044}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: XCOH(54) + XCHXO(36) <=> OCX(13) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 121733.39088078991}
+  note: 'Source: Template family Surface_Abstraction_Beta | Estimated using template
+    [Abstracting;Donating] for rate rule [C=*;R-O-H]; Euclidian distance = 2.8284271247461903;
+    family: Surface_Abstraction_Beta'
+- equation: H2OX(9) + XCHXO(36) <=> HOX(8) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.8, b: 0.9956894270665297, Ea: 138154.67768602032}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; Multiplied by
+    reaction path degeneracy 2.0; family: Surface_Abstraction_vdW; Ea raised from
+    137.7 to 138.2 kJ/mol to match endothermicity of reaction.'
+- equation: XCHO(37) + XCHXO(36) <=> OCX(13) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 88678.94416982726}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C;*C-H]
+    for rate rule [C=*;*-C-H]; Euclidian distance = 1.4142135623730951; family: Surface_Abstraction'
+- equation: XCHOH(47) + XCH2XO(30) <=> XCHXO(36) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 40318.9843093704}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C=*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: XCHXO(36) + HCOOHX(58) <=> XCOOH(74) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.44, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_vdW'
+- equation: XCHOH(47) + XCH2XO(30) <=> CH2X(16) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.39e+17, b: 0.101, Ea: 19000.0}
+  note: 'Source: Template family Surface_Abstraction | Estimated using template [C=*;Donating]
+    for rate rule [C=*;*R-O]; Euclidian distance = 1.0; family: Surface_Abstraction'
+- equation: HOCOXX(73) + XCH2XO(30) <=> XCHXO(36) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 41472.87850113162}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C=*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: H2X(28) + XCHXO(36) <=> HX(5) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [H-H;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCHXO(36) + CH3OHX(45) <=> XCH2XO(30) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: XCHXO(36) + CH3OHX(45) <=> XCH2XO(30) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 886439654659582.2, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_vdW'
+- equation: vacantX(3) + vacantX(3) + XOCH3(25) <=> HX(5) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 5.57e+21, b: 0.0, Ea: 46000.0}
+  note: 'Source: Template family Surface_Dissociation_to_Bidentate | From training
+    reaction 1 used for Combined;VacantSite1;VacantSite2; Exact match found for rate
+    rule [Combined;VacantSite1;VacantSite2]; Euclidian distance = 0; Multiplied by
+    reaction path degeneracy 3.0; family: Surface_Dissociation_to_Bidentate'
+- equation: vacantX(3) + CH2OX(31) <=> XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.0e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_vdW_to_Bidentate | Matched reaction 3 H2COX_vdW
+    + X <=> H2CO_2X in Surface_vdW_to_Bidentate/training; This reaction matched rate
+    rule [Combined;VacantSite]; family: Surface_vdW_to_Bidentate; metal: None'
+- equation: XCHXO(36) + CH2OX(31) <=> XCHO(37) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 590959769773054.9, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [AdsorbateVdW;*=C] for rate rule [C-R;*=C-2R]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: CHX(17) + XCH2XO(30) <=> XCHXO(36) + CH2X(16)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 7.425803660210784e+17, b: 0.0, Ea: 49220.50739489742}
+  note: 'Source: Template family Surface_Abstraction | Estimated using average of
+    templates [Abstracting;*-C-H] + [C;*C-H] for rate rule [C#*;*-CH-H]; Euclidian
+    distance = 2.23606797749979; Multiplied by reaction path degeneracy 2.0; family:
+    Surface_Abstraction'
+- equation: vacantX(3) + HC(O)XO(114) <=> OX(6) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.733e+16, b: 0.0, Ea: 227705.4079759764}
+  note: 'Source: Template family Surface_Dissociation | Matched reaction 28 HCOO*
+    + Ni_4 <=> HCO* + OX_3 in Surface_Dissociation/training; This reaction matched
+    rate rule [O-C=O;VacantSite]; family: Surface_Dissociation; metal: None'
+- equation: vacantX(3) + vacantX(3) + formic_acid(56) <=> HX(5) + HC(O)XO(114)
+  type: sticking-Arrhenius
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 95219.2032493195}
+  note: 'Source: Template family Surface_Adsorption_Dissociative | Exact match found
+    for rate rule [O-H;VacantSite1;VacantSite2]; Euclidian distance = 0; family: Surface_Adsorption_Dissociative'
+- equation: HC(O)XO(114) + CH3X(7) <=> CO2X(12) + CH4X(22)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 39345.29732106556}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + CH2X(16) <=> CO2X(12) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 27923.83979629461}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HX(5) + CO2X(12) <=> vacantX(3) + HC(O)XO(114)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.243e+18, b: 0.0, Ea: 85530.19678646722}
+  note: 'Source: Template family Surface_Dissociation_Beta_vdW | Matched reaction
+    17 CO2* + H* <=> HCOO* + X_5 in Surface_Dissociation_Beta_vdW/training; This reaction
+    matched rate rule [C-H;VacantSite]; family: Surface_Dissociation_Beta_vdW; metal:
+    None; Ea raised from 83.9 to 85.5 kJ/mol to match endothermicity of reaction.'
+- equation: OX(6) + HC(O)XO(114) <=> HOX(8) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 57542.015200446716}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Exact match found
+    for rate rule [O;R-C-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta_vdW'
+- equation: HOX(8) + HC(O)XO(114) <=> H2OX(9) + CO2X(12)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 0.0}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Exact match
+    found for rate rule [OH;R-C-H]; Euclidian distance = 0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: OCX(13) + HC(O)XO(114) <=> CO2X(12) + XCHO(37)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 124632.8545135748}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HC(O)XO(114) + XCHOH(47) <=> CO2X(12) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 50237.9843007477}
+  note: 'Source: Template family Surface_Abstraction_Beta_vdW | Estimated using template
+    [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance =
+    1.0; family: Surface_Abstraction_Beta_vdW'
+- equation: HX(5) + HC(O)XO(114) <=> vacantX(3) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.424e+18, b: 0.0, Ea: 87801.66155005872}
+  note: 'Source: Template family Surface_Dissociation_vdW | Matched reaction 19 HCOO*
+    + H* <=> HCOOH_1* + X_4 in Surface_Dissociation_vdW/training; This reaction matched
+    rate rule [O-H;VacantSite]; family: Surface_Dissociation_vdW; metal: None'
+- equation: OX(6) + HCOOHX(58) <=> HOX(8) + HC(O)XO(114)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 1.1355049650484472e+16, b: 0.1856333987911567, Ea: 161188.36958933502}
+  note: 'Source: Template family Surface_Abstraction_vdW | From training reaction
+    46 used for O-C=R;*=O; Exact match found for rate rule [O-C=R;*=O]; Euclidian
+    distance = 0; family: Surface_Abstraction_vdW'
+- equation: OX(6) + HCOOHX(58) <=> HOX(8) + HC(O)XO(114)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.07e+20, b: -0.274, Ea: 218400.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | From training reaction
+    34 used for O-R;*=O; Exact match found for rate rule [O-R;*=O]; Euclidian distance
+    = 0; family: Surface_Abstraction_vdW'
+- equation: HC(O)XO(114) + CH4X(22) <=> HCOOHX(58) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.672e+18, b: 0.0, Ea: 104240.77272972846}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 4.0; family: Surface_Abstraction_Single_vdW'
+- equation: CH2X(16) + HCOOHX(58) <=> HC(O)XO(114) + CH3X(7)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: CHX(17) + HCOOHX(58) <=> HC(O)XO(114) + CH2X(16)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*#CH]; Euclidian distance = 2.0; family: Surface_Abstraction_vdW'
+- equation: HOX(8) + HCOOHX(58) <=> H2OX(9) + HC(O)XO(114)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 85507.53693798829}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [O-H;*O-H]; Euclidian distance =
+    2.8284271247461903; family: Surface_Abstraction_Single_vdW'
+- equation: CX(15) + HCOOHX(58) <=> CHX(17) + HC(O)XO(114)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*$C]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: XCHOH(47) + HCOOHX(58) <=> HC(O)XO(114) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: XCOH(54) + HCOOHX(58) <=> HC(O)XO(114) + XCHOH(47)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*C] for rate rule [O-R;*#C]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + HC(O)XO(114) <=> OCX(13) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 7.475e+18, b: 0.0, Ea: 57891.205417621124}
+  note: 'Source: Template family Surface_Abstraction_vdW | Matched reaction 41 HCOO_1*
+    + HCO* <=> HCOOH* + CO* in Surface_Abstraction_vdW/training; This reaction matched
+    rate rule [O-R;*=C=R]; family: Surface_Abstraction_vdW; metal: None'
+- equation: HC(O)XO(114) + CH2OX(31) <=> XCHO(37) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 10276.649284545927}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Single_vdW'
+- equation: HOCOXX(73) + HCOOHX(58) <=> HC(O)XO(114) + formic_acidXX(57)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: HC(O)XO(114) + HCOOHX(58) <=> XCOOH(74) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 33690.99451829493}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    family: Surface_Abstraction_Single_vdW'
+- equation: HC(O)XO(114) + CH3OHX(45) <=> HCOOHX(58) + XCH2OH(46)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 75596.97874624941}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [C-R;*O]; Euclidian distance = 1.4142135623730951;
+    Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Single_vdW'
+- equation: XCHXO(36) + HCOOHX(58) <=> HC(O)XO(114) + XCH2XO(30)
+  type: interface-Arrhenius
+  rate-constant: {A: 295479884886527.4, b: 0.9956894270665297, Ea: 123451.69090685464}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using template
+    [O-R;*=C] for rate rule [O-R;*=C-2R]; Euclidian distance = 1.0; family: Surface_Abstraction_vdW'
+- equation: HC(O)XO(114) + HC(O)XO(114) <=> CO2X(12) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 21217.34567874146}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + XCOOH(74) <=> CO2X(12) + HCOOHX(58)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 90381.3070910388}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + XCOOH(74) <=> CO2X(12) + HCOOHX(58)
+  duplicate: true
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 90381.3070910388}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + O[CH](O)[Pt](66) <=> HCOOHX(58) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 8.36e+17, b: 0.0, Ea: 53205.74585462029}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; Multiplied by reaction path degeneracy 2.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + XOCH3(25) <=> CO2X(12) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 5726.671329906804}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + XCH2OH(46) <=> CO2X(12) + CH3OHX(45)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 60066.33977719938}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + CH3OHX(45) <=> HCOOHX(58) + XOCH3(25)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 150713.5792469185}
+  note: 'Source: Template family Surface_Abstraction_Single_vdW | Estimated using
+    template [Donating;Abstracting] for rate rule [O-H;*O]; Euclidian distance = 2.23606797749979;
+    family: Surface_Abstraction_Single_vdW'
+- equation: OX(6) + CH2OX(31) <=> HX(5) + HC(O)XO(114)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.782614347822758e+20, b: -0.1875, Ea: 155550.0}
+  note: 'Source: Template family Surface_Abstraction_vdW | Estimated using an average
+    for rate rule [AdsorbateVdW;*=O]; Euclidian distance = 0; Multiplied by reaction
+    path degeneracy 2.0; family: Surface_Abstraction_vdW'
+- equation: XCHO(37) + HC(O)XO(114) <=> CO2X(12) + CH2OX(31)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 107319.34406864442}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-C-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + XOCH3(25) <=> CH2OX(31) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 1.254e+18, b: 0.0, Ea: 58118.023968564674}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-CH3]; Euclidian distance
+    = 2.0; Multiplied by reaction path degeneracy 3.0; family: Surface_Abstraction_Beta_double_vdW'
+- equation: HC(O)XO(114) + XCH2OH(46) <=> CH2OX(31) + HCOOHX(58)
+  type: interface-Arrhenius
+  rate-constant: {A: 4.18e+17, b: 0.0, Ea: 112457.69241585722}
+  note: 'Source: Template family Surface_Abstraction_Beta_double_vdW | Estimated using
+    template [Abstracting;Donating] for rate rule [Abstracting;R-O-H]; Euclidian distance
+    = 1.0; family: Surface_Abstraction_Beta_double_vdW'

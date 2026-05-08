@@ -1,0 +1,48 @@
+Loading /Users/daniellelucey/Desktop/NEU/Research/rmg-yaml-benchmarks/dltest/ch4o2 test compare2/cantera_from_ck/chem.yaml...
+Loading /Users/daniellelucey/Desktop/NEU/Research/rmg-yaml-benchmarks/dltest/ch4o2 test compare2/cantera1/chem.yaml...
+Comparing YAML metadata...
+Comparing phases...
+  Comparing species in phase 'gas'...
+  Comparing reactions in phase 'gas'...
+  Comparing species in phase 'SURF0'...
+  Comparing reactions in phase 'SURF0'...
+Cantera YAML comparison found 39 difference(s) between /Users/daniellelucey/Desktop/NEU/Research/rmg-yaml-benchmarks/dltest/ch4o2 test compare2/cantera_from_ck/chem.yaml and /Users/daniellelucey/Desktop/NEU/Research/rmg-yaml-benchmarks/dltest/ch4o2 test compare2/cantera1/chem.yaml
+  Value mismatch at metadata.units.quantity: 'mol' vs 'kmol'
+  Value mismatch at metadata.units.length: 'cm' vs 'm'
+  Value mismatch at metadata.units.activation-energy: 'kcal/mol' vs 'J/kmol'
+  Value mismatch at metadata.generator: 'ck2yaml' vs 'RMG-Py CanteraWriter1 at /Users/daniellelucey/RMG-Py/rmgpy/yaml_cantera1.py (git commit: 4a87784)'
+  Missing key in second file at metadata.phases[1].state
+  Value mismatch at metadata.phases[1].name: 'SURF0' vs 'surface'
+  Value mismatch at metadata.phases[1].reactions[0]: 'SURF0-reactions' vs 'site0-reactions'
+  Numerical difference at phase.gas.species.Ar.thermo.temperature-ranges[1]: 6000.0 vs 1000.0 (abs_diff=5.00e+03, rel_diff=5.00e+00)
+  Missing key in second file at phase.gas.species.Ar.transport.note
+  Missing key in second file at phase.gas.species.CH3OH(44).transport.note
+  Missing key in second file at phase.gas.species.CH4(1).transport.note
+  Missing key in second file at phase.gas.species.CO2(11).transport.note
+  Missing key in second file at phase.gas.species.H2(4).transport.note
+  Missing key in second file at phase.gas.species.H2O(10).transport.note
+  Numerical difference at phase.gas.species.He.thermo.temperature-ranges[1]: 6000.0 vs 1000.0 (abs_diff=5.00e+03, rel_diff=5.00e+00)
+  Missing key in second file at phase.gas.species.He.transport.note
+  Missing key in second file at phase.gas.species.N2.transport.note
+  Numerical difference at phase.gas.species.Ne.thermo.temperature-ranges[1]: 6000.0 vs 1000.0 (abs_diff=5.00e+03, rel_diff=5.00e+00)
+  Missing key in second file at phase.gas.species.Ne.transport.note
+  Missing key in second file at phase.gas.species.O2(2).transport.note
+  Missing key in second file at phase.gas.species.formic_acid(56).transport.note
+  Phase 1: name differs: 'SURF0' vs 'surface'
+  Numerical difference at phase.SURF0.species.vacantX(3).thermo.temperature-ranges[1]: 3000.0 vs 1000.0 (abs_diff=2.00e+03, rel_diff=2.00e+00)
+  Phase 'SURF0': reaction 56 equation differs: 'XCHOH(47) + XCOH(54) <=> XCHO(37) + XCHOH(47)' vs '2 XCHOH(47) + XCOH(54) <=> XCHO(37) + 2 XCHOH(47)'
+  Value mismatch at phase.SURF0.reaction[56].equation: 'XCHOH(47) + XCOH(54) <=> XCHO(37) + XCHOH(47)' vs '2 XCHOH(47) + XCOH(54) <=> XCHO(37) + 2 XCHOH(47)'
+  Phase 'SURF0': reaction 65 equation differs: 'OCX(13) + XCOH(54) <=> OCX(13) + XCHO(37)' vs '2 OCX(13) + XCOH(54) <=> 2 OCX(13) + XCHO(37)'
+  Value mismatch at phase.SURF0.reaction[65].equation: 'OCX(13) + XCOH(54) <=> OCX(13) + XCHO(37)' vs '2 OCX(13) + XCOH(54) <=> 2 OCX(13) + XCHO(37)'
+  Numerical difference at phase.SURF0.reaction[174].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)
+  Numerical difference at phase.SURF0.reaction[179].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)
+  Numerical difference at phase.SURF0.reaction[209].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)
+  Numerical difference at phase.SURF0.reaction[213].rate-constant.b: 0.186 vs 0.1856333987911567 (abs_diff=3.67e-04, rel_diff=1.97e-03)
+  Phase 'SURF0': reaction 225 equation differs: 'CH3OHX(45) + XOCH3(25) <=> CH3OHX(45) + XCH2OH(46)' vs '2 CH3OHX(45) + XOCH3(25) <=> 2 CH3OHX(45) + XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[225].equation: 'CH3OHX(45) + XOCH3(25) <=> CH3OHX(45) + XCH2OH(46)' vs '2 CH3OHX(45) + XOCH3(25) <=> 2 CH3OHX(45) + XCH2OH(46)'
+  Phase 'SURF0': reaction 244 equation differs: 'XCH2OH(46) + XCHOH(47) <=> CH2OX(31) + XCH2OH(46)' vs '2 XCH2OH(46) + XCHOH(47) <=> CH2OX(31) + 2 XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[244].equation: 'XCH2OH(46) + XCHOH(47) <=> CH2OX(31) + XCH2OH(46)' vs '2 XCH2OH(46) + XCHOH(47) <=> CH2OX(31) + 2 XCH2OH(46)'
+  Numerical difference at phase.SURF0.reaction[302].rate-constant.b: 0.186 vs 0.1856333987911567 (abs_diff=3.67e-04, rel_diff=1.97e-03)
+  Phase 'SURF0': reaction 314 equation differs: 'HC(O)XO(114) + HCOOHX(58) <=> HCOOHX(58) + XCOOH(74)' vs 'HC(O)XO(114) + 2 HCOOHX(58) <=> 2 HCOOHX(58) + XCOOH(74)'
+  Value mismatch at phase.SURF0.reaction[314].equation: 'HC(O)XO(114) + HCOOHX(58) <=> HCOOHX(58) + XCOOH(74)' vs 'HC(O)XO(114) + 2 HCOOHX(58) <=> 2 HCOOHX(58) + XCOOH(74)'
+  Numerical difference at phase.SURF0.reaction[324].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)

@@ -1,0 +1,1173 @@
+generator: "RMG-Py CanteraWriter1 at /Users/daniellelucey/RMG-Py/rmgpy/yaml_cantera1.py (git commit: 4a87784)"
+date: Fri, 08 May 2026 13:45:31
+
+units: {length: m, time: s, quantity: kmol, activation-energy: J/kmol}
+
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  elements: [H, C, O, N, Ne, Ar, He, Si, S, F, Cl, Br, I, D, T, CI, OI, X]
+  species: [N2, Ar, He, Ne, CH4(1), O2(2), H2(4), H2O(10), CO2(11), CH3OH(44), formic_acid(56)]
+  kinetics: gas
+  reactions: [gas-reactions]
+  transport: mixture-averaged
+  state: {T: 300.0, P: 1 atm}
+
+- name: surface
+  thermo: ideal-surface
+  adjacent-phases: [gas]
+  elements: [H, C, O, N, Ne, Ar, He, Si, S, F, Cl, Br, I, D, T, CI, OI, X]
+  species: [vacantX(3), HX(5), OX(6), CH3X(7), HOX(8), H2OX(9), CO2X(12), OCX(13), CX(15), CH2X(16), CHX(17), CH4X(22), XOCH3(25), H2X(28), XCH2XO(30), CH2OX(31), XCHXO(36), XCHO(37), CH3OHX(45), XCH2OH(46), XCHOH(47), XCOH(54), CH2O2X2(57), HCOOHX(58), 'O[CH](O)[Pt](66)', HOCOXX(73), XCOOH(74), HC(O)XO(114), XOC(OH)O(149)]
+  kinetics: surface
+  reactions: [site0-reactions]
+  site-density: 2.483e-09
+
+elements:
+- symbol: D
+  atomic-weight: 2.014102
+- symbol: T
+  atomic-weight: 3.016049
+- symbol: CI
+  atomic-weight: 13.003354
+- symbol: OI
+  atomic-weight: 17.999159
+- symbol: X
+  atomic-weight: 195.083
+
+species:
+- name: N2
+  composition: {N: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [3.53101, -0.000123661, -5.02999e-07, 2.43531e-09, -1.40881e-12, -1046.98, 2.96747]
+    - [2.95258, 0.0013969, -4.92632e-07, 7.8601e-11, -4.60755e-15, -923.949, 5.87189]
+  transport: {model: gas, geometry: linear, diameter: 3.6210000000000013, well-depth: 97.53030619382686,
+    polarizability: 1.7600000000000011, rotational-relaxation: 4.0}
+- name: Ar
+  composition: {Ar: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 4.37967]
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 4.37967]
+  transport: {model: gas, geometry: atom, diameter: 3.3300000000000005, well-depth: 136.50054988458677}
+- name: He
+  composition: {He: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 0.928724]
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 0.928724]
+  transport: {model: gas, geometry: atom, diameter: 2.5760000000000005, well-depth: 10.2}
+- name: Ne
+  composition: {Ne: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [200.0, 1000.0, 6000.0]
+    data:
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 3.35532]
+    - [2.5, 0.0, 0.0, 0.0, 0.0, -745.375, 3.35532]
+  transport: {model: gas, geometry: atom, diameter: 3.7580000000000005, well-depth: 148.6}
+- name: CH4(1)
+  composition: {C: 1.0, H: 4.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 1084.1178897101286, 5000.0]
+    data:
+    - [4.205416684633066, -0.005355590254627177, 2.511238250111796e-05, -2.137635320163276e-08,
+      5.9752670131915595e-12, -10161.943368029231, -0.9212844871470729]
+    - [0.9082573996547298, 0.011454099528933412, -4.571746006222714e-06, 8.291934667300837e-10,
+      -5.66316365457203e-14, -9719.970790335326, 13.993141571614126]
+  transport: {model: gas, geometry: nonlinear, diameter: 3.746000000000001, well-depth: 141.400440100105,
+    polarizability: 2.600000000000002, rotational-relaxation: 13.0}
+- name: O2(2)
+  composition: {O: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 1074.5559874666221, 5000.0]
+    data:
+    - [3.5373217113695397, -0.0012157081866178787, 5.3161744753665525e-06, -4.894429543084893e-09,
+      1.4584485293487145e-12, -1038.5884568564704, 4.6836844075736]
+    - [3.1538247849326697, 0.001678037130877558, -7.699705205295331e-07, 1.5127459750571054e-10,
+      -1.0878170489110307e-14, -1040.8190172537113, 6.167535803814269]
+  transport: {model: gas, geometry: linear, diameter: 3.4580000000000015, well-depth: 107.40032560095216,
+    polarizability: 1.6000000000000008, rotational-relaxation: 3.8}
+- name: vacantX(3)
+  composition: {X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 3000.0]
+    data:
+    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    - [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+- name: OX(6)
+  composition: {O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.294475701, 0.0144162624, -2.61322704e-05, 2.19005957e-08, -6.9801942e-12,
+      -16461.9234, -0.199445623]
+    - [2.90244691, -0.000338584457, 6.43372619e-07, -3.6632666e-10, 6.90093884e-14,
+      -17049.7471, -15.2559728]
+- name: CH4X(22)
+  composition: {C: 1.0, H: 4.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [4.85496247, -0.00554134984, 3.01198105e-05, -2.99225917e-08, 1.00502514e-11,
+      -11709.6278, -9.25620913]
+    - [9.54139378, -0.0104025134, 1.837774e-05, -9.6676513e-09, 1.71211379e-12, -13447.5614,
+      -35.5638434]
+- name: CH3X(7)
+  composition: {C: 1.0, H: 3.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.044454906, 0.0194367665, -1.91028733e-05, 1.11269371e-08, -2.73735895e-12,
+      -6388.03762, -0.173375969]
+    - [8.65704524, -0.00790307778, 1.40100438e-05, -7.40016074e-09, 1.31516592e-12,
+      -8635.98517, -44.3352558]
+- name: HX(5)
+  composition: {H: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-2.07570125, 0.0173580835, -2.60920784e-05, 1.89282268e-08, -5.38835643e-12,
+      -3166.18959, 8.15361518]
+    - [2.72248139, -0.00106817206, 1.9865379e-06, -1.12048461e-09, 2.09811636e-13,
+      -4218.23896, -15.320747]
+- name: CH2X(16)
+  composition: {C: 1.0, H: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-2.23006757, 0.0292222928, -4.33154923e-05, 3.31428193e-08, -9.96471308e-12,
+      -222.255986, 8.30173205]
+    - [6.83459954, -0.00514926339, 9.15491022e-06, -4.84917377e-09, 8.63766547e-13,
+      -2258.97684, -36.2215373]
+- name: CHX(17)
+  composition: {C: 1.0, H: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-2.66805027, 0.0290693485, -4.82653552e-05, 3.87589256e-08, -1.19749384e-11,
+      -2918.15541, 9.72941427]
+    - [4.90429859, -0.00263865042, 4.71729273e-06, -2.51267002e-09, 4.49659283e-13,
+      -4464.40812, -26.7107945]
+- name: HOX(8)
+  composition: {H: 1.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.42359828, 0.0157830409, -2.91659307e-05, 2.50432531e-08, -8.04088046e-12,
+      -18999.3029, -3.15230478]
+    - [5.03574444, -0.00134422013, 2.25915779e-06, -1.08547653e-09, 1.77875516e-13,
+      -19634.4169, -20.0345222]
+- name: CX(15)
+  composition: {C: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-1.94350915, 0.0197767398, -3.36336641e-05, 2.69027201e-08, -8.27959229e-12,
+      7000.56568, 7.17469909]
+    - [2.81347137, -0.000693951702, 1.30307929e-06, -7.38700347e-10, 1.38795827e-13,
+      6060.0273, -15.5738286]
+- name: XCHOH(47)
+  composition: {C: 1.0, H: 2.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.500706212, 0.0203875126, -1.83412371e-05, 8.05213048e-09, -1.17601762e-12,
+      -26303.9895, 7.4226431]
+    - [8.40355286, -0.00656451064, 1.17183592e-05, -6.25846821e-09, 1.12274887e-12,
+      -28634.206, -37.9680665]
+- name: XCOH(54)
+  composition: {C: 1.0, H: 1.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.281392618, 0.0236060988, -3.32958929e-05, 2.35937581e-08, -6.59988036e-12,
+      -30449.908, -2.84937962]
+    - [7.57277703, -0.00316578469, 5.61811938e-06, -2.96831946e-09, 5.2868399e-13,
+      -32111.8815, -38.8297167]
+- name: OCX(13)
+  composition: {C: 1.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.42895, 0.0140374509, -2.2117892e-05, 1.78659581e-08, -5.71478802e-12, -34568.8484,
+      -7.78265517]
+    - [5.48656312, -0.00168118543, 3.0903031e-06, -1.71186643e-09, 3.15864598e-13,
+      -35481.5495, -27.6788365]
+- name: H2OX(9)
+  composition: {H: 2.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.72971388, 0.00871051652, -1.29131826e-05, 1.07295e-08, -3.39433689e-12, -32612.6997,
+      -6.04479516]
+    - [5.8549628, -0.00328847412, 5.56990501e-06, -2.73008086e-09, 4.55898028e-13,
+      -33304.6343, -21.3518349]
+- name: H2O(10)
+  composition: {H: 2.0, O: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 1130.229527376887, 5000.0]
+    data:
+    - [4.0576350324382435, -0.0007879268259766038, 2.908745359555667e-06, -1.4751533432712154e-09,
+      2.128292857644156e-13, -30281.58660142529, -0.31136116480217385]
+    - [2.8432560092133228, 0.0027510764450291783, -7.81026468417208e-07, 1.072424842465603e-10,
+      -5.79382842272479e-15, -29958.615252484073, 5.910388340788128]
+  transport: {model: gas, geometry: nonlinear, diameter: 2.6050000000000004, well-depth: 572.4019516813576,
+    dipole: 1.8439999999999999, rotational-relaxation: 4.0}
+- name: H2(4)
+  composition: {H: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 1959.0704060489752, 5000.0]
+    data:
+    - [3.4353639487680128, 0.0002127118156028557, -2.7862835897145624e-07, 3.402697677898988e-10,
+      -7.760384389606823e-14, -1031.3598307378923, -3.9084166738022317]
+    - [2.788183431931728, 0.0005876180754751174, 1.5902112168376917e-07, -5.527605114100645e-11,
+      4.343266442811977e-15, -596.1546540947348, 0.11262832427188434]
+  transport: {model: gas, geometry: linear, diameter: 2.9200000000000004, well-depth: 38.00012796964137,
+    polarizability: 0.7900000000000005, rotational-relaxation: 280.0}
+- name: CO2(11)
+  composition: {C: 1.0, O: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 978.2164204728674, 5000.0]
+    data:
+    - [3.2808442401967555, 0.0025018599604604585, 8.08190860070739e-06, -1.2051019791178848e-08,
+      4.665419379298039e-12, -48400.8303130066, 6.00081542611513]
+    - [4.674275261049278, 0.002609626909889396, -9.856820966410659e-07, 1.9571201879038625e-10,
+      -1.498347168380767e-14, -48951.217304546415, -2.110780236384027]
+  transport: {model: gas, geometry: linear, diameter: 3.763, well-depth: 244.00106224424113,
+    polarizability: 2.650000000000001, rotational-relaxation: 2.1}
+- name: XCHO(37)
+  composition: {C: 1.0, H: 1.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.33925015, 0.0156187879, -1.78706053e-05, 1.16103367e-08, -3.20827392e-12,
+      -28040.1952, -4.27823196]
+    - [7.47250182, -0.00425652358, 7.67240272e-06, -4.1509429e-09, 7.52057428e-13,
+      -29601.8735, -35.2777491]
+- name: HOCOXX(73)
+  composition: {C: 1.0, H: 1.0, O: 2.0, X: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 932.0652544914789, 5000.0]
+    data:
+    - [3.3547338696278186, 0.00501514685339938, 2.9379796892972218e-05, -4.730216795991219e-08,
+      1.9887259296636703e-11, -52083.87270299059, -11.387531369414988]
+    - [10.256923815177712, -0.0011078130034184565, 1.4174749179896675e-06, -2.5360003657663844e-10,
+      1.2879554306264064e-14, -54391.22454069365, -49.67646244570719]
+  sites: 2.0
+- name: XCOOH(74)
+  composition: {C: 1.0, H: 1.0, O: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.359051461, 0.0250172545, -3.09587526e-05, 2.00287012e-08, -5.26520494e-12,
+      -57731.9467, 3.52735255]
+    - [9.16264817, -0.00470146235, 8.43555601e-06, -4.53366378e-09, 8.17971447e-13,
+      -59883.6653, -40.5975157]
+- name: formic_acid(56)
+  composition: {C: 1.0, H: 2.0, O: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 993.7308824616091, 5000.0]
+    data:
+    - [3.7624049304973135, -0.0009438468378144913, 3.3877835485811036e-05, -4.049830375414929e-08,
+      1.4398636824274389e-11, -46821.21013990247, 7.632763374908396]
+    - [5.645004078054891, 0.007551817910748831, -3.2085124698884127e-06, 6.589185800658705e-10,
+      -5.050548313872655e-14, -47989.002804893214, -5.431050136426511]
+  transport: {model: gas, geometry: nonlinear, diameter: 3.626000000000001, well-depth: 481.8,
+    dipole: 1.7000000000000002, rotational-relaxation: 1.0}
+- name: XCH2OH(46)
+  composition: {C: 1.0, H: 3.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [-0.373829188, 0.0233977003, -1.95735792e-05, 7.62721113e-09, -7.42114703e-13,
+      -29384.2663, 6.57911397]
+    - [10.3141499, -0.00856871933, 1.51855306e-05, -8.02279311e-09, 1.42722033e-12,
+      -32196.7714, -47.9896307]
+- name: XCHXO(36)
+  composition: {C: 1.0, H: 1.0, O: 1.0, X: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.873097043, 0.0193259085, -2.43372823e-05, 1.61326691e-08, -4.3452672e-12,
+      -24557.5801, -2.94044233]
+    - [7.63455521, -0.00373566071, 6.72665116e-06, -3.63437732e-09, 6.57956785e-13,
+      -26201.7814, -36.7791287]
+  sites: 2.0
+- name: CO2X(12)
+  composition: {C: 1.0, O: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.00959799, 0.0133597565, -1.62303912e-05, 1.10029585e-08, -3.14484723e-12,
+      -52781.8299, -2.58903014]
+    - [6.98298591, -0.00309871776, 5.62883251e-06, -3.07847525e-09, 5.62449215e-13,
+      -54033.4894, -27.6481272]
+- name: O[CH](O)[Pt](66)
+  composition: {C: 1.0, H: 3.0, O: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 806.5054080110434, 5000.0]
+    data:
+    - [2.99426452475854, 0.025506559922353216, -4.042109665959635e-05, 3.934850139682784e-08,
+      -1.512733216735009e-11, -52535.737264871204, -8.444822767691566]
+    - [3.807709269950307, 0.01459812238630075, -7.347930480806886e-06, 1.4417567032347805e-09,
+      -1.0113751464882507e-13, -52443.38610877319, -10.808312765116119]
+- name: CH3OH(44)
+  composition: {C: 1.0, H: 4.0, O: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 1035.749181724867, 5000.0]
+    data:
+    - [3.8400621022696124, 0.0013824204066135077, 1.9166717581634933e-05, -2.015686407671425e-08,
+      6.3910218016679525e-12, -25608.308707872922, 5.909781499911083]
+    - [2.791843147788007, 0.011582784916219805, -4.515519114172271e-06, 8.212066677179746e-10,
+      -5.670632179635165e-14, -25721.16743738466, 9.410614887004398]
+  transport: {model: gas, geometry: nonlinear, diameter: 3.626000000000001, well-depth: 481.802091582003,
+    rotational-relaxation: 1.0}
+- name: HCOOHX(58)
+  composition: {C: 1.0, H: 2.0, O: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.35698005, 0.016581795, -8.93246966e-06, -5.9659096e-10, 1.65711542e-12, -53694.2403,
+      -0.543199062]
+    - [11.0477913, -0.0072427437, 1.29091018e-05, -6.88021503e-09, 1.2328955e-12,
+      -56097.556, -45.4728471]
+- name: CH2O2X2(57)
+  composition: {C: 1.0, H: 2.0, O: 2.0, X: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [100.0, 949.0879885101498, 5000.0]
+    data:
+    - [3.401196244915814, 0.0020026669085049472, 4.623629016503994e-05, -6.425902686297858e-08,
+      2.5254519399815498e-11, -54251.88823197163, -12.02675371504058]
+    - [9.85372019059073, 0.0032114630884164078, -5.647784939812092e-07, 1.478414966244086e-10,
+      -1.693141541908992e-14, -56755.935667407044, -49.55862058616274]
+  sites: 2.0
+- name: XOC(OH)O(149)
+  composition: {C: 1.0, H: 1.0, O: 3.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.01328212, 0.0326276222, -3.70609785e-05, 2.09604143e-08, -4.66693351e-12,
+      -77148.9241, -4.75360743]
+    - [12.8523534, -0.00570824836, 1.02858082e-05, -5.56715984e-09, 1.01065309e-12,
+      -80105.9462, -64.4494097]
+- name: H2X(28)
+  composition: {H: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [3.86406413, 0.000753456449, -1.65571442e-06, 1.55223217e-09, -4.4678226e-13,
+      -1689.27505, -8.85806531]
+    - [4.06879652, -0.000495806734, 6.59234335e-07, -1.72597715e-10, 7.62965383e-15,
+      -1700.70035, -9.71917749]
+- name: CH3OHX(45)
+  composition: {C: 1.0, H: 4.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [3.05737703, 0.0128624334, 4.84927639e-06, -1.35997111e-08, 5.96900307e-12,
+      -31062.1321, -12.4359019]
+    - [13.1134924, -0.0114087964, 2.0203011e-05, -1.06647877e-08, 1.89545946e-12,
+      -34019.5663, -65.2666455]
+- name: XOCH3(25)
+  composition: {C: 1.0, H: 3.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [1.63812716, 0.011236545, 3.66483568e-06, -1.11206508e-08, 4.85717369e-12, -20003.4033,
+      -2.01845704]
+    - [10.2529575, -0.00948030603, 1.6901234e-05, -9.01198807e-09, 1.61413339e-12,
+      -22550.4985, -47.3210723]
+- name: CH2OX(31)
+  composition: {C: 1.0, H: 2.0, O: 1.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [4.152111, -0.000548713399, 1.6858931e-05, -1.83357871e-08, 6.29630397e-12,
+      -21001.0697, -11.442038]
+    - [8.40512532, -0.00690216938, 1.2352155e-05, -6.6236299e-09, 1.19136449e-12,
+      -22482.1487, -34.8417937]
+- name: XCH2XO(30)
+  composition: {C: 1.0, H: 2.0, O: 1.0, X: 2.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [0.336104022, 0.0226483369, -2.39239155e-05, 1.37256579e-08, -3.24031427e-12,
+      -21398.5316, -1.88215814]
+    - [9.52489548, -0.0065073405, 1.16586275e-05, -6.25680688e-09, 1.12649338e-12,
+      -23748.0774, -48.4225553]
+  sites: 2.0
+- name: HC(O)XO(114)
+  composition: {C: 1.0, H: 1.0, O: 2.0, X: 1.0}
+  thermo:
+    model: NASA7
+    reference-pressure: 10000.0
+    temperature-ranges: [298.0, 1000.0, 2000.0]
+    data:
+    - [2.6545242, 0.0153991982, -1.01838393e-05, 1.7530405e-09, 5.79614481e-13, -45905.8194,
+      -11.0811323]
+    - [10.1836282, -0.00548155633, 9.9350472e-06, -5.42476495e-09, 9.90183951e-13,
+      -47988.5042, -49.9790695]
+gas-reactions:
+- equation: CO2(11) + H2(4) <=> formic_acid(56)
+  rate-constant: {A: 1510000.0000000002, b: 1.23, Ea: 309198000.0}
+site0-reactions:
+- equation: O2(2) + 2 vacantX(3) <=> 2 OX(6)
+  rate-constant: {A: 1.8900000000000003e+17, b: -0.5, Ea: 0.0}
+- equation: CH4(1) + vacantX(3) <=> CH4X(22)
+  sticking-coefficient: {A: 0.008, b: 0.0, Ea: 0.0}
+- equation: CH3X(7) + HX(5) <=> CH4(1) + 2 vacantX(3)
+  rate-constant: {A: 3.3e+20, b: 0.0, Ea: 50000000.0}
+- equation: CH4X(22) + vacantX(3) <=> CH3X(7) + HX(5)
+  rate-constant: {A: 1.54e+20, b: 0.087, Ea: 55800000.000000015}
+- equation: CH2X(16) + HX(5) <=> CH3X(7) + vacantX(3)
+  rate-constant: {A: 3.09e+21, b: 0.0, Ea: 0.0}
+- equation: CH2X(16) + CH4X(22) <=> 2 CH3X(7)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2X(16) + vacantX(3) <=> CHX(17) + HX(5)
+  rate-constant: {A: 7.31e+21, b: 0.0, Ea: 58900000.00000001}
+- equation: CH4X(22) + CHX(17) <=> CH2X(16) + CH3X(7)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: 2 CH2X(16) <=> CH3X(7) + CHX(17)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 72713726.7367676}
+- equation: CH4(1) + OX(6) + vacantX(3) <=> CH3X(7) + HOX(8)
+  rate-constant: {A: 500000000000000.06, b: 0.7, Ea: 42000000.00000001}
+- equation: HOX(8) + vacantX(3) <=> HX(5) + OX(6)
+  rate-constant: {A: 7.39e+18, b: 0.0, Ea: 77300000.0}
+- equation: CH4X(22) + OX(6) <=> CH3X(7) + HOX(8)
+  rate-constant: {A: 5.62e+23, b: -0.101, Ea: 92700000.00000001}
+- equation: CH2X(16) + HOX(8) <=> CH3X(7) + OX(6)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: CHX(17) + HOX(8) <=> CH2X(16) + OX(6)
+  rate-constant: {A: 4.4e+21, b: 0.101, Ea: 42439032.03044352}
+- equation: CHX(17) + vacantX(3) <=> CX(15) + HX(5)
+  rate-constant: {A: 3.09e+21, b: 0.0, Ea: 51700000.00000001}
+- equation: CX(15) + HOX(8) <=> CHX(17) + OX(6)
+  rate-constant: {A: 2.43e+20, b: -0.312, Ea: 118900000.0}
+- equation: CH4X(22) + CX(15) <=> CH3X(7) + CHX(17)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3X(7) + CX(15) <=> CH2X(16) + CHX(17)
+  rate-constant: {A: 9.894e+20, b: 0.0, Ea: 0.0}
+- equation: CH2X(16) + CX(15) <=> 2 CHX(17)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 60241985.08898375}
+- equation: XCHOH(47) + vacantX(3) <=> CHX(17) + HOX(8)
+  rate-constant: {A: 1.46e+23, b: -0.213, Ea: 54300000.00000001}
+- equation: XCOH(54) + vacantX(3) <=> CX(15) + HOX(8)
+  rate-constant: {A: 1.46e+23, b: -0.213, Ea: 154102256.4412319}
+- equation: XCHOH(47) + vacantX(3) <=> HX(5) + XCOH(54)
+  rate-constant: {A: 3.71e+20, b: 0.0, Ea: 0.0}
+- equation: HOX(8) + XCOH(54) <=> OX(6) + XCHOH(47)
+  rate-constant: {A: 4.4e+21, b: 0.101, Ea: 53248561.00562542}
+- equation: CH4X(22) + XCOH(54) <=> CH3X(7) + XCHOH(47)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2X(16) + XCHOH(47) <=> CH3X(7) + XCOH(54)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 69615769.14683516}
+- equation: CH2X(16) + XCOH(54) <=> CHX(17) + XCHOH(47)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 102397957.58993249}
+- equation: CX(15) + XCHOH(47) <=> CHX(17) + XCOH(54)
+  rate-constant: {A: 2.43e+20, b: -0.312, Ea: 118900000.0}
+  duplicate: true
+- equation: CX(15) + XCHOH(47) <=> CHX(17) + XCOH(54)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 57144027.49905131}
+  duplicate: true
+- equation: OCX(13) + vacantX(3) <=> CX(15) + OX(6)
+  rate-constant: {A: 3.7e+18, b: 0.0, Ea: 236500000.00000003}
+- equation: XCOH(54) + vacantX(3) <=> HX(5) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 57468326.77332538}
+- equation: OX(6) + XCOH(54) <=> HOX(8) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 0.0}
+- equation: CH2X(16) + XCOH(54) <=> CH3X(7) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 52007599.083408035}
+- equation: CHX(17) + XCOH(54) <=> CH2X(16) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 119551104.130539}
+- equation: CX(15) + XCOH(54) <=> CHX(17) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 20322633.816065267}
+- equation: 2 XCOH(54) <=> OCX(13) + XCHOH(47)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 127421590.98063767}
+- equation: CH4(1) + HOX(8) + vacantX(3) <=> CH3X(7) + H2OX(9)
+  sticking-coefficient: {A: 1.0, b: 0.0, Ea: 10000000.0}
+- equation: H2OX(9) + vacantX(3) <=> HOX(8) + HX(5)
+  rate-constant: {A: 1.15e+18, b: 0.0, Ea: 101400000.00000001}
+- equation: H2OX(9) + OX(6) <=> 2 HOX(8)
+  rate-constant: {A: 1.0e+19, b: 0.0, Ea: 90500000.0}
+- equation: CH4X(22) + HOX(8) <=> CH3X(7) + H2OX(9)
+  rate-constant: {A: 1.672e+21, b: 0.0, Ea: 60448309.66771668}
+- equation: CH2X(16) + H2OX(9) <=> CH3X(7) + HOX(8)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CHX(17) + H2OX(9) <=> CH2X(16) + HOX(8)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 135422973.15031353}
+- equation: CX(15) + H2OX(9) <=> CHX(17) + HOX(8)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CHX(17) + H2OX(9) <=> HX(5) + XCHOH(47)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2OX(9) + XCOH(54) <=> HOX(8) + XCHOH(47)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 145990339.30359858}
+- equation: CX(15) + H2OX(9) <=> HX(5) + XCOH(54)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2O(10) + vacantX(3) <=> H2OX(9)
+  sticking-coefficient: {A: 0.75, b: 0.0, Ea: 0.0}
+- equation: H2O(10) + 2 vacantX(3) <=> HOX(8) + HX(5)
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 152586513.23411915}
+- equation: H2(4) + 2 vacantX(3) <=> 2 HX(5)
+  sticking-coefficient: {A: 0.046, b: 0.0, Ea: 0.0}
+- equation: CX(15) + H2(4) <=> CH2X(16)
+  sticking-coefficient: {A: 0.04, b: 0.0, Ea: 29700000.0}
+- equation: CO2(11) + 2 vacantX(3) <=> OCX(13) + OX(6)
+  sticking-coefficient: {A: 0.01, b: 0.0, Ea: 41840000.00000001}
+- equation: XCHO(37) + vacantX(3) <=> CHX(17) + OX(6)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 195337236.45593902}
+- equation: XCHOH(47) + vacantX(3) <=> HX(5) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 63358439.46823298}
+- equation: OX(6) + XCHOH(47) <=> HOX(8) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 0.0}
+- equation: CH2X(16) + XCHOH(47) <=> CH3X(7) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 73302621.90345858}
+- equation: CHX(17) + XCHOH(47) <=> CH2X(16) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 140846126.95058954}
+- equation: CX(15) + XCHOH(47) <=> CHX(17) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 41617656.63611584}
+- equation: XCHOH(47) + XCOH(54) + XCHOH(47) <=> XCHO(37) + XCHOH(47) + XCHOH(47)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 148716613.80068818}
+- equation: CH4X(22) + OCX(13) <=> CH3X(7) + XCHO(37)
+  rate-constant: {A: 1.1819195395461094e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2X(16) + XCHO(37) <=> CH3X(7) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 61233685.69638971}
+- equation: HX(5) + OCX(13) <=> XCHO(37) + vacantX(3)
+  rate-constant: {A: 3.14e+20, b: 0.0, Ea: 95520488.93907487}
+- equation: CHX(17) + XCHO(37) <=> CH2X(16) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 87819958.95962213}
+- equation: CX(15) + XCHO(37) <=> CHX(17) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 48761944.048605874}
+- equation: OX(6) + XCHO(37) <=> HOX(8) + OCX(13)
+  rate-constant: {A: 3.298e+20, b: 0.0, Ea: 0.0}
+- equation: XCHO(37) + XCOH(54) <=> OCX(13) + XCHOH(47)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 90917916.54955457}
+- equation: OCX(13) + XCHOH(47) <=> 2 XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 170011636.62073874}
+- equation: OCX(13) + XCOH(54) + OCX(13) <=> OCX(13) + XCHO(37) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 148716613.8006882}
+- equation: HOX(8) + XCHO(37) <=> H2OX(9) + OCX(13)
+  rate-constant: {A: 3.261e+20, b: 0.0, Ea: 28945602.70881056}
+- equation: HOCOXX(73) <=> OX(6) + XCOH(54)
+  rate-constant: {A: 4220000000000.0, b: 0.0, Ea: 104000000.00000001}
+- equation: XCOOH(74) + vacantX(3) <=> OX(6) + XCOH(54)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 213747503.94325244}
+- equation: HOX(8) + OCX(13) <=> XCOOH(74) + vacantX(3)
+  rate-constant: {A: 4.02e+17, b: 0.0, Ea: 11500000.000000002}
+- equation: OCX(13) + XCHOH(47) <=> CHX(17) + XCOOH(74)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: CX(15) + XCOOH(74) <=> OCX(13) + XCOH(54)
+  rate-constant: {A: 2.43e+20, b: -0.312, Ea: 118900000.0}
+- equation: H2OX(9) + OCX(13) <=> HX(5) + XCOOH(74)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCOOH(74) + vacantX(3) <=> HOCOXX(73)
+  rate-constant: {A: 1.0e+20, b: 0.0, Ea: 45690263.872821935}
+- equation: formic_acid(56) + 2 vacantX(3) <=> OX(6) + XCHOH(47)
+  sticking-coefficient: {A: 0.005, b: 0.0, Ea: 41840000.00000001}
+- equation: formic_acid(56) + 2 vacantX(3) <=> HOX(8) + XCHO(37)
+  sticking-coefficient: {A: 0.0075, b: 0.0, Ea: 5000000.0}
+- equation: formic_acid(56) + 2 vacantX(3) <=> HX(5) + XCOOH(74)
+  sticking-coefficient: {A: 0.05, b: 0.0, Ea: 25038124.757429555}
+- equation: XCH2OH(46) + vacantX(3) <=> CH2X(16) + HOX(8)
+  rate-constant: {A: 1.46e+23, b: -0.213, Ea: 88283536.63070574}
+- equation: CH4X(22) + XCHOH(47) <=> CH3X(7) + XCH2OH(46)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2X(16) + XCH2OH(46) <=> CH3X(7) + XCHOH(47)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 45258386.45391082}
+- equation: XCH2OH(46) + vacantX(3) <=> HX(5) + XCHOH(47)
+  rate-constant: {A: 7.42e+20, b: 0.0, Ea: 0.0}
+- equation: CH2X(16) + XCHOH(47) <=> CHX(17) + XCH2OH(46)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+  duplicate: true
+- equation: CH2X(16) + XCHOH(47) <=> CHX(17) + XCH2OH(46)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 81496953.82894596}
+  duplicate: true
+- equation: CX(15) + XCH2OH(46) <=> CHX(17) + XCHOH(47)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 39022515.6300189}
+- equation: HOX(8) + XCHOH(47) <=> OX(6) + XCH2OH(46)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: 2 XCHOH(47) <=> XCH2OH(46) + XCOH(54)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 78398996.23901351}
+- equation: 2 XCHOH(47) <=> XCH2OH(46) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 95616766.4079117}
+- equation: CX(15) + XCH2OH(46) <=> CH2X(16) + XCOH(54)
+  rate-constant: {A: 2.43e+20, b: -0.312, Ea: 118900000.0}
+- equation: XCHOH(47) + XCOH(54) <=> OCX(13) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 74321743.58786114}
+- equation: CH2X(16) + H2OX(9) <=> HX(5) + XCH2OH(46)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2OX(9) + XCHOH(47) <=> HOX(8) + XCH2OH(46)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCHO(37) + XCHOH(47) <=> OCX(13) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 70016912.78856808}
+- equation: CH2X(16) + XCOOH(74) <=> OCX(13) + XCH2OH(46)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: CHX(17) + OX(6) <=> XCHXO(36)
+  rate-constant: {A: 6.54e+20, b: 0.0, Ea: 142000000.0}
+- equation: XCHOH(47) + 2 vacantX(3) <=> HX(5) + XCHXO(36)
+  rate-constant: {A: 1.8566666666666664e+27, b: 0.0, Ea: 46000000.00000001}
+- equation: XCHO(37) + vacantX(3) <=> XCHXO(36)
+  rate-constant: {A: 1.0e+20, b: 0.0, Ea: 28819104.533958975}
+- equation: XCHXO(36) + XCOH(54) <=> CHX(17) + HOCOXX(73)
+  rate-constant: {A: 4.4e+21, b: 0.101, Ea: 42400000.0}
+- equation: CO2(11) + vacantX(3) <=> CO2X(12)
+  sticking-coefficient: {A: 0.005, b: 0.0, Ea: 0.0}
+- equation: OCX(13) + OX(6) <=> CO2X(12) + vacantX(3)
+  rate-constant: {A: 3.7e+20, b: 0.0, Ea: 117600000.00000001}
+- equation: HOX(8) + OCX(13) <=> CO2X(12) + HX(5)
+  rate-constant: {A: 1.0e+18, b: 0.0, Ea: 38700000.0}
+- equation: CO2X(12) + HX(5) <=> XCOOH(74) + vacantX(3)
+  rate-constant: {A: 6.25e+23, b: -0.475, Ea: 117200000.0}
+- equation: OX(6) + XCOOH(74) <=> CO2X(12) + HOX(8)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 31892727.067445423}
+- equation: CH3X(7) + XCOOH(74) <=> CH4X(22) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 108509258.73336293}
+- equation: CH2X(16) + XCOOH(74) <=> CH3X(7) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 123532845.27799976}
+- equation: HOX(8) + XCOOH(74) <=> CO2X(12) + H2OX(9)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 505930.9694433182}
+- equation: XCHOH(47) + XCOOH(74) <=> CO2X(12) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 145846989.78245285}
+- equation: OCX(13) + XCOOH(74) <=> CO2X(12) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 220241859.99527997}
+- equation: O[CH](O)[Pt](66) + vacantX(3) <=> HOX(8) + XCHOH(47)
+  rate-constant: {A: 2.92e+23, b: -0.213, Ea: 62357971.15103843}
+- equation: 2 XCHOH(47) <=> CHX(17) + O[CH](O)[Pt](66)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: CX(15) + O[CH](O)[Pt](66) <=> XCHOH(47) + XCOH(54)
+  rate-constant: {A: 4.86e+20, b: -0.312, Ea: 118900000.0}
+- equation: H2OX(9) + XCHOH(47) <=> HX(5) + O[CH](O)[Pt](66)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCHOH(47) + XCOOH(74) <=> OCX(13) + O[CH](O)[Pt](66)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: CH2X(16) + O[CH](O)[Pt](66) <=> XCH2OH(46) + XCHOH(47)
+  rate-constant: {A: 2.78e+20, b: 0.101, Ea: 19000000.0}
+- equation: CH3OH(44) + 2 vacantX(3) <=> CH3X(7) + HOX(8)
+  sticking-coefficient: {A: 0.0075, b: 0.0, Ea: 5000000.0}
+- equation: CH3OH(44) + 2 vacantX(3) <=> HX(5) + XCH2OH(46)
+  sticking-coefficient: {A: 0.0495, b: 0.0, Ea: 59367047.78218079}
+- equation: HCOOHX(58) + vacantX(3) <=> OX(6) + XCHOH(47)
+  rate-constant: {A: 1.641e+19, b: 0.0, Ea: 241213355.90675473}
+- equation: HCOOHX(58) + vacantX(3) <=> HOX(8) + XCHO(37)
+  rate-constant: {A: 1.781e+20, b: 0.0, Ea: 157271108.0512041}
+- equation: CHX(17) + HCOOHX(58) <=> XCHO(37) + XCHOH(47)
+  rate-constant: {A: 2.0375211367384003e+20, b: 0.4473447135332649, Ea: 108075845.45342731}
+- equation: CX(15) + HCOOHX(58) <=> XCHO(37) + XCOH(54)
+  rate-constant: {A: 1.405e+23, b: -0.101, Ea: 92700000.00000001}
+- equation: CH3X(7) + HCOOHX(58) <=> CH4X(22) + XCOOH(74)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 58750221.78856647}
+- equation: CH2X(16) + HCOOHX(58) <=> CH3X(7) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HX(5) + XCOOH(74) <=> HCOOHX(58) + vacantX(3)
+  rate-constant: {A: 2.308e+21, b: 0.0, Ea: 70434299.92477237}
+- equation: CHX(17) + HCOOHX(58) <=> CH2X(16) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CX(15) + HCOOHX(58) <=> CHX(17) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + OX(6) <=> HOX(8) + XCOOH(74)
+  rate-constant: {A: 1.405e+23, b: -0.101, Ea: 92700000.00000001}
+- equation: HCOOHX(58) + XCOH(54) <=> XCHOH(47) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + HOX(8) <=> H2OX(9) + XCOOH(74)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 0.0}
+- equation: HCOOHX(58) + OCX(13) <=> XCHO(37) + XCOOH(74)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+  duplicate: true
+- equation: HCOOHX(58) + OCX(13) <=> XCHO(37) + XCOOH(74)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+  duplicate: true
+- equation: 2 XCOOH(74) <=> CO2X(12) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 159545268.50333616}
+- equation: formic_acid(56) + vacantX(3) <=> HCOOHX(58)
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 0.0}
+- equation: CH2X(16) + HCOOHX(58) <=> XCH2OH(46) + XCHO(37)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + XCHOH(47) <=> XCH2OH(46) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: O[CH](O)[Pt](66) + vacantX(3) <=> HCOOHX(58) + HX(5)
+  rate-constant: {A: 2.5978752365723407e+21, b: 0.8733136449768377, Ea: 91493330.19125971}
+- equation: OX(6) + O[CH](O)[Pt](66) <=> HCOOHX(58) + HOX(8)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 0.0}
+- equation: CH3X(7) + O[CH](O)[Pt](66) <=> CH4X(22) + HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 71333697.49694438}
+- equation: CH2X(16) + O[CH](O)[Pt](66) <=> CH3X(7) + HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 72143098.86295058}
+- equation: HOX(8) + O[CH](O)[Pt](66) <=> H2OX(9) + HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 0.0}
+- equation: O[CH](O)[Pt](66) + XCHOH(47) <=> HCOOHX(58) + XCH2OH(46)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 94457243.36740375}
+- equation: OCX(13) + O[CH](O)[Pt](66) <=> HCOOHX(58) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 168852113.58023083}
+- equation: HCOOHX(58) + XCHOH(47) <=> O[CH](O)[Pt](66) + XCHO(37)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: O[CH](O)[Pt](66) + XCOOH(74) <=> 2 HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 122369707.26691763}
+- equation: CH2O2X2(57) <=> OX(6) + XCHOH(47)
+  rate-constant: {A: 4220000000000.0, b: 0.0, Ea: 104000000.00000001}
+- equation: CH4X(22) + HOCOXX(73) <=> CH2O2X2(57) + CH3X(7)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2O2X2(57) + CH2X(16) <=> CH3X(7) + HOCOXX(73)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 88208984.52429923}
+- equation: CH2O2X2(57) + vacantX(3) <=> HOCOXX(73) + HX(5)
+  rate-constant: {A: 2.3750000000000003e+20, b: 0.0, Ea: 72000000.0}
+- equation: CH2X(16) + HOCOXX(73) <=> CH2O2X2(57) + CHX(17)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 83804742.2124684}
+- equation: CH2O2X2(57) + CX(15) <=> CHX(17) + HOCOXX(73)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 75737242.87651539}
+- equation: CH2O2X2(57) + OX(6) <=> HOCOXX(73) + HOX(8)
+  rate-constant: {A: 3.298e+20, b: 0.0, Ea: 0.0}
+- equation: HOCOXX(73) + XCHOH(47) <=> CH2O2X2(57) + XCOH(54)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+  duplicate: true
+- equation: HOCOXX(73) + XCHOH(47) <=> CH2O2X2(57) + XCOH(54)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 80706784.62253593}
+  duplicate: true
+- equation: HOCOXX(73) + XCHOH(47) <=> CH2O2X2(57) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 101479796.35523891}
+- equation: HOCOXX(73) + XCOH(54) <=> CH2O2X2(57) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 80184773.53518842}
+- equation: H2OX(9) + HOCOXX(73) <=> CH2O2X2(57) + HOX(8)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HOCOXX(73) + XCHO(37) <=> CH2O2X2(57) + OCX(13)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 72324701.17209049}
+- equation: formic_acid(56) + 2 vacantX(3) <=> CH2O2X2(57)
+  sticking-coefficient: {A: 0.83, b: 0.0, Ea: 0.0}
+- equation: CH2O2X2(57) + XCHOH(47) <=> HOCOXX(73) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 96992211.61647756}
+- equation: CH2O2X2(57) + vacantX(3) <=> HOX(8) + XCHXO(36)
+  rate-constant: {A: 1.46e+23, b: -0.213, Ea: 92674805.87161152}
+- equation: XCHOH(47) + XCHXO(36) <=> CH2O2X2(57) + CHX(17)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+  duplicate: true
+- equation: XCHOH(47) + XCHXO(36) <=> CH2O2X2(57) + CHX(17)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+  duplicate: true
+- equation: CH2O2X2(57) + CX(15) <=> XCHXO(36) + XCOH(54)
+  rate-constant: {A: 2.43e+20, b: -0.312, Ea: 118900000.0}
+- equation: H2OX(9) + XCHXO(36) <=> CH2O2X2(57) + HX(5)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCHXO(36) + XCOOH(74) <=> CH2O2X2(57) + OCX(13)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: CH2O2X2(57) + CH2X(16) <=> XCH2OH(46) + XCHXO(36)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: O[CH](O)[Pt](66) + 2 vacantX(3) <=> CH2O2X2(57) + HX(5)
+  rate-constant: {A: 3.713333333333333e+27, b: 0.0, Ea: 46000000.00000001}
+- equation: O[CH](O)[Pt](66) + XCHXO(36) <=> CH2O2X2(57) + XCHOH(47)
+  rate-constant: {A: 2.78e+20, b: 0.101, Ea: 19000000.0}
+- equation: HCOOHX(58) + vacantX(3) <=> CH2O2X2(57)
+  rate-constant: {A: 2.0e+20, b: 0.0, Ea: 0.0}
+- equation: HCOOHX(58) + HOCOXX(73) <=> CH2O2X2(57) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + XCHXO(36) <=> CH2O2X2(57) + XCHO(37)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XOC(OH)O(149) + vacantX(3) <=> OX(6) + XCOOH(74)
+  rate-constant: {A: 8.733e+19, b: 0.0, Ea: 227705407.97597644}
+- equation: XOC(OH)O(149) + vacantX(3) <=> CO2X(12) + HOX(8)
+  rate-constant: {A: 5.140126096132323e+21, b: 0.8289867884322139, Ea: 48950149.40433856}
+- equation: OCX(13) + XOC(OH)O(149) <=> CO2X(12) + XCOOH(74)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 136376127.3724437}
+- equation: CH2X(16) + XOC(OH)O(149) <=> CO2X(12) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 92326616.00721484}
+- equation: XCHOH(47) + XOC(OH)O(149) <=> CO2X(12) + O[CH](O)[Pt](66)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 120474014.52522475}
+- equation: HCOOHX(58) + OX(6) <=> HX(5) + XOC(OH)O(149)
+  rate-constant: {A: 2.391307173911379e+23, b: -0.1875, Ea: 155550000.0}
+- equation: XCHO(37) + XOC(OH)O(149) <=> CO2X(12) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 98876440.6485185}
+- equation: CH2X(16) + H2X(28) <=> CH3X(7) + HX(5)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CHX(17) + H2X(28) <=> CH2X(16) + HX(5)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CX(15) + H2X(28) <=> CHX(17) + HX(5)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2X(28) + OX(6) <=> HOX(8) + HX(5)
+  rate-constant: {A: 4.782614347822758e+23, b: -0.1875, Ea: 155550000.0}
+- equation: H2X(28) + XCOH(54) <=> HX(5) + XCHOH(47)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2(4) + vacantX(3) <=> H2X(28)
+  sticking-coefficient: {A: 0.008, b: 0.0, Ea: 0.0}
+- equation: H2X(28) + OCX(13) <=> HX(5) + XCHO(37)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2X(28) + XCHOH(47) <=> HX(5) + XCH2OH(46)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: H2X(28) + HOCOXX(73) <=> CH2O2X2(57) + HX(5)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + vacantX(3) <=> CH3X(7) + HOX(8)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 145617207.76822725}
+- equation: CH3OHX(45) + CHX(17) <=> CH3X(7) + XCHOH(47)
+  rate-constant: {A: 2.0375211367384003e+20, b: 0.4473447135332649, Ea: 108075845.45342731}
+- equation: CH3OHX(45) + CX(15) <=> CH3X(7) + XCOH(54)
+  rate-constant: {A: 1.405e+23, b: -0.101, Ea: 92700000.00000001}
+- equation: CH3OHX(45) + OCX(13) <=> CH3X(7) + XCOOH(74)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + CH3X(7) <=> CH4X(22) + XCH2OH(46)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 100656206.01652098}
+- equation: CH2X(16) + CH3OHX(45) <=> CH3X(7) + XCH2OH(46)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+  duplicate: true
+- equation: CH2X(16) + CH3OHX(45) <=> CH3X(7) + XCH2OH(46)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+  duplicate: true
+- equation: HX(5) + XCH2OH(46) <=> CH3OHX(45) + vacantX(3)
+  rate-constant: {A: 2.783e+20, b: 0.0, Ea: 49207524.60497797}
+- equation: CH3OHX(45) + CHX(17) <=> CH2X(16) + XCH2OH(46)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + CX(15) <=> CHX(17) + XCH2OH(46)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + OX(6) <=> HOX(8) + XCH2OH(46)
+  rate-constant: {A: 4.215e+23, b: -0.101, Ea: 92700000.00000001}
+- equation: CH3OHX(45) + XCOH(54) <=> XCH2OH(46) + XCHOH(47)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + HOX(8) <=> H2OX(9) + XCH2OH(46)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 31804515.684237633}
+- equation: CH3OHX(45) + OCX(13) <=> XCH2OH(46) + XCHO(37)
+  rate-constant: {A: 8.864396546595821e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCH2OH(46) + XCOOH(74) <=> CH3OHX(45) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 129230301.18949673}
+- equation: CH3OHX(45) + XCHOH(47) <=> 2 XCH2OH(46)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + XCHOH(47) <=> CH3X(7) + O[CH](O)[Pt](66)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: O[CH](O)[Pt](66) + XCH2OH(46) <=> CH3OHX(45) + HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 92054739.9530782}
+- equation: CH3OH(44) + vacantX(3) <=> CH3OHX(45)
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 0.0}
+- equation: CH3OHX(45) + XCHO(37) <=> CH3X(7) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 118546480.87590319}
+- equation: HCOOHX(58) + XCH2OH(46) <=> CH3OHX(45) + XCOOH(74)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 87394015.77204557}
+- equation: CH3OHX(45) + XCHXO(36) <=> CH2O2X2(57) + CH3X(7)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + HOCOXX(73) <=> CH2O2X2(57) + XCH2OH(46)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3X(7) + XOC(OH)O(149) <=> CH3OHX(45) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 106655582.14254601}
+- equation: CH4X(22) + OX(6) <=> HX(5) + XOCH3(25)
+  rate-constant: {A: 9.565228695645516e+23, b: -0.1875, Ea: 155550000.0}
+- equation: XOCH3(25) + vacantX(3) <=> CH3X(7) + OX(6)
+  rate-constant: {A: 1.864e+21, b: 0.0, Ea: 193935538.1490308}
+- equation: CH3OH(44) + 2 vacantX(3) <=> HX(5) + XOCH3(25)
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 119702285.12608247}
+- equation: HX(5) + XOCH3(25) <=> CH3OHX(45) + vacantX(3)
+  rate-constant: {A: 4.349e+20, b: 0.0, Ea: 112887850.56436118}
+- equation: CH3OHX(45) + OX(6) <=> HOX(8) + XOCH3(25)
+  rate-constant: {A: 1.1355049650484472e+19, b: 0.1856333987911567, Ea: 161188369.58933502}
+  duplicate: true
+- equation: CH3OHX(45) + OX(6) <=> HOX(8) + XOCH3(25)
+  rate-constant: {A: 4.07e+23, b: -0.274, Ea: 218400000.00000003}
+  duplicate: true
+- equation: CH4X(22) + XOCH3(25) <=> CH3OHX(45) + CH3X(7)
+  rate-constant: {A: 1.672e+21, b: 0.0, Ea: 82827193.48280998}
+- equation: CH2X(16) + CH3OHX(45) <=> CH3X(7) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + CHX(17) <=> CH2X(16) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + HOX(8) <=> H2OX(9) + XOCH3(25)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 106921116.18490674}
+- equation: CH3OHX(45) + CX(15) <=> CHX(17) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + XCHOH(47) <=> XCH2OH(46) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + XCOH(54) <=> XCHOH(47) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 124676393.64995128}
+- equation: XCHO(37) + XOCH3(25) <=> CH3OHX(45) + OCX(13)
+  rate-constant: {A: 6.572e+19, b: 0.0, Ea: 36664430.09782672}
+- equation: CH3OHX(45) + HOCOXX(73) <=> CH2O2X2(57) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + XOCH3(25) <=> CH3OHX(45) + XCOOH(74)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 12277415.271376438}
+- equation: CH3OHX(45) + XOCH3(25) + CH3OHX(45) <=> CH3OHX(45) + XCH2OH(46) + CH3OHX(45)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 54183399.49933092}
+- equation: XCOOH(74) + XOCH3(25) <=> CH3OHX(45) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 74890632.74220414}
+- equation: O[CH](O)[Pt](66) + XOCH3(25) <=> CH3OHX(45) + HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 37715071.50578564}
+- equation: CH2OX(31) + vacantX(3) <=> CH2X(16) + OX(6)
+  rate-constant: {A: 1.641e+19, b: 0.0, Ea: 241213355.90675473}
+- equation: CH2OX(31) + CH3X(7) <=> CH4X(22) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 35335876.554817475}
+- equation: CH2OX(31) + CH2X(16) <=> CH3X(7) + XCHO(37)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HX(5) + XCHO(37) <=> CH2OX(31) + vacantX(3)
+  rate-constant: {A: 1.932e+20, b: 0.0, Ea: 88342471.4657905}
+- equation: CH2OX(31) + CHX(17) <=> CH2X(16) + XCHO(37)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2OX(31) + CX(15) <=> CHX(17) + XCHO(37)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2OX(31) + OX(6) <=> HOX(8) + XCHO(37)
+  rate-constant: {A: 2.81e+23, b: -0.101, Ea: 92700000.00000001}
+- equation: CH2OX(31) + XCOH(54) <=> XCHO(37) + XCHOH(47)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2OX(31) + HOX(8) <=> H2OX(9) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 0.0}
+- equation: CH2OX(31) + OCX(13) <=> 2 XCHO(37)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCHO(37) + XCOOH(74) <=> CH2OX(31) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 176483305.4809418}
+- equation: CH2OX(31) + HX(5) <=> XCH2OH(46) + vacantX(3)
+  rate-constant: {A: 3.234e+22, b: 0.0, Ea: 79117980.73741555}
+- equation: OX(6) + XCH2OH(46) <=> CH2OX(31) + HOX(8)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 57838698.79410606}
+- equation: CH3X(7) + XCH2OH(46) <=> CH2OX(31) + CH4X(22)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 130585644.05818132}
+- equation: CH2X(16) + XCH2OH(46) <=> CH2OX(31) + CH3X(7)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 154050201.46230757}
+- equation: HOX(8) + XCH2OH(46) <=> CH2OX(31) + H2OX(9)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 1155236.4201732716}
+- equation: XCH2OH(46) + XCHOH(47) + XCH2OH(46) <=> CH2OX(31) + XCH2OH(46) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 176364345.9667607}
+- equation: OCX(13) + XCH2OH(46) <=> CH2OX(31) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 250759216.17958772}
+- equation: XCH2OH(46) + XCHO(37) <=> 2 CH2OX(31)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 198559690.8057602}
+- equation: CH2OX(31) + XCHOH(47) <=> XCH2OH(46) + XCHO(37)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCH2OH(46) + XCOOH(74) <=> CH2OX(31) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 181621653.8281546}
+- equation: 2 XCH2OH(46) <=> CH2OX(31) + CH3OHX(45)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 151306686.51431513}
+- equation: O[CH](O)[Pt](66) + XCHO(37) <=> CH2OX(31) + HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 139307744.24452326}
+- equation: CH2OX(31) + XCOOH(74) <=> HCOOHX(58) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 105885654.76625109}
+- equation: CH2OX(31) + HOCOXX(73) <=> CH2O2X2(57) + XCHO(37)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2OX(31) + XOCH3(25) <=> CH3OHX(45) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 0.0}
+- equation: CH2OX(31) + XCH2OH(46) <=> CH3OHX(45) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 63979670.53829653}
+- equation: CH2OX(31) + HX(5) <=> XOCH3(25) + vacantX(3)
+  rate-constant: {A: 6.167e+20, b: 0.0, Ea: 34807704.47000917}
+- equation: OX(6) + XOCH3(25) <=> CH2OX(31) + HOX(8)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 108551776.36579058}
+- equation: CH3X(7) + XOCH3(25) <=> CH2OX(31) + CH4X(22)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 76245975.61088881}
+- equation: CH2X(16) + XOCH3(25) <=> CH2OX(31) + CH3X(7)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 78933600.96163848}
+- equation: HOX(8) + XOCH3(25) <=> CH2OX(31) + H2OX(9)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 26438369.838598732}
+- equation: XCHOH(47) + XOCH3(25) <=> CH2OX(31) + XCH2OH(46)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 101247745.4660916}
+- equation: OCX(13) + XOCH3(25) <=> CH2OX(31) + XCHO(37)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 175642615.67891863}
+- equation: XCHO(37) + XOCH3(25) <=> 2 CH2OX(31)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 144220022.35846773}
+- equation: XCOOH(74) + XOCH3(25) <=> CH2OX(31) + HCOOHX(58)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 127281985.38086203}
+- equation: XCH2OH(46) + XOCH3(25) <=> CH2OX(31) + CH3OHX(45)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 96967018.06702256}
+  duplicate: true
+- equation: XCH2OH(46) + XOCH3(25) <=> CH2OX(31) + CH3OHX(45)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 96967018.06702256}
+  duplicate: true
+- equation: 2 XOCH3(25) <=> CH2OX(31) + CH3OHX(45)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 42627349.619730055}
+- equation: CH2X(16) + OX(6) <=> XCH2XO(30)
+  rate-constant: {A: 2.2e+21, b: 0.0, Ea: 115000000.00000001}
+- equation: XCH2XO(30) + XCOH(54) <=> CH2X(16) + HOCOXX(73)
+  rate-constant: {A: 4.4e+21, b: 0.101, Ea: 42400000.0}
+- equation: HX(5) + XCH2XO(30) <=> XCH2OH(46) + 2 vacantX(3)
+  rate-constant: {A: 8.22e+19, b: 0.0, Ea: 29000000.0}
+- equation: CH4X(22) + XCHXO(36) <=> CH3X(7) + XCH2XO(30)
+  rate-constant: {A: 1.1819195395461097e+18, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH2X(16) + XCH2XO(30) <=> CH3X(7) + XCHXO(36)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 35927370.76328122}
+- equation: XCH2XO(30) + vacantX(3) <=> HX(5) + XCHXO(36)
+  rate-constant: {A: 8.75e+19, b: 0.0, Ea: 2000000.0}
+- equation: CHX(17) + XCH2XO(30) <=> CH2X(16) + XCHXO(36)
+  rate-constant: {A: 4.4e+21, b: 0.101, Ea: 42400000.0}
+  duplicate: true
+- equation: CX(15) + XCH2XO(30) <=> CHX(17) + XCHXO(36)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 29691499.939389296}
+- equation: HOX(8) + XCHXO(36) <=> OX(6) + XCH2XO(30)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 45412899.388047114}
+- equation: XCH2XO(30) + XCOH(54) <=> XCHOH(47) + XCHXO(36)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 50769486.18986367}
+- equation: XCHOH(47) + XCHXO(36) <=> XCH2XO(30) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 143028413.70084044}
+- equation: XCHXO(36) + XCOH(54) <=> OCX(13) + XCH2XO(30)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 121733390.88078992}
+- equation: H2OX(9) + XCHXO(36) <=> HOX(8) + XCH2XO(30)
+  rate-constant: {A: 5.909597697730547e+17, b: 0.9956894270665297, Ea: 138154677.6860203}
+- equation: XCHO(37) + XCHXO(36) <=> OCX(13) + XCH2XO(30)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 88678944.16982727}
+- equation: XCH2XO(30) + XCHOH(47) <=> XCH2OH(46) + XCHXO(36)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 40318984.3093704}
+- equation: HCOOHX(58) + XCHXO(36) <=> XCH2XO(30) + XCOOH(74)
+  rate-constant: {A: 2.954798848865274e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XCH2XO(30) + XCHOH(47) <=> CH2O2X2(57) + CH2X(16)
+  rate-constant: {A: 1.39e+20, b: 0.101, Ea: 19000000.0}
+- equation: HOCOXX(73) + XCH2XO(30) <=> CH2O2X2(57) + XCHXO(36)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 41472878.50113163}
+- equation: H2X(28) + XCHXO(36) <=> HX(5) + XCH2XO(30)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + XCHXO(36) <=> XCH2XO(30) + XOCH3(25)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CH3OHX(45) + XCHXO(36) <=> XCH2OH(46) + XCH2XO(30)
+  rate-constant: {A: 8.864396546595822e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: XOCH3(25) + 2 vacantX(3) <=> HX(5) + XCH2XO(30)
+  rate-constant: {A: 5.57e+27, b: 0.0, Ea: 46000000.00000001}
+- equation: CH2OX(31) + vacantX(3) <=> XCH2XO(30)
+  rate-constant: {A: 1.0e+20, b: 0.0, Ea: 0.0}
+- equation: CH2OX(31) + XCHXO(36) <=> XCH2XO(30) + XCHO(37)
+  rate-constant: {A: 5.909597697730548e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CHX(17) + XCH2XO(30) <=> CH2X(16) + XCHXO(36)
+  rate-constant: {A: 7.425803660210784e+20, b: 0.0, Ea: 49220507.394897416}
+  duplicate: true
+- equation: HC(O)XO(114) + vacantX(3) <=> OX(6) + XCHO(37)
+  rate-constant: {A: 8.733e+19, b: 0.0, Ea: 227705407.97597644}
+- equation: formic_acid(56) + 2 vacantX(3) <=> HC(O)XO(114) + HX(5)
+  sticking-coefficient: {A: 0.1, b: 0.0, Ea: 95219203.2493195}
+- equation: CH3X(7) + HC(O)XO(114) <=> CH4X(22) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 39345297.32106556}
+- equation: CH2X(16) + HC(O)XO(114) <=> CH3X(7) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 27923839.796294615}
+- equation: CO2X(12) + HX(5) <=> HC(O)XO(114) + vacantX(3)
+  rate-constant: {A: 1.243e+21, b: 0.0, Ea: 85530196.78646722}
+- equation: HC(O)XO(114) + OX(6) <=> CO2X(12) + HOX(8)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 57542015.200446725}
+- equation: HC(O)XO(114) + HOX(8) <=> CO2X(12) + H2OX(9)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 0.0}
+- equation: HC(O)XO(114) + OCX(13) <=> CO2X(12) + XCHO(37)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 124632854.5135748}
+- equation: HC(O)XO(114) + XCHOH(47) <=> CO2X(12) + XCH2OH(46)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 50237984.3007477}
+- equation: HC(O)XO(114) + HX(5) <=> HCOOHX(58) + vacantX(3)
+  rate-constant: {A: 4.424e+21, b: 0.0, Ea: 87801661.55005872}
+- equation: HCOOHX(58) + OX(6) <=> HC(O)XO(114) + HOX(8)
+  rate-constant: {A: 1.1355049650484472e+19, b: 0.1856333987911567, Ea: 161188369.58933502}
+  duplicate: true
+- equation: HCOOHX(58) + OX(6) <=> HC(O)XO(114) + HOX(8)
+  rate-constant: {A: 4.07e+23, b: -0.274, Ea: 218400000.00000003}
+  duplicate: true
+- equation: CH4X(22) + HC(O)XO(114) <=> CH3X(7) + HCOOHX(58)
+  rate-constant: {A: 1.672e+21, b: 0.0, Ea: 104240772.72972846}
+- equation: CH2X(16) + HCOOHX(58) <=> CH3X(7) + HC(O)XO(114)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: CHX(17) + HCOOHX(58) <=> CH2X(16) + HC(O)XO(114)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + HOX(8) <=> H2OX(9) + HC(O)XO(114)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 85507536.93798831}
+- equation: CX(15) + HCOOHX(58) <=> CHX(17) + HC(O)XO(114)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + XCHOH(47) <=> HC(O)XO(114) + XCH2OH(46)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HCOOHX(58) + XCOH(54) <=> HC(O)XO(114) + XCHOH(47)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HC(O)XO(114) + XCHO(37) <=> HCOOHX(58) + OCX(13)
+  rate-constant: {A: 7.475e+21, b: 0.0, Ea: 57891205.41762112}
+- equation: CH2OX(31) + HC(O)XO(114) <=> HCOOHX(58) + XCHO(37)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 10276649.284545926}
+- equation: HCOOHX(58) + HOCOXX(73) <=> CH2O2X2(57) + HC(O)XO(114)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: HC(O)XO(114) + HCOOHX(58) + HCOOHX(58) <=> HCOOHX(58) + XCOOH(74) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 33690994.51829493}
+- equation: CH3OHX(45) + HC(O)XO(114) <=> HCOOHX(58) + XCH2OH(46)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 75596978.74624941}
+- equation: HCOOHX(58) + XCHXO(36) <=> HC(O)XO(114) + XCH2XO(30)
+  rate-constant: {A: 2.9547988488652736e+17, b: 0.9956894270665297, Ea: 123451690.90685464}
+- equation: 2 HC(O)XO(114) <=> CO2X(12) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 21217345.678741463}
+- equation: HC(O)XO(114) + XCOOH(74) <=> CO2X(12) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 90381307.09103881}
+  duplicate: true
+- equation: HC(O)XO(114) + XCOOH(74) <=> CO2X(12) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 90381307.09103881}
+  duplicate: true
+- equation: HC(O)XO(114) + O[CH](O)[Pt](66) <=> 2 HCOOHX(58)
+  rate-constant: {A: 8.36e+20, b: 0.0, Ea: 53205745.85462029}
+- equation: HC(O)XO(114) + XOCH3(25) <=> CH3OHX(45) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 5726671.3299068045}
+- equation: HC(O)XO(114) + XCH2OH(46) <=> CH3OHX(45) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 60066339.77719939}
+- equation: CH3OHX(45) + HC(O)XO(114) <=> HCOOHX(58) + XOCH3(25)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 150713579.24691853}
+- equation: CH2OX(31) + OX(6) <=> HC(O)XO(114) + HX(5)
+  rate-constant: {A: 4.782614347822758e+23, b: -0.1875, Ea: 155550000.0}
+- equation: HC(O)XO(114) + XCHO(37) <=> CH2OX(31) + CO2X(12)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 107319344.06864443}
+- equation: HC(O)XO(114) + XOCH3(25) <=> CH2OX(31) + HCOOHX(58)
+  rate-constant: {A: 1.254e+21, b: 0.0, Ea: 58118023.968564674}
+- equation: HC(O)XO(114) + XCH2OH(46) <=> CH2OX(31) + HCOOHX(58)
+  rate-constant: {A: 4.18e+20, b: 0.0, Ea: 112457692.41585724}
