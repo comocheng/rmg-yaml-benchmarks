@@ -1,0 +1,90 @@
+Created run directory: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012
+branch 'yaml_fix' set up to track 'upstream/yaml_fix'.
+HEAD is now at 6ae9f2ce2 Skip empty Cantera YAML 'elements' blocks to match ck2yaml output
+Wrote RMG git info to /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012/rmg_git_info.txt
+
+Checking vital dependencies...
+
+Package        Version        Location
+Cantera        3.2.0          /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/cantera/__init__.py
+OpenBabel      3.1.0          /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/openbabel/openbabel.py
+pydqed         1.0.4          /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/pydqed.cpython-311-x86_64-linux-gnu.so
+RDKit          2025.03.6      /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/rdkit/__init__.py
+symmetry       1.16           /home/lucey.da/miniforge3/envs/rmg_env2/bin/symmetry
+
+Everything was found :)
+
+
+Checking for solvers before compiling...
+
+DASPK solver found. Compiling with DASPK and sensitivity analysis capability...
+
+python setup.py build_ext --inplace
+Compiling rmgpy/statmech/conformer.pyx because it changed.
+Compiling rmgpy/reaction.py because it changed.
+Compiling rmgpy/chemkin.pyx because it changed.
+Compiling rmgpy/solver/base.pyx because it changed.
+Compiling rmgpy/solver/simple.pyx because it depends on rmgpy/solver/base.pxd.
+Compiling rmgpy/solver/liquid.pyx because it depends on rmgpy/solver/base.pxd.
+Compiling rmgpy/solver/mbSampled.pyx because it depends on rmgpy/solver/base.pxd.
+Compiling rmgpy/solver/surface.pyx because it depends on rmgpy/solver/base.pxd.
+[1/8] Cythonizing rmgpy/chemkin.pyx
+[2/8] Cythonizing rmgpy/reaction.py
+[3/8] Cythonizing rmgpy/solver/base.pyx
+[4/8] Cythonizing rmgpy/statmech/conformer.pyx
+[5/8] Cythonizing rmgpy/solver/liquid.pyx
+[6/8] Cythonizing rmgpy/solver/mbSampled.pyx
+[7/8] Cythonizing rmgpy/solver/simple.pyx
+[8/8] Cythonizing rmgpy/solver/surface.pyx
+running build_ext
+building 'rmgpy.statmech.conformer' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/statmech/conformer.c -o build/temp.linux-x86_64-cpython-311/rmgpy/statmech/conformer.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/statmech/conformer.o -o build/lib.linux-x86_64-cpython-311/rmgpy/statmech/conformer.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.reaction' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/reaction.c -o build/temp.linux-x86_64-cpython-311/rmgpy/reaction.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/reaction.o -o build/lib.linux-x86_64-cpython-311/rmgpy/reaction.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.chemkin' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/chemkin.c -o build/temp.linux-x86_64-cpython-311/rmgpy/chemkin.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/chemkin.o -o build/lib.linux-x86_64-cpython-311/rmgpy/chemkin.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.solver.base' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/solver/base.c -o build/temp.linux-x86_64-cpython-311/rmgpy/solver/base.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/solver/base.o -o build/lib.linux-x86_64-cpython-311/rmgpy/solver/base.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.solver.simple' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/solver/simple.c -o build/temp.linux-x86_64-cpython-311/rmgpy/solver/simple.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/solver/simple.o -o build/lib.linux-x86_64-cpython-311/rmgpy/solver/simple.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.solver.liquid' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/solver/liquid.c -o build/temp.linux-x86_64-cpython-311/rmgpy/solver/liquid.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/solver/liquid.o -o build/lib.linux-x86_64-cpython-311/rmgpy/solver/liquid.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.solver.mbSampled' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/solver/mbSampled.c -o build/temp.linux-x86_64-cpython-311/rmgpy/solver/mbSampled.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/solver/mbSampled.o -o build/lib.linux-x86_64-cpython-311/rmgpy/solver/mbSampled.cpython-311-x86_64-linux-gnu.so
+building 'rmgpy.solver.surface' extension
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -O2 -isystem /home/lucey.da/miniforge3/envs/rmg_env2/include -fPIC -I/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include -I/home/lucey.da/miniforge3/envs/rmg_env2/include/python3.11 -c rmgpy/solver/surface.c -o build/temp.linux-x86_64-cpython-311/rmgpy/solver/surface.o
+gcc -pthread -B /home/lucey.da/miniforge3/envs/rmg_env2/compiler_compat -shared -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lucey.da/miniforge3/envs/rmg_env2/lib -Wl,-rpath-link,/home/lucey.da/miniforge3/envs/rmg_env2/lib -L/home/lucey.da/miniforge3/envs/rmg_env2/lib build/temp.linux-x86_64-cpython-311/rmgpy/solver/surface.o -o build/lib.linux-x86_64-cpython-311/rmgpy/solver/surface.cpython-311-x86_64-linux-gnu.so
+copying build/lib.linux-x86_64-cpython-311/rmgpy/kinetics/arrhenius.cpython-311-x86_64-linux-gnu.so -> rmgpy/kinetics
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/atomtype.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/group.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/molecule.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/symmetry.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/converter.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/translator.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/inchi.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/resonance.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/kekulize.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/statmech/conformer.cpython-311-x86_64-linux-gnu.so -> rmgpy/statmech
+copying build/lib.linux-x86_64-cpython-311/rmgpy/thermo/thermodata.cpython-311-x86_64-linux-gnu.so -> rmgpy/thermo
+copying build/lib.linux-x86_64-cpython-311/rmgpy/thermo/nasa.cpython-311-x86_64-linux-gnu.so -> rmgpy/thermo
+copying build/lib.linux-x86_64-cpython-311/rmgpy/thermo/wilhoit.cpython-311-x86_64-linux-gnu.so -> rmgpy/thermo
+copying build/lib.linux-x86_64-cpython-311/rmgpy/quantity.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/reaction.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/species.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/chemkin.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/base.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/simple.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/liquid.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/mbSampled.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/surface.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+Submitting RMG job...
+Submitted RMG job: 6832975
+Submitting analysis job...
+Submitted analysis job: 6832976

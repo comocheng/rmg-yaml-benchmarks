@@ -1,0 +1,11 @@
+Running RMG job
+RUN_DIR: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012
+RMG_PATH: /home/lucey.da/RMG-Py
+CONDA_ENV: rmg_env2
+RMG_WALLTIME: 00:05:50:00
+SLURM_JOB_ID: 6832975
+SLURM_NODE: d0110
+/home/lucey.da/miniforge3/envs/rmg_env2/bin/python
+Python 3.11.15
+Starting RMG...
+ERROR: RMG job failed on line 61 with exit code 1

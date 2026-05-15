@@ -1,0 +1,94 @@
+====================================================================================================
+RMG YAML BENCHMARK ANALYSIS REPORT
+====================================================================================================
+
+RUN INFO
+----------------------------------------------------------------------------------------------------
+Run directory:       /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012
+Benchmark:           gas_phase/ethane_pyrolysis_oxidation
+SLURM job id:        
+SLURM node:          
+Profile file:        MISSING
+Total profile time:  0.000 s
+
+RMG GIT INFO
+----------------------------------------------------------------------------------------------------
+branch: yaml_fix
+commit_hash: 6ae9f2ce2e5be0ed771a1a0fbbc4ce2b4cfd8b26
+short_hash: 6ae9f2ce2
+commit_date: 2026-05-15 09:58:23 -0400
+commit_message: Skip empty Cantera YAML 'elements' blocks to match ck2yaml output
+rmg_path: /home/lucey.da/RMG-Py
+
+PROFILE GRAPH OUTPUT
+----------------------------------------------------------------------------------------------------
+Graph status:        skipped_missing_profile
+DOT file:            None
+PDF file:            None
+
+WRITER CPU TIME SUMMARY
+----------------------------------------------------------------------------------------------------
+yaml_write_cumulative_s: 0.0
+yaml_write_self_s: 0.0
+chemkin_write_cumulative_s: 0.0
+chemkin_write_self_s: 0.0
+all_output_cumulative_s: 0.0
+all_output_self_s: 0.0
+yaml_to_chemkin_write_time_ratio: None
+
+CHEMICAL EQUIVALENCE SUMMARY
+----------------------------------------------------------------------------------------------------
+yaml_file: 
+chemkin_file: 
+species_dictionary: 
+transport_file: 
+yaml_loads: False
+chemkin_converts: False
+chemkin_loads: False
+yaml_species_count: None
+chemkin_species_count: None
+species_count_match: False
+yaml_reaction_count: None
+chemkin_reaction_count: None
+reaction_count_match: False
+yaml_phase_names: 
+chemkin_phase_names: 
+yaml_surface_phase_count: None
+yaml_gas_phase_count: None
+chemically_equivalent_basic: False
+chemical_equivalence_notes: YAML did not load in Cantera. Chemkin did not convert/load through Cantera.
+
+YAML ERROR
+----------------------------------------------------------------------------------------------------
+No YAML file found.
+
+CHEMKIN ERROR
+----------------------------------------------------------------------------------------------------
+No Chemkin file found.
+
+CATEGORY PROFILE SUMMARY
+----------------------------------------------------------------------------------------------------
+Category                           Self s     Self %        Cum s      Cum %        Calls    Funcs
+----------------------------------------------------------------------------------------------------
+
+TOP 75 FUNCTIONS BY CUMULATIVE TIME
+----------------------------------------------------------------------------------------------------
+       Cum s      Cum %       Self s     Self %        Calls Category                 Function
+----------------------------------------------------------------------------------------------------
+
+TOP 75 FUNCTIONS BY SELF TIME
+----------------------------------------------------------------------------------------------------
+      Self s     Self %        Cum s      Cum %        Calls Category                 Function
+----------------------------------------------------------------------------------------------------
+
+YAML_WRITER FUNCTIONS
+----------------------------------------------------------------------------------------------------
+No functions found for category yaml_writer.
+
+CHEMKIN_WRITER FUNCTIONS
+----------------------------------------------------------------------------------------------------
+No functions found for category chemkin_writer.
+
+ALL_OUTPUT FUNCTIONS
+----------------------------------------------------------------------------------------------------
+No functions found for category all_output.

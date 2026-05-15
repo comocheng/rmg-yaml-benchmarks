@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/lucey.da/RMG-Py/rmg.py", line 1, in <module>
+    from rmgpy import __main__
+  File "/home/lucey.da/RMG-Py/rmgpy/__main__.py", line 38, in <module>
+    from rmgpy.rmg.main import RMG, initialize_log, process_profile_stats, make_profile_graph
+  File "/home/lucey.da/RMG-Py/rmgpy/rmg/main.py", line 56, in <module>
+    from rmgpy.chemkin import ChemkinWriter
+  File "rmgpy/chemkin.pyx", line 45, in init rmgpy.chemkin
+  File "/home/lucey.da/RMG-Py/rmgpy/data/kinetics/__init__.py", line 30, in <module>
+    from rmgpy.data.kinetics.database import KineticsDatabase
+  File "/home/lucey.da/RMG-Py/rmgpy/data/kinetics/database.py", line 42, in <module>
+    from rmgpy.data.kinetics.family import KineticsFamily
+  File "/home/lucey.da/RMG-Py/rmgpy/data/kinetics/family.py", line 67, in <module>
+    from rmgpy.tools.uncertainty import KineticParameterUncertainty
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/uncertainty.py", line 35, in <module>
+    import rmgpy.data.thermo
+  File "/home/lucey.da/RMG-Py/rmgpy/data/thermo.py", line 43, in <module>
+    from pysidt import read_nodes, MultiTargetSingleEvalSubgraphIsomorphicDecisionTree
+ModuleNotFoundError: No module named 'pysidt'

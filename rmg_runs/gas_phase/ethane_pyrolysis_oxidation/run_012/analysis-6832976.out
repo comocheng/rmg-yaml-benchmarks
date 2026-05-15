@@ -1,0 +1,10 @@
+Running analysis
+BENCH_DIR: /home/lucey.da/rmg/rmg-yaml-benchmarks
+RUN_DIR: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012
+SLURM_JOB_ID: 6832976
+No profile found in /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012 — writing partial analysis.
+Wrote report:        /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012/analysis_report.txt
+Wrote functions CSV: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012/profile_functions.csv
+Appended history:    results/benchmark_history.csv
+Wrote JSON summary:  /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_012/analysis_summary.json
+Graph status:        skipped_missing_profile

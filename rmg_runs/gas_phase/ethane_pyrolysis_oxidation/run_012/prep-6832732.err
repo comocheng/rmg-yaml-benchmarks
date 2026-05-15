@@ -1,0 +1,93 @@
+From https://github.com/ReactionMechanismGenerator/RMG-Py
+   abef75420..909e2b1db  get_w0_fix_for_halocarbene_recomb_double -> upstream/get_w0_fix_for_halocarbene_recomb_double
+ * [new branch]          macinstall -> upstream/macinstall
+   b35055d9a..1de628143  main       -> upstream/main
+   5c4d2e671..42483641d  vdW_bonds  -> upstream/vdW_bonds
+ + 021903d37...6ae9f2ce2 yaml_fix   -> upstream/yaml_fix  (forced update)
+Switched to a new branch 'yaml_fix'
+warning: rmgpy/solver/surface.pyx:408:61: Unreachable code
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/setuptools/dist.py:334: InformationOnly: Normalizing '4.0.0.rc1' to '4.0.0rc1'
+  self.metadata.version = self._normalize_version(self.metadata.version)
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/statmech/conformer.c:1240:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/reaction.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/chemkin.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/solver/base.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+rmgpy/solver/base.c: In function ‘__pyx_f_5rmgpy_6solver_4base_14ReactionSystem_simulate’:
+rmgpy/solver/base.c:2725:73: warning: ‘__pyx_pybuffernd_sens_species_indices.diminfo[0].strides’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 2725 | #define __Pyx_BufPtrStrided1d(type, buf, i0, s0) (type)((char*)buf + i0 * s0)
+      |                                                                         ^
+rmgpy/solver/base.c:17671:21: note: ‘__pyx_pybuffernd_sens_species_indices.diminfo[0].strides’ was declared here
+17671 |   __Pyx_LocalBuf_ND __pyx_pybuffernd_sens_species_indices;
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rmgpy/solver/base.c:21279:40: warning: ‘__pyx_pybuffernd_sens_species_indices.diminfo[0].shape’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+21279 |         if (__pyx_t_26 < 0) __pyx_t_26 += __pyx_pybuffernd_sens_species_indices.diminfo[0].shape;
+      |                             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rmgpy/solver/base.c:21170:23: warning: ‘__pyx_v_RTP’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+21170 |           __pyx_t_4 = PyFloat_FromDouble(__pyx_v_RTP); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 795, __pyx_L1_error)
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/solver/simple.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+rmgpy/solver/simple.c: In function ‘__pyx_pf_5rmgpy_6solver_6simple_13SimpleReactor_20residual’:
+rmgpy/solver/simple.c:12500:40: warning: ‘__pyx_v_j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+12500 |         if (__pyx_t_20 < 0) __pyx_t_20 += __pyx_pybuffernd_kf.diminfo[0].shape;
+      |                             ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/solver/liquid.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/solver/mbSampled.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+In file included from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from rmgpy/solver/surface.c:1257:
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+rmgpy/solver/surface.c: In function ‘__pyx_pf_5rmgpy_6solver_7surface_14SurfaceReactor_16residual’:
+rmgpy/solver/surface.c:16124:38: warning: ‘__pyx_pybuffernd_coverages.diminfo[0].shape’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+16124 |       if (__pyx_t_18 < 0) __pyx_t_18 += __pyx_pybuffernd_coverages.diminfo[0].shape;
+      |                           ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rmgpy/solver/surface.c:2752:73: warning: ‘__pyx_pybuffernd_coverages.diminfo[0].strides’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 2752 | #define __Pyx_BufPtrStrided1d(type, buf, i0, s0) (type)((char*)buf + i0 * s0)
+      |                                                                         ^
+rmgpy/solver/surface.c:14087:21: note: ‘__pyx_pybuffernd_coverages.diminfo[0].strides’ was declared here
+14087 |   __Pyx_LocalBuf_ND __pyx_pybuffernd_coverages;
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
