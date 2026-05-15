@@ -1,0 +1,65 @@
+{
+  "git_info": {
+    "branch": "yaml_fix",
+    "remote_used": "upstream",
+    "remote_branch_used": "upstream/yaml_fix",
+    "commit_hash": "6ae9f2ce2e5be0ed771a1a0fbbc4ce2b4cfd8b26",
+    "short_hash": "6ae9f2ce2",
+    "commit_date": "2026-05-15 09:58:23 -0400",
+    "commit_message": "Skip empty Cantera YAML 'elements' blocks to match ck2yaml output",
+    "upstream_yaml_fix_hash": "6ae9f2ce2e5be0ed771a1a0fbbc4ce2b4cfd8b26",
+    "origin_yaml_fix_hash": "origin/yaml_fix",
+    "rmg_path": "/home/lucey.da/RMG-Py",
+    "benchmark": "catalytic/co2_hydrog_long",
+    "run_dir": "/home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_011",
+    "prep_slurm_job_id": "6832861",
+    "prep_slurm_node": "d0110",
+    "rmg_slurm_job_id": "6833094",
+    "analysis_slurm_job_id": "6833095",
+    "actual_rmg_slurm_job_id": "6833094",
+    "actual_rmg_slurm_node": "d0110",
+    "actual_rmg_started_at": "2026-05-15T10:58:01-04:00"
+  },
+  "profile": {
+    "total_time_s": 0.0,
+    "category_rows": []
+  },
+  "graph": {
+    "dot_file": null,
+    "pdf_file": null,
+    "graph_status": "skipped_missing_profile"
+  },
+  "chemistry": {
+    "yaml_loads": false,
+    "yaml_error": "No YAML file found.",
+    "yaml_species_count": null,
+    "yaml_reaction_count": null,
+    "yaml_phase_names": "",
+    "yaml_surface_phase_count": null,
+    "yaml_gas_phase_count": null,
+    "chemkin_converts": false,
+    "chemkin_loads": false,
+    "chemkin_error": "No Chemkin file found.",
+    "chemkin_converted_yaml": "",
+    "chemkin_species_count": null,
+    "chemkin_reaction_count": null,
+    "chemkin_phase_names": "",
+    "yaml_file": "",
+    "chemkin_file": "",
+    "species_dictionary": "",
+    "transport_file": "",
+    "species_count_match": false,
+    "reaction_count_match": false,
+    "chemically_equivalent_basic": false,
+    "chemical_equivalence_notes": "YAML did not load in Cantera. Chemkin did not convert/load through Cantera."
+  },
+  "writer_timing": {
+    "yaml_write_cumulative_s": 0.0,
+    "yaml_write_self_s": 0.0,
+    "chemkin_write_cumulative_s": 0.0,
+    "chemkin_write_self_s": 0.0,
+    "all_output_cumulative_s": 0.0,
+    "all_output_self_s": 0.0,
+    "yaml_to_chemkin_write_time_ratio": null
+  }
+}

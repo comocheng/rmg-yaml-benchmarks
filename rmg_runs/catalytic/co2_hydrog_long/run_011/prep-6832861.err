@@ -1,0 +1,3 @@
+Already on 'yaml_fix'
+/home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/setuptools/dist.py:334: InformationOnly: Normalizing '4.0.0.rc1' to '4.0.0rc1'
+  self.metadata.version = self._normalize_version(self.metadata.version)

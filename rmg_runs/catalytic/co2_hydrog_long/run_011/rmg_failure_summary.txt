@@ -1,0 +1,9 @@
+rmg_failed: true
+failed_line: 61
+exit_code: 1
+timestamp: 2026-05-15T10:58:07-04:00
+slurm_job_id: 6833094
+slurm_node: d0110
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_011
+rmg_path: /home/lucey.da/RMG-Py
+rmg_walltime: 00:01:50:00
