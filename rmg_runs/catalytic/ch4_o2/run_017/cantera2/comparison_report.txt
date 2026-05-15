@@ -1,0 +1,372 @@
+Loading /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_017/cantera_from_ck/chem.yaml...
+Loading /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_017/cantera2/chem.yaml...
+Comparing YAML metadata...
+Comparing phases...
+  Comparing species in phase 'gas'...
+  Comparing reactions in phase 'gas'...
+  Comparing species in phase 'SURF0'...
+  Comparing reactions in phase 'SURF0'...
+Cantera YAML comparison found 363 difference(s) between /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_017/cantera_from_ck/chem.yaml and /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_017/cantera2/chem.yaml
+  Value mismatch at metadata.units.activation-energy: 'kcal/mol' vs 'J/mol'
+  Value mismatch at metadata.units.length: 'cm' vs 'm'
+  Missing key in first file at metadata.description
+  Value mismatch at metadata.phases[0].species[13]: 'CH2O3(134)' vs 'O=C(O)O(134)'
+  Value mismatch at metadata.phases[0].species[14]: 'C2H2O4(189)' vs 'O=COC(=O)O(189)'
+  Value mismatch at metadata.phases[0].species[15]: 'C2H2O5(254)' vs 'O=C(O)OC(=O)O(254)'
+  Value mismatch at metadata.phases[1].name: 'SURF0' vs 'surface'
+  Value mismatch at metadata.phases[1].reactions[0]: 'SURF0-reactions' vs 'surface-reactions'
+  Numerical difference at metadata.phases[1].site-density: 2.483e-09 vs 2.4829999999999998e-05 (abs_diff=2.48e-05, rel_diff=1.00e+00)
+  Value mismatch at metadata.phases[1].species[24]: 'CH2O2X2(68)' vs 'formic_acidXX(68)'
+  Value mismatch at metadata.phases[1].species[27]: 'CH2O3X2(120)' vs 'O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at metadata.phases[1].species[30]: 'CH3O3X(270)' vs 'OC(O)[O][Pt](270)'
+  Value mismatch at metadata.generator: 'ck2yaml' vs 'RMG-Py CanteraWriter2 at /home/lucey.da/RMG-Py/rmgpy/yaml_cantera2.py (git commit: 6ae9f2c)'
+  Phase 'gas': species 'C2H2O5(254)' only in first file
+  Phase 'gas': species 'CH2O3(134)' only in first file
+  Phase 'gas': species 'C2H2O4(189)' only in first file
+  Phase 'gas': species 'O=COC(=O)O(189)' only in second file
+  Phase 'gas': species 'O=C(O)OC(=O)O(254)' only in second file
+  Phase 'gas': species 'O=C(O)O(134)' only in second file
+  Numerical difference at phase.gas.species.Ar.thermo.temperature-ranges[1]: 6000.0 vs 1000.0 (abs_diff=5.00e+03, rel_diff=5.00e+00)
+  Numerical difference at phase.gas.species.He.thermo.temperature-ranges[1]: 6000.0 vs 1000.0 (abs_diff=5.00e+03, rel_diff=5.00e+00)
+  Numerical difference at phase.gas.species.Ne.thermo.temperature-ranges[1]: 6000.0 vs 1000.0 (abs_diff=5.00e+03, rel_diff=5.00e+00)
+  Phase 'gas': reaction 1 equation differs: 'C2H2O4(189) <=> CO2(11) + formic_acid(67)' vs 'O=COC(=O)O(189) <=> CO2(11) + formic_acid(67)'
+  Value mismatch at phase.gas.reaction[1].equation: 'C2H2O4(189) <=> CO2(11) + formic_acid(67)' vs 'O=COC(=O)O(189) <=> CO2(11) + formic_acid(67)'
+  Numerical difference at phase.gas.reaction[1].rate-constant.b: 0.206 vs 0.20628 (abs_diff=2.80e-04, rel_diff=1.36e-03)
+  Phase 'gas': reaction 2 equation differs: 'C2H2O5(254) <=> CH2O3(134) + CO2(11)' vs 'O=C(O)OC(=O)O(254) <=> CO2(11) + O=C(O)O(134)'
+  Value mismatch at phase.gas.reaction[2].equation: 'C2H2O5(254) <=> CH2O3(134) + CO2(11)' vs 'O=C(O)OC(=O)O(254) <=> CO2(11) + O=C(O)O(134)'
+  Numerical difference at phase.gas.reaction[2].rate-constant.b: 0.206 vs 0.20628 (abs_diff=2.80e-04, rel_diff=1.36e-03)
+  Phase 1: name differs: 'SURF0' vs 'surface'
+  Phase 'SURF0': species 'CH2O3X2(120)' only in first file
+  Phase 'SURF0': species 'CH3O3X(270)' only in first file
+  Phase 'SURF0': species 'CH2O2X2(68)' only in first file
+  Phase 'SURF0': species 'formic_acidXX(68)' only in second file
+  Phase 'SURF0': species 'O[C](O)([Pt])[O][Pt](120)' only in second file
+  Phase 'SURF0': species 'OC(O)[O][Pt](270)' only in second file
+  Numerical difference at phase.SURF0.species.vacantX(3).thermo.temperature-ranges[1]: 3000.0 vs 1000.0 (abs_diff=2.00e+03, rel_diff=2.00e+00)
+  Numerical difference at phase.SURF0.reaction[5].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[7].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[16].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[21].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[40].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[41].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[42].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[43].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[44].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[45].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[53].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[62].rate-constant.Ea: 12552.000000000002 vs 10759.642528873428 (abs_diff=1.79e+03, rel_diff=1.67e-01)
+  Numerical difference at phase.SURF0.reaction[67].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[76].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[77].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[90].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 106 equation differs: 'CH2O3(134) + 2 vacantX(3) <=> HOX(8) + XCOOH(58)' vs 'O=C(O)O(134) + 2 vacantX(3) <=> HOX(8) + XCOOH(58)'
+  Value mismatch at phase.SURF0.reaction[106].equation: 'CH2O3(134) + 2 vacantX(3) <=> HOX(8) + XCOOH(58)' vs 'O=C(O)O(134) + 2 vacantX(3) <=> HOX(8) + XCOOH(58)'
+  Numerical difference at phase.SURF0.reaction[110].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[115].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[117].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[118].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[120].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[123].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[127].rate-constant.b: -0.126 vs -0.12573065551425344 (abs_diff=2.69e-04, rel_diff=2.14e-03)
+  Numerical difference at phase.SURF0.reaction[128].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[129].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[130].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[135].rate-constant.Ea: 351456.0 vs 352751.4833362743 (abs_diff=1.30e+03, rel_diff=3.67e-03)
+  Numerical difference at phase.SURF0.reaction[139].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 140 equation differs: 'CH2O2X2(68) <=> OX(6) + XCHOH(47)' vs 'formic_acidXX(68) <=> OX(6) + XCHOH(47)'
+  Value mismatch at phase.SURF0.reaction[140].equation: 'CH2O2X2(68) <=> OX(6) + XCHOH(47)' vs 'formic_acidXX(68) <=> OX(6) + XCHOH(47)'
+  Phase 'SURF0': reaction 141 equation differs: 'CH4X(22) + HOCOXX(57) <=> CH2O2X2(68) + CH3X(7)' vs 'CH4X(22) + HOCOXX(57) <=> CH3X(7) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[141].equation: 'CH4X(22) + HOCOXX(57) <=> CH2O2X2(68) + CH3X(7)' vs 'CH4X(22) + HOCOXX(57) <=> CH3X(7) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[141].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 142 equation differs: 'CH2O2X2(68) + CH2X(16) <=> CH3X(7) + HOCOXX(57)' vs 'CH2X(16) + formic_acidXX(68) <=> CH3X(7) + HOCOXX(57)'
+  Value mismatch at phase.SURF0.reaction[142].equation: 'CH2O2X2(68) + CH2X(16) <=> CH3X(7) + HOCOXX(57)' vs 'CH2X(16) + formic_acidXX(68) <=> CH3X(7) + HOCOXX(57)'
+  Phase 'SURF0': reaction 143 equation differs: 'CH2O2X2(68) + vacantX(3) <=> HOCOXX(57) + HX(5)' vs 'formic_acidXX(68) + vacantX(3) <=> HOCOXX(57) + HX(5)'
+  Value mismatch at phase.SURF0.reaction[143].equation: 'CH2O2X2(68) + vacantX(3) <=> HOCOXX(57) + HX(5)' vs 'formic_acidXX(68) + vacantX(3) <=> HOCOXX(57) + HX(5)'
+  Phase 'SURF0': reaction 144 equation differs: 'CH2X(16) + HOCOXX(57) <=> CH2O2X2(68) + CHX(17)' vs 'CH2X(16) + HOCOXX(57) <=> CHX(17) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[144].equation: 'CH2X(16) + HOCOXX(57) <=> CH2O2X2(68) + CHX(17)' vs 'CH2X(16) + HOCOXX(57) <=> CHX(17) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 145 equation differs: 'CH2O2X2(68) + CX(15) <=> CHX(17) + HOCOXX(57)' vs 'CX(15) + formic_acidXX(68) <=> CHX(17) + HOCOXX(57)'
+  Value mismatch at phase.SURF0.reaction[145].equation: 'CH2O2X2(68) + CX(15) <=> CHX(17) + HOCOXX(57)' vs 'CX(15) + formic_acidXX(68) <=> CHX(17) + HOCOXX(57)'
+  Phase 'SURF0': reaction 146 equation differs: 'CH2O2X2(68) + OX(6) <=> HOCOXX(57) + HOX(8)' vs 'OX(6) + formic_acidXX(68) <=> HOCOXX(57) + HOX(8)'
+  Value mismatch at phase.SURF0.reaction[146].equation: 'CH2O2X2(68) + OX(6) <=> HOCOXX(57) + HOX(8)' vs 'OX(6) + formic_acidXX(68) <=> HOCOXX(57) + HOX(8)'
+  Phase 'SURF0': reaction 147 equation differs: 'HOCOXX(57) + XCOH(54) <=> CH2O2X2(68) + OCX(13)' vs 'HOCOXX(57) + XCOH(54) <=> OCX(13) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[147].equation: 'HOCOXX(57) + XCOH(54) <=> CH2O2X2(68) + OCX(13)' vs 'HOCOXX(57) + XCOH(54) <=> OCX(13) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 148 equation differs: 'HOCOXX(57) + XCHOH(47) <=> CH2O2X2(68) + XCOH(54)' vs 'HOCOXX(57) + XCHOH(47) <=> XCOH(54) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[148].equation: 'HOCOXX(57) + XCHOH(47) <=> CH2O2X2(68) + XCOH(54)' vs 'HOCOXX(57) + XCHOH(47) <=> XCOH(54) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 149 equation differs: 'HOCOXX(57) + XCHOH(47) <=> CH2O2X2(68) + XCHO(37)' vs 'HOCOXX(57) + XCHOH(47) <=> XCHO(37) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[149].equation: 'HOCOXX(57) + XCHOH(47) <=> CH2O2X2(68) + XCHO(37)' vs 'HOCOXX(57) + XCHOH(47) <=> XCHO(37) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 150 equation differs: 'H2OX(9) + HOCOXX(57) <=> CH2O2X2(68) + HOX(8)' vs 'H2OX(9) + HOCOXX(57) <=> HOX(8) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[150].equation: 'H2OX(9) + HOCOXX(57) <=> CH2O2X2(68) + HOX(8)' vs 'H2OX(9) + HOCOXX(57) <=> HOX(8) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[150].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 151 equation differs: 'HOCOXX(57) + XCOOH(58) <=> CH2O2X2(68) + CO2X(12)' vs 'HOCOXX(57) + XCOOH(58) <=> CO2X(12) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[151].equation: 'HOCOXX(57) + XCOOH(58) <=> CH2O2X2(68) + CO2X(12)' vs 'HOCOXX(57) + XCOOH(58) <=> CO2X(12) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 152 equation differs: 'CH2O2X2(68) + XCHOH(47) <=> HOCOXX(57) + XCH2OH(46)' vs 'XCHOH(47) + formic_acidXX(68) <=> HOCOXX(57) + XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[152].equation: 'CH2O2X2(68) + XCHOH(47) <=> HOCOXX(57) + XCH2OH(46)' vs 'XCHOH(47) + formic_acidXX(68) <=> HOCOXX(57) + XCH2OH(46)'
+  Phase 'SURF0': reaction 153 equation differs: 'formic_acid(67) + 2 vacantX(3) <=> CH2O2X2(68)' vs 'formic_acid(67) + 2 vacantX(3) <=> formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[153].equation: 'formic_acid(67) + 2 vacantX(3) <=> CH2O2X2(68)' vs 'formic_acid(67) + 2 vacantX(3) <=> formic_acidXX(68)'
+  Phase 'SURF0': reaction 154 equation differs: 'HOCOXX(57) + XCHO(37) <=> CH2O2X2(68) + OCX(13)' vs 'HOCOXX(57) + XCHO(37) <=> OCX(13) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[154].equation: 'HOCOXX(57) + XCHO(37) <=> CH2O2X2(68) + OCX(13)' vs 'HOCOXX(57) + XCHO(37) <=> OCX(13) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 155 equation differs: 'CH2O2X2(68) + vacantX(3) <=> HOX(8) + XCHXO(36)' vs 'formic_acidXX(68) + vacantX(3) <=> HOX(8) + XCHXO(36)'
+  Value mismatch at phase.SURF0.reaction[155].equation: 'CH2O2X2(68) + vacantX(3) <=> HOX(8) + XCHXO(36)' vs 'formic_acidXX(68) + vacantX(3) <=> HOX(8) + XCHXO(36)'
+  Phase 'SURF0': reaction 156 equation differs: 'CH2O2X2(68) + CX(15) <=> XCHXO(36) + XCOH(54)' vs 'CX(15) + formic_acidXX(68) <=> XCHXO(36) + XCOH(54)'
+  Value mismatch at phase.SURF0.reaction[156].equation: 'CH2O2X2(68) + CX(15) <=> XCHXO(36) + XCOH(54)' vs 'CX(15) + formic_acidXX(68) <=> XCHXO(36) + XCOH(54)'
+  Phase 'SURF0': reaction 157 equation differs: 'XCHOH(47) + XCHXO(36) <=> CH2O2X2(68) + CHX(17)' vs 'XCHOH(47) + XCHXO(36) <=> CHX(17) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[157].equation: 'XCHOH(47) + XCHXO(36) <=> CH2O2X2(68) + CHX(17)' vs 'XCHOH(47) + XCHXO(36) <=> CHX(17) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 158 equation differs: 'H2OX(9) + XCHXO(36) <=> CH2O2X2(68) + HX(5)' vs 'H2OX(9) + XCHXO(36) <=> HX(5) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[158].equation: 'H2OX(9) + XCHXO(36) <=> CH2O2X2(68) + HX(5)' vs 'H2OX(9) + XCHXO(36) <=> HX(5) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[158].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 159 equation differs: 'XCHXO(36) + XCOOH(58) <=> CH2O2X2(68) + OCX(13)' vs 'XCHXO(36) + XCOOH(58) <=> OCX(13) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[159].equation: 'XCHXO(36) + XCOOH(58) <=> CH2O2X2(68) + OCX(13)' vs 'XCHXO(36) + XCOOH(58) <=> OCX(13) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 160 equation differs: 'XCH2OH(46) + XCHXO(36) <=> CH2O2X2(68) + CH2X(16)' vs 'XCH2OH(46) + XCHXO(36) <=> CH2X(16) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[160].equation: 'XCH2OH(46) + XCHXO(36) <=> CH2O2X2(68) + CH2X(16)' vs 'XCH2OH(46) + XCHXO(36) <=> CH2X(16) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 161 equation differs: 'O[CH](O)[Pt](76) + 2 vacantX(3) <=> CH2O2X2(68) + HX(5)' vs 'O[CH](O)[Pt](76) + 2 vacantX(3) <=> HX(5) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[161].equation: 'O[CH](O)[Pt](76) + 2 vacantX(3) <=> CH2O2X2(68) + HX(5)' vs 'O[CH](O)[Pt](76) + 2 vacantX(3) <=> HX(5) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 162 equation differs: 'HOCOXX(57) + O[CH](O)[Pt](76) <=> CH2O2X2(68) + HCOOHX(69)' vs 'HOCOXX(57) + O[CH](O)[Pt](76) <=> HCOOHX(69) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[162].equation: 'HOCOXX(57) + O[CH](O)[Pt](76) <=> CH2O2X2(68) + HCOOHX(69)' vs 'HOCOXX(57) + O[CH](O)[Pt](76) <=> HCOOHX(69) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 163 equation differs: 'O[CH](O)[Pt](76) + XCHXO(36) <=> CH2O2X2(68) + XCHOH(47)' vs 'O[CH](O)[Pt](76) + XCHXO(36) <=> XCHOH(47) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[163].equation: 'O[CH](O)[Pt](76) + XCHXO(36) <=> CH2O2X2(68) + XCHOH(47)' vs 'O[CH](O)[Pt](76) + XCHXO(36) <=> XCHOH(47) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 164 equation differs: 'HCOOHX(69) + vacantX(3) <=> CH2O2X2(68)' vs 'HCOOHX(69) + vacantX(3) <=> formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[164].equation: 'HCOOHX(69) + vacantX(3) <=> CH2O2X2(68)' vs 'HCOOHX(69) + vacantX(3) <=> formic_acidXX(68)'
+  Phase 'SURF0': reaction 165 equation differs: 'HCOOHX(69) + HOCOXX(57) <=> CH2O2X2(68) + XCOOH(58)' vs 'HCOOHX(69) + HOCOXX(57) <=> XCOOH(58) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[165].equation: 'HCOOHX(69) + HOCOXX(57) <=> CH2O2X2(68) + XCOOH(58)' vs 'HCOOHX(69) + HOCOXX(57) <=> XCOOH(58) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[165].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 166 equation differs: 'HCOOHX(69) + XCHXO(36) <=> CH2O2X2(68) + XCHO(37)' vs 'HCOOHX(69) + XCHXO(36) <=> XCHO(37) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[166].equation: 'HCOOHX(69) + XCHXO(36) <=> CH2O2X2(68) + XCHO(37)' vs 'HCOOHX(69) + XCHXO(36) <=> XCHO(37) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[166].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 173 equation differs: 'CH2O3(134) + 2 vacantX(3) <=> HX(5) + XOC(OH)O(129)' vs 'O=C(O)O(134) + 2 vacantX(3) <=> HX(5) + XOC(OH)O(129)'
+  Value mismatch at phase.SURF0.reaction[173].equation: 'CH2O3(134) + 2 vacantX(3) <=> HX(5) + XOC(OH)O(129)' vs 'O=C(O)O(134) + 2 vacantX(3) <=> HX(5) + XOC(OH)O(129)'
+  Numerical difference at phase.SURF0.reaction[175].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)
+  Phase 'SURF0': reaction 177 equation differs: 'XCHXO(36) + XOC(OH)O(129) <=> CH2O2X2(68) + CO2X(12)' vs 'XCHXO(36) + XOC(OH)O(129) <=> CO2X(12) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[177].equation: 'XCHXO(36) + XOC(OH)O(129) <=> CH2O2X2(68) + CO2X(12)' vs 'XCHXO(36) + XOC(OH)O(129) <=> CO2X(12) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[178].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[179].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[180].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[181].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)
+  Numerical difference at phase.SURF0.reaction[182].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[184].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[185].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 186 equation differs: 'H2X(28) + HOCOXX(57) <=> CH2O2X2(68) + HX(5)' vs 'H2X(28) + HOCOXX(57) <=> HX(5) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[186].equation: 'H2X(28) + HOCOXX(57) <=> CH2O2X2(68) + HX(5)' vs 'H2X(28) + HOCOXX(57) <=> HX(5) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[186].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 187 equation differs: 'CH2O3X2(120) + vacantX(3) <=> HOCOXX(57) + HOX(8)' vs 'O[C](O)([Pt])[O][Pt](120) + vacantX(3) <=> HOCOXX(57) + HOX(8)'
+  Value mismatch at phase.SURF0.reaction[187].equation: 'CH2O3X2(120) + vacantX(3) <=> HOCOXX(57) + HOX(8)' vs 'O[C](O)([Pt])[O][Pt](120) + vacantX(3) <=> HOCOXX(57) + HOX(8)'
+  Phase 'SURF0': reaction 188 equation differs: 'CH2O3X2(120) + CX(15) <=> HOCOXX(57) + XCOH(54)' vs 'CX(15) + O[C](O)([Pt])[O][Pt](120) <=> HOCOXX(57) + XCOH(54)'
+  Value mismatch at phase.SURF0.reaction[188].equation: 'CH2O3X2(120) + CX(15) <=> HOCOXX(57) + XCOH(54)' vs 'CX(15) + O[C](O)([Pt])[O][Pt](120) <=> HOCOXX(57) + XCOH(54)'
+  Phase 'SURF0': reaction 189 equation differs: 'HOCOXX(57) + XCHOH(47) <=> CH2O3X2(120) + CHX(17)' vs 'HOCOXX(57) + XCHOH(47) <=> CHX(17) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[189].equation: 'HOCOXX(57) + XCHOH(47) <=> CH2O3X2(120) + CHX(17)' vs 'HOCOXX(57) + XCHOH(47) <=> CHX(17) + O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 190 equation differs: 'H2OX(9) + HOCOXX(57) <=> CH2O3X2(120) + HX(5)' vs 'H2OX(9) + HOCOXX(57) <=> HX(5) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[190].equation: 'H2OX(9) + HOCOXX(57) <=> CH2O3X2(120) + HX(5)' vs 'H2OX(9) + HOCOXX(57) <=> HX(5) + O[C](O)([Pt])[O][Pt](120)'
+  Numerical difference at phase.SURF0.reaction[190].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 191 equation differs: 'HOCOXX(57) + XCOOH(58) <=> CH2O3X2(120) + OCX(13)' vs 'HOCOXX(57) + XCOOH(58) <=> OCX(13) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[191].equation: 'HOCOXX(57) + XCOOH(58) <=> CH2O3X2(120) + OCX(13)' vs 'HOCOXX(57) + XCOOH(58) <=> OCX(13) + O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 192 equation differs: 'HOCOXX(57) + XCH2OH(46) <=> CH2O3X2(120) + CH2X(16)' vs 'HOCOXX(57) + XCH2OH(46) <=> CH2X(16) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[192].equation: 'HOCOXX(57) + XCH2OH(46) <=> CH2O3X2(120) + CH2X(16)' vs 'HOCOXX(57) + XCH2OH(46) <=> CH2X(16) + O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 193 equation differs: 'CH2O3(134) + 2 vacantX(3) <=> CH2O3X2(120)' vs 'O=C(O)O(134) + 2 vacantX(3) <=> O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[193].equation: 'CH2O3(134) + 2 vacantX(3) <=> CH2O3X2(120)' vs 'O=C(O)O(134) + 2 vacantX(3) <=> O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 194 equation differs: 'HOCOXX(57) + O[CH](O)[Pt](76) <=> CH2O3X2(120) + XCHOH(47)' vs 'HOCOXX(57) + O[CH](O)[Pt](76) <=> O[C](O)([Pt])[O][Pt](120) + XCHOH(47)'
+  Value mismatch at phase.SURF0.reaction[194].equation: 'HOCOXX(57) + O[CH](O)[Pt](76) <=> CH2O3X2(120) + XCHOH(47)' vs 'HOCOXX(57) + O[CH](O)[Pt](76) <=> O[C](O)([Pt])[O][Pt](120) + XCHOH(47)'
+  Phase 'SURF0': reaction 195 equation differs: 'HCOOHX(69) + HOCOXX(57) <=> CH2O3X2(120) + XCHO(37)' vs 'HCOOHX(69) + HOCOXX(57) <=> O[C](O)([Pt])[O][Pt](120) + XCHO(37)'
+  Value mismatch at phase.SURF0.reaction[195].equation: 'HCOOHX(69) + HOCOXX(57) <=> CH2O3X2(120) + XCHO(37)' vs 'HCOOHX(69) + HOCOXX(57) <=> O[C](O)([Pt])[O][Pt](120) + XCHO(37)'
+  Numerical difference at phase.SURF0.reaction[195].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 196 equation differs: 'CH2O2X2(68) + HOCOXX(57) <=> CH2O3X2(120) + XCHXO(36)' vs 'HOCOXX(57) + formic_acidXX(68) <=> O[C](O)([Pt])[O][Pt](120) + XCHXO(36)'
+  Value mismatch at phase.SURF0.reaction[196].equation: 'CH2O2X2(68) + HOCOXX(57) <=> CH2O3X2(120) + XCHXO(36)' vs 'HOCOXX(57) + formic_acidXX(68) <=> O[C](O)([Pt])[O][Pt](120) + XCHXO(36)'
+  Phase 'SURF0': reaction 197 equation differs: 'HOCOXX(57) + XOC(OH)O(129) <=> CH2O3X2(120) + CO2X(12)' vs 'HOCOXX(57) + XOC(OH)O(129) <=> CO2X(12) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[197].equation: 'HOCOXX(57) + XOC(OH)O(129) <=> CH2O3X2(120) + CO2X(12)' vs 'HOCOXX(57) + XOC(OH)O(129) <=> CO2X(12) + O[C](O)([Pt])[O][Pt](120)'
+  Numerical difference at phase.SURF0.reaction[201].rate-constant.b: -0.126 vs -0.12573065551425344 (abs_diff=2.69e-04, rel_diff=2.14e-03)
+  Numerical difference at phase.SURF0.reaction[202].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[204].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[205].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[207].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[208].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[210].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[213].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[214].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[215].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 219 equation differs: 'CH3OHX(45) + XCHXO(36) <=> CH2O2X2(68) + CH3X(7)' vs 'CH3OHX(45) + XCHXO(36) <=> CH3X(7) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[219].equation: 'CH3OHX(45) + XCHXO(36) <=> CH2O2X2(68) + CH3X(7)' vs 'CH3OHX(45) + XCHXO(36) <=> CH3X(7) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[219].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 220 equation differs: 'CH3OHX(45) + HOCOXX(57) <=> CH2O2X2(68) + XCH2OH(46)' vs 'CH3OHX(45) + HOCOXX(57) <=> XCH2OH(46) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[220].equation: 'CH3OHX(45) + HOCOXX(57) <=> CH2O2X2(68) + XCH2OH(46)' vs 'CH3OHX(45) + HOCOXX(57) <=> XCH2OH(46) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[220].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 223 equation differs: 'CH3OHX(45) + HOCOXX(57) <=> CH2O3X2(120) + CH3X(7)' vs 'CH3OHX(45) + HOCOXX(57) <=> CH3X(7) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[223].equation: 'CH3OHX(45) + HOCOXX(57) <=> CH2O3X2(120) + CH3X(7)' vs 'CH3OHX(45) + HOCOXX(57) <=> CH3X(7) + O[C](O)([Pt])[O][Pt](120)'
+  Numerical difference at phase.SURF0.reaction[223].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[224].rate-constant.b: -0.188 vs -0.1875 (abs_diff=5.00e-04, rel_diff=2.67e-03)
+  Numerical difference at phase.SURF0.reaction[228].rate-constant.b: 0.258 vs 0.25837381319082553 (abs_diff=3.74e-04, rel_diff=1.45e-03)
+  Numerical difference at phase.SURF0.reaction[231].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[232].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[234].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[235].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[236].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 238 equation differs: 'CH3OHX(45) + HOCOXX(57) <=> CH2O2X2(68) + XOCH3(25)' vs 'CH3OHX(45) + HOCOXX(57) <=> XOCH3(25) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[238].equation: 'CH3OHX(45) + HOCOXX(57) <=> CH2O2X2(68) + XOCH3(25)' vs 'CH3OHX(45) + HOCOXX(57) <=> XOCH3(25) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[238].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 251 equation differs: 'HOCOXX(57) + XCH2OH(46) <=> CH2O2X2(68) + CH2OX(31)' vs 'HOCOXX(57) + XCH2OH(46) <=> CH2OX(31) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[251].equation: 'HOCOXX(57) + XCH2OH(46) <=> CH2O2X2(68) + CH2OX(31)' vs 'HOCOXX(57) + XCH2OH(46) <=> CH2OX(31) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[255].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[257].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[258].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[260].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[264].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[265].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 268 equation differs: 'CH2OX(31) + HOCOXX(57) <=> CH2O2X2(68) + XCHO(37)' vs 'CH2OX(31) + HOCOXX(57) <=> XCHO(37) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[268].equation: 'CH2OX(31) + HOCOXX(57) <=> CH2O2X2(68) + XCHO(37)' vs 'CH2OX(31) + HOCOXX(57) <=> XCHO(37) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[268].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 278 equation differs: 'HOCOXX(57) + XOCH3(25) <=> CH2O2X2(68) + CH2OX(31)' vs 'HOCOXX(57) + XOCH3(25) <=> CH2OX(31) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[278].equation: 'HOCOXX(57) + XOCH3(25) <=> CH2O2X2(68) + CH2OX(31)' vs 'HOCOXX(57) + XOCH3(25) <=> CH2OX(31) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[286].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[295].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[301].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 302 equation differs: 'HOCOXX(57) + XCH2XO(30) <=> CH2O2X2(68) + XCHXO(36)' vs 'HOCOXX(57) + XCH2XO(30) <=> XCHXO(36) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[302].equation: 'HOCOXX(57) + XCH2XO(30) <=> CH2O2X2(68) + XCHXO(36)' vs 'HOCOXX(57) + XCH2XO(30) <=> XCHXO(36) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[303].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[304].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[305].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[309].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[316].rate-constant.b: -0.126 vs -0.12573065551425344 (abs_diff=2.69e-04, rel_diff=2.14e-03)
+  Numerical difference at phase.SURF0.reaction[317].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[318].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[319].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 321 equation differs: 'OC(O)O.[Pt](276) + XCHXO(36) <=> CH2O2X2(68) + O[CH](O)[Pt](76)' vs 'OC(O)O.[Pt](276) + XCHXO(36) <=> O[CH](O)[Pt](76) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[321].equation: 'OC(O)O.[Pt](276) + XCHXO(36) <=> CH2O2X2(68) + O[CH](O)[Pt](76)' vs 'OC(O)O.[Pt](276) + XCHXO(36) <=> O[CH](O)[Pt](76) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[321].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 323 equation differs: 'HOCOXX(57) + OC(O)O.[Pt](276) <=> CH2O3X2(120) + O[CH](O)[Pt](76)' vs 'HOCOXX(57) + OC(O)O.[Pt](276) <=> O[CH](O)[Pt](76) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[323].equation: 'HOCOXX(57) + OC(O)O.[Pt](276) <=> CH2O3X2(120) + O[CH](O)[Pt](76)' vs 'HOCOXX(57) + OC(O)O.[Pt](276) <=> O[CH](O)[Pt](76) + O[C](O)([Pt])[O][Pt](120)'
+  Numerical difference at phase.SURF0.reaction[323].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 326 equation differs: 'CH3O3X(270) + vacantX(3) <=> OX(6) + O[CH](O)[Pt](76)' vs 'OC(O)[O][Pt](270) + vacantX(3) <=> OX(6) + O[CH](O)[Pt](76)'
+  Value mismatch at phase.SURF0.reaction[326].equation: 'CH3O3X(270) + vacantX(3) <=> OX(6) + O[CH](O)[Pt](76)' vs 'OC(O)[O][Pt](270) + vacantX(3) <=> OX(6) + O[CH](O)[Pt](76)'
+  Phase 'SURF0': reaction 327 equation differs: 'CH3O3X(270) + vacantX(3) <=> HCOOHX(69) + HOX(8)' vs 'OC(O)[O][Pt](270) + vacantX(3) <=> HCOOHX(69) + HOX(8)'
+  Value mismatch at phase.SURF0.reaction[327].equation: 'CH3O3X(270) + vacantX(3) <=> HCOOHX(69) + HOX(8)' vs 'OC(O)[O][Pt](270) + vacantX(3) <=> HCOOHX(69) + HOX(8)'
+  Phase 'SURF0': reaction 328 equation differs: 'CH3O3X(270) + OCX(13) <=> HCOOHX(69) + XCOOH(58)' vs 'OC(O)[O][Pt](270) + OCX(13) <=> HCOOHX(69) + XCOOH(58)'
+  Value mismatch at phase.SURF0.reaction[328].equation: 'CH3O3X(270) + OCX(13) <=> HCOOHX(69) + XCOOH(58)' vs 'OC(O)[O][Pt](270) + OCX(13) <=> HCOOHX(69) + XCOOH(58)'
+  Phase 'SURF0': reaction 329 equation differs: 'CH2X(16) + CH3O3X(270) <=> HCOOHX(69) + XCH2OH(46)' vs 'CH2X(16) + OC(O)[O][Pt](270) <=> HCOOHX(69) + XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[329].equation: 'CH2X(16) + CH3O3X(270) <=> HCOOHX(69) + XCH2OH(46)' vs 'CH2X(16) + OC(O)[O][Pt](270) <=> HCOOHX(69) + XCH2OH(46)'
+  Phase 'SURF0': reaction 330 equation differs: 'CH3O3X(270) + XCHOH(47) <=> HCOOHX(69) + O[CH](O)[Pt](76)' vs 'OC(O)[O][Pt](270) + XCHOH(47) <=> HCOOHX(69) + O[CH](O)[Pt](76)'
+  Value mismatch at phase.SURF0.reaction[330].equation: 'CH3O3X(270) + XCHOH(47) <=> HCOOHX(69) + O[CH](O)[Pt](76)' vs 'OC(O)[O][Pt](270) + XCHOH(47) <=> HCOOHX(69) + O[CH](O)[Pt](76)'
+  Phase 'SURF0': reaction 331 equation differs: 'CH3O3X(270) + XCHO(37) <=> 2 HCOOHX(69)' vs 'OC(O)[O][Pt](270) + XCHO(37) <=> 2 HCOOHX(69)'
+  Value mismatch at phase.SURF0.reaction[331].equation: 'CH3O3X(270) + XCHO(37) <=> 2 HCOOHX(69)' vs 'OC(O)[O][Pt](270) + XCHO(37) <=> 2 HCOOHX(69)'
+  Phase 'SURF0': reaction 332 equation differs: 'CH3O3X(270) + XCHXO(36) <=> CH2O2X2(68) + HCOOHX(69)' vs 'OC(O)[O][Pt](270) + XCHXO(36) <=> HCOOHX(69) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[332].equation: 'CH3O3X(270) + XCHXO(36) <=> CH2O2X2(68) + HCOOHX(69)' vs 'OC(O)[O][Pt](270) + XCHXO(36) <=> HCOOHX(69) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 333 equation differs: 'CH3O3X(270) + 2 vacantX(3) <=> CH2O3X2(120) + HX(5)' vs 'OC(O)[O][Pt](270) + 2 vacantX(3) <=> HX(5) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[333].equation: 'CH3O3X(270) + 2 vacantX(3) <=> CH2O3X2(120) + HX(5)' vs 'OC(O)[O][Pt](270) + 2 vacantX(3) <=> HX(5) + O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 334 equation differs: 'CH3O3X(270) + HOCOXX(57) <=> CH2O3X2(120) + HCOOHX(69)' vs 'HOCOXX(57) + OC(O)[O][Pt](270) <=> HCOOHX(69) + O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[334].equation: 'CH3O3X(270) + HOCOXX(57) <=> CH2O3X2(120) + HCOOHX(69)' vs 'HOCOXX(57) + OC(O)[O][Pt](270) <=> HCOOHX(69) + O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 335 equation differs: 'OC(O)O(275) + 2 vacantX(3) <=> CH3O3X(270) + HX(5)' vs 'OC(O)O(275) + 2 vacantX(3) <=> HX(5) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[335].equation: 'OC(O)O(275) + 2 vacantX(3) <=> CH3O3X(270) + HX(5)' vs 'OC(O)O(275) + 2 vacantX(3) <=> HX(5) + OC(O)[O][Pt](270)'
+  Phase 'SURF0': reaction 336 equation differs: 'CH3O3X(270) + CH3X(7) <=> CH3OHX(45) + HCOOHX(69)' vs 'CH3X(7) + OC(O)[O][Pt](270) <=> CH3OHX(45) + HCOOHX(69)'
+  Value mismatch at phase.SURF0.reaction[336].equation: 'CH3O3X(270) + CH3X(7) <=> CH3OHX(45) + HCOOHX(69)' vs 'CH3X(7) + OC(O)[O][Pt](270) <=> CH3OHX(45) + HCOOHX(69)'
+  Phase 'SURF0': reaction 337 equation differs: 'OC(O)O.[Pt](276) + vacantX(3) <=> CH3O3X(270) + HX(5)' vs 'OC(O)O.[Pt](276) + vacantX(3) <=> HX(5) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[337].equation: 'OC(O)O.[Pt](276) + vacantX(3) <=> CH3O3X(270) + HX(5)' vs 'OC(O)O.[Pt](276) + vacantX(3) <=> HX(5) + OC(O)[O][Pt](270)'
+  Phase 'SURF0': reaction 338 equation differs: 'OC(O)O.[Pt](276) + OX(6) <=> CH3O3X(270) + HOX(8)' vs 'OC(O)O.[Pt](276) + OX(6) <=> HOX(8) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[338].equation: 'OC(O)O.[Pt](276) + OX(6) <=> CH3O3X(270) + HOX(8)' vs 'OC(O)O.[Pt](276) + OX(6) <=> HOX(8) + OC(O)[O][Pt](270)'
+  Numerical difference at phase.SURF0.reaction[338].rate-constant.b: 0.258 vs 0.25837381319082553 (abs_diff=3.74e-04, rel_diff=1.45e-03)
+  Phase 'SURF0': reaction 339 equation differs: 'OC(O)O.[Pt](276) + OX(6) <=> CH3O3X(270) + HOX(8)' vs 'OC(O)O.[Pt](276) + OX(6) <=> HOX(8) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[339].equation: 'OC(O)O.[Pt](276) + OX(6) <=> CH3O3X(270) + HOX(8)' vs 'OC(O)O.[Pt](276) + OX(6) <=> HOX(8) + OC(O)[O][Pt](270)'
+  Phase 'SURF0': reaction 340 equation differs: 'CH3O3X(270) + CH4X(22) <=> CH3X(7) + OC(O)O.[Pt](276)' vs 'CH4X(22) + OC(O)[O][Pt](270) <=> CH3X(7) + OC(O)O.[Pt](276)'
+  Value mismatch at phase.SURF0.reaction[340].equation: 'CH3O3X(270) + CH4X(22) <=> CH3X(7) + OC(O)O.[Pt](276)' vs 'CH4X(22) + OC(O)[O][Pt](270) <=> CH3X(7) + OC(O)O.[Pt](276)'
+  Phase 'SURF0': reaction 341 equation differs: 'CH2X(16) + OC(O)O.[Pt](276) <=> CH3O3X(270) + CH3X(7)' vs 'CH2X(16) + OC(O)O.[Pt](276) <=> CH3X(7) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[341].equation: 'CH2X(16) + OC(O)O.[Pt](276) <=> CH3O3X(270) + CH3X(7)' vs 'CH2X(16) + OC(O)O.[Pt](276) <=> CH3X(7) + OC(O)[O][Pt](270)'
+  Numerical difference at phase.SURF0.reaction[341].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 342 equation differs: 'CHX(17) + OC(O)O.[Pt](276) <=> CH2X(16) + CH3O3X(270)' vs 'CHX(17) + OC(O)O.[Pt](276) <=> CH2X(16) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[342].equation: 'CHX(17) + OC(O)O.[Pt](276) <=> CH2X(16) + CH3O3X(270)' vs 'CHX(17) + OC(O)O.[Pt](276) <=> CH2X(16) + OC(O)[O][Pt](270)'
+  Numerical difference at phase.SURF0.reaction[342].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 343 equation differs: 'HOX(8) + OC(O)O.[Pt](276) <=> CH3O3X(270) + H2OX(9)' vs 'HOX(8) + OC(O)O.[Pt](276) <=> H2OX(9) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[343].equation: 'HOX(8) + OC(O)O.[Pt](276) <=> CH3O3X(270) + H2OX(9)' vs 'HOX(8) + OC(O)O.[Pt](276) <=> H2OX(9) + OC(O)[O][Pt](270)'
+  Phase 'SURF0': reaction 344 equation differs: 'CX(15) + OC(O)O.[Pt](276) <=> CH3O3X(270) + CHX(17)' vs 'CX(15) + OC(O)O.[Pt](276) <=> CHX(17) + OC(O)[O][Pt](270)'
+  Value mismatch at phase.SURF0.reaction[344].equation: 'CX(15) + OC(O)O.[Pt](276) <=> CH3O3X(270) + CHX(17)' vs 'CX(15) + OC(O)O.[Pt](276) <=> CHX(17) + OC(O)[O][Pt](270)'
+  Numerical difference at phase.SURF0.reaction[344].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 345 equation differs: 'OC(O)O.[Pt](276) + XCOH(54) <=> CH3O3X(270) + XCHOH(47)' vs 'OC(O)O.[Pt](276) + XCOH(54) <=> OC(O)[O][Pt](270) + XCHOH(47)'
+  Value mismatch at phase.SURF0.reaction[345].equation: 'OC(O)O.[Pt](276) + XCOH(54) <=> CH3O3X(270) + XCHOH(47)' vs 'OC(O)O.[Pt](276) + XCOH(54) <=> OC(O)[O][Pt](270) + XCHOH(47)'
+  Numerical difference at phase.SURF0.reaction[345].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 346 equation differs: 'OC(O)O.[Pt](276) + XCHOH(47) <=> CH3O3X(270) + XCH2OH(46)' vs 'OC(O)O.[Pt](276) + XCHOH(47) <=> OC(O)[O][Pt](270) + XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[346].equation: 'OC(O)O.[Pt](276) + XCHOH(47) <=> CH3O3X(270) + XCH2OH(46)' vs 'OC(O)O.[Pt](276) + XCHOH(47) <=> OC(O)[O][Pt](270) + XCH2OH(46)'
+  Numerical difference at phase.SURF0.reaction[346].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 347 equation differs: 'OC(O)O.[Pt](276) + OCX(13) <=> CH3O3X(270) + XCHO(37)' vs 'OC(O)O.[Pt](276) + OCX(13) <=> OC(O)[O][Pt](270) + XCHO(37)'
+  Value mismatch at phase.SURF0.reaction[347].equation: 'OC(O)O.[Pt](276) + OCX(13) <=> CH3O3X(270) + XCHO(37)' vs 'OC(O)O.[Pt](276) + OCX(13) <=> OC(O)[O][Pt](270) + XCHO(37)'
+  Numerical difference at phase.SURF0.reaction[347].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 348 equation differs: 'HOCOXX(57) + OC(O)O.[Pt](276) <=> CH2O2X2(68) + CH3O3X(270)' vs 'HOCOXX(57) + OC(O)O.[Pt](276) <=> OC(O)[O][Pt](270) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[348].equation: 'HOCOXX(57) + OC(O)O.[Pt](276) <=> CH2O2X2(68) + CH3O3X(270)' vs 'HOCOXX(57) + OC(O)O.[Pt](276) <=> OC(O)[O][Pt](270) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[348].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 349 equation differs: 'CH3O3X(270) + HCOOHX(69) <=> OC(O)O.[Pt](276) + XCOOH(58)' vs 'HCOOHX(69) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XCOOH(58)'
+  Value mismatch at phase.SURF0.reaction[349].equation: 'CH3O3X(270) + HCOOHX(69) <=> OC(O)O.[Pt](276) + XCOOH(58)' vs 'HCOOHX(69) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XCOOH(58)'
+  Phase 'SURF0': reaction 350 equation differs: 'CH3O3X(270) + XCOOH(58) <=> CO2X(12) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + XCOOH(58) <=> CO2X(12) + OC(O)O.[Pt](276)'
+  Value mismatch at phase.SURF0.reaction[350].equation: 'CH3O3X(270) + XCOOH(58) <=> CO2X(12) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + XCOOH(58) <=> CO2X(12) + OC(O)O.[Pt](276)'
+  Phase 'SURF0': reaction 351 equation differs: 'CH3O3X(270) + CH3OHX(45) <=> OC(O)O.[Pt](276) + XCH2OH(46)' vs 'CH3OHX(45) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[351].equation: 'CH3O3X(270) + CH3OHX(45) <=> OC(O)O.[Pt](276) + XCH2OH(46)' vs 'CH3OHX(45) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XCH2OH(46)'
+  Phase 'SURF0': reaction 352 equation differs: 'CH2OX(31) + CH3O3X(270) <=> OC(O)O.[Pt](276) + XCHO(37)' vs 'CH2OX(31) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XCHO(37)'
+  Value mismatch at phase.SURF0.reaction[352].equation: 'CH2OX(31) + CH3O3X(270) <=> OC(O)O.[Pt](276) + XCHO(37)' vs 'CH2OX(31) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XCHO(37)'
+  Phase 'SURF0': reaction 353 equation differs: 'OC(O)O.[Pt](276) + XCHXO(36) <=> CH3O3X(270) + XCH2XO(30)' vs 'OC(O)O.[Pt](276) + XCHXO(36) <=> OC(O)[O][Pt](270) + XCH2XO(30)'
+  Value mismatch at phase.SURF0.reaction[353].equation: 'OC(O)O.[Pt](276) + XCHXO(36) <=> CH3O3X(270) + XCH2XO(30)' vs 'OC(O)O.[Pt](276) + XCHXO(36) <=> OC(O)[O][Pt](270) + XCH2XO(30)'
+  Numerical difference at phase.SURF0.reaction[353].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 354 equation differs: 'CH3O3X(270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)'
+  Value mismatch at phase.SURF0.reaction[354].equation: 'CH3O3X(270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)'
+  Phase 'SURF0': reaction 355 equation differs: 'CH3O3X(270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)'
+  Value mismatch at phase.SURF0.reaction[355].equation: 'CH3O3X(270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + O[CH](O)[Pt](76) <=> HCOOHX(69) + OC(O)O.[Pt](276)'
+  Phase 'SURF0': reaction 356 equation differs: 'CH3O3X(270) + CH3OHX(45) <=> OC(O)O.[Pt](276) + XOCH3(25)' vs 'CH3OHX(45) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XOCH3(25)'
+  Value mismatch at phase.SURF0.reaction[356].equation: 'CH3O3X(270) + CH3OHX(45) <=> OC(O)O.[Pt](276) + XOCH3(25)' vs 'CH3OHX(45) + OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + XOCH3(25)'
+  Phase 'SURF0': reaction 357 equation differs: 'CH3O3X(270) + XOCH3(25) <=> CH2OX(31) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + XOCH3(25) <=> CH2OX(31) + OC(O)O.[Pt](276)'
+  Value mismatch at phase.SURF0.reaction[357].equation: 'CH3O3X(270) + XOCH3(25) <=> CH2OX(31) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + XOCH3(25) <=> CH2OX(31) + OC(O)O.[Pt](276)'
+  Phase 'SURF0': reaction 358 equation differs: 'CH3O3X(270) + XCH2OH(46) <=> CH2OX(31) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + XCH2OH(46) <=> CH2OX(31) + OC(O)O.[Pt](276)'
+  Value mismatch at phase.SURF0.reaction[358].equation: 'CH3O3X(270) + XCH2OH(46) <=> CH2OX(31) + OC(O)O.[Pt](276)' vs 'OC(O)[O][Pt](270) + XCH2OH(46) <=> CH2OX(31) + OC(O)O.[Pt](276)'
+  Numerical difference at phase.SURF0.reaction[361].rate-constant.b: -0.126 vs -0.12573065551425344 (abs_diff=2.69e-04, rel_diff=2.14e-03)
+  Numerical difference at phase.SURF0.reaction[362].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[363].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 364 equation differs: 'CH2O3(134) + vacantX(3) <=> OC(OH)OHX(136)' vs 'O=C(O)O(134) + vacantX(3) <=> OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[364].equation: 'CH2O3(134) + vacantX(3) <=> OC(OH)OHX(136)' vs 'O=C(O)O(134) + vacantX(3) <=> OC(OH)OHX(136)'
+  Numerical difference at phase.SURF0.reaction[365].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 367 equation differs: 'OC(OH)OHX(136) + XCHXO(36) <=> CH2O2X2(68) + XCOOH(58)' vs 'OC(OH)OHX(136) + XCHXO(36) <=> XCOOH(58) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[367].equation: 'OC(OH)OHX(136) + XCHXO(36) <=> CH2O2X2(68) + XCOOH(58)' vs 'OC(OH)OHX(136) + XCHXO(36) <=> XCOOH(58) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[367].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[369].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[371].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[372].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[373].rate-constant.b: 0.258 vs 0.25837381319082553 (abs_diff=3.74e-04, rel_diff=1.45e-03)
+  Numerical difference at phase.SURF0.reaction[375].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[380].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[381].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 384 equation differs: 'HOCOXX(57) + OC(OH)OHX(136) <=> CH2O2X2(68) + XOC(OH)O(129)' vs 'HOCOXX(57) + OC(OH)OHX(136) <=> XOC(OH)O(129) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[384].equation: 'HOCOXX(57) + OC(OH)OHX(136) <=> CH2O2X2(68) + XOC(OH)O(129)' vs 'HOCOXX(57) + OC(OH)OHX(136) <=> XOC(OH)O(129) + formic_acidXX(68)'
+  Numerical difference at phase.SURF0.reaction[384].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 385 equation differs: 'OC(OH)OHX(136) + vacantX(3) <=> CH2O3X2(120)' vs 'OC(OH)OHX(136) + vacantX(3) <=> O[C](O)([Pt])[O][Pt](120)'
+  Value mismatch at phase.SURF0.reaction[385].equation: 'OC(OH)OHX(136) + vacantX(3) <=> CH2O3X2(120)' vs 'OC(OH)OHX(136) + vacantX(3) <=> O[C](O)([Pt])[O][Pt](120)'
+  Phase 'SURF0': reaction 386 equation differs: 'HOCOXX(57) + OC(OH)OHX(136) <=> CH2O3X2(120) + XCOOH(58)' vs 'HOCOXX(57) + OC(OH)OHX(136) <=> O[C](O)([Pt])[O][Pt](120) + XCOOH(58)'
+  Value mismatch at phase.SURF0.reaction[386].equation: 'HOCOXX(57) + OC(OH)OHX(136) <=> CH2O3X2(120) + XCOOH(58)' vs 'HOCOXX(57) + OC(OH)OHX(136) <=> O[C](O)([Pt])[O][Pt](120) + XCOOH(58)'
+  Numerical difference at phase.SURF0.reaction[386].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Numerical difference at phase.SURF0.reaction[392].rate-constant.b: -0.15 vs -0.1504613110285069 (abs_diff=4.61e-04, rel_diff=3.07e-03)
+  Phase 'SURF0': reaction 394 equation differs: 'CH3O3X(270) + OC(OH)OHX(136) <=> OC(O)O.[Pt](276) + XOC(OH)O(129)' vs 'OC(O)[O][Pt](270) + OC(OH)OHX(136) <=> OC(O)O.[Pt](276) + XOC(OH)O(129)'
+  Value mismatch at phase.SURF0.reaction[394].equation: 'CH3O3X(270) + OC(OH)OHX(136) <=> OC(O)O.[Pt](276) + XOC(OH)O(129)' vs 'OC(O)[O][Pt](270) + OC(OH)OHX(136) <=> OC(O)O.[Pt](276) + XOC(OH)O(129)'
+  Phase 'SURF0': reaction 395 equation differs: 'CH3O3X(270) + vacantX(3) <=> HX(5) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + vacantX(3) <=> HX(5) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[395].equation: 'CH3O3X(270) + vacantX(3) <=> HX(5) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + vacantX(3) <=> HX(5) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 396 equation differs: 'CH3O3X(270) + OX(6) <=> HOX(8) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + OX(6) <=> HOX(8) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[396].equation: 'CH3O3X(270) + OX(6) <=> HOX(8) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + OX(6) <=> HOX(8) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 397 equation differs: 'CH3O3X(270) + CH3X(7) <=> CH4X(22) + OC(OH)OHX(136)' vs 'CH3X(7) + OC(O)[O][Pt](270) <=> CH4X(22) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[397].equation: 'CH3O3X(270) + CH3X(7) <=> CH4X(22) + OC(OH)OHX(136)' vs 'CH3X(7) + OC(O)[O][Pt](270) <=> CH4X(22) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 398 equation differs: 'CH2X(16) + CH3O3X(270) <=> CH3X(7) + OC(OH)OHX(136)' vs 'CH2X(16) + OC(O)[O][Pt](270) <=> CH3X(7) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[398].equation: 'CH2X(16) + CH3O3X(270) <=> CH3X(7) + OC(OH)OHX(136)' vs 'CH2X(16) + OC(O)[O][Pt](270) <=> CH3X(7) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 399 equation differs: 'CH3O3X(270) + HOX(8) <=> H2OX(9) + OC(OH)OHX(136)' vs 'HOX(8) + OC(O)[O][Pt](270) <=> H2OX(9) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[399].equation: 'CH3O3X(270) + HOX(8) <=> H2OX(9) + OC(OH)OHX(136)' vs 'HOX(8) + OC(O)[O][Pt](270) <=> H2OX(9) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 400 equation differs: 'CH3O3X(270) + XCHOH(47) <=> OC(OH)OHX(136) + XCH2OH(46)' vs 'OC(O)[O][Pt](270) + XCHOH(47) <=> OC(OH)OHX(136) + XCH2OH(46)'
+  Value mismatch at phase.SURF0.reaction[400].equation: 'CH3O3X(270) + XCHOH(47) <=> OC(OH)OHX(136) + XCH2OH(46)' vs 'OC(O)[O][Pt](270) + XCHOH(47) <=> OC(OH)OHX(136) + XCH2OH(46)'
+  Phase 'SURF0': reaction 401 equation differs: 'CH3O3X(270) + OCX(13) <=> OC(OH)OHX(136) + XCHO(37)' vs 'OC(O)[O][Pt](270) + OCX(13) <=> OC(OH)OHX(136) + XCHO(37)'
+  Value mismatch at phase.SURF0.reaction[401].equation: 'CH3O3X(270) + OCX(13) <=> OC(OH)OHX(136) + XCHO(37)' vs 'OC(O)[O][Pt](270) + OCX(13) <=> OC(OH)OHX(136) + XCHO(37)'
+  Phase 'SURF0': reaction 402 equation differs: 'CH3O3X(270) + HOCOXX(57) <=> CH2O2X2(68) + OC(OH)OHX(136)' vs 'HOCOXX(57) + OC(O)[O][Pt](270) <=> OC(OH)OHX(136) + formic_acidXX(68)'
+  Value mismatch at phase.SURF0.reaction[402].equation: 'CH3O3X(270) + HOCOXX(57) <=> CH2O2X2(68) + OC(OH)OHX(136)' vs 'HOCOXX(57) + OC(O)[O][Pt](270) <=> OC(OH)OHX(136) + formic_acidXX(68)'
+  Phase 'SURF0': reaction 403 equation differs: 'CH3O3X(270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[403].equation: 'CH3O3X(270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 404 equation differs: 'CH3O3X(270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[404].equation: 'CH3O3X(270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCOOH(58) <=> HCOOHX(69) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 405 equation differs: 'CH3O3X(270) + XCH2OH(46) <=> CH3OHX(45) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCH2OH(46) <=> CH3OHX(45) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[405].equation: 'CH3O3X(270) + XCH2OH(46) <=> CH3OHX(45) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCH2OH(46) <=> CH3OHX(45) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 406 equation differs: 'CH3O3X(270) + XCHO(37) <=> CH2OX(31) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCHO(37) <=> CH2OX(31) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[406].equation: 'CH3O3X(270) + XCHO(37) <=> CH2OX(31) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XCHO(37) <=> CH2OX(31) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 407 equation differs: 'CH3O3X(270) + XCHXO(36) <=> OC(OH)OHX(136) + XCH2XO(30)' vs 'OC(O)[O][Pt](270) + XCHXO(36) <=> OC(OH)OHX(136) + XCH2XO(30)'
+  Value mismatch at phase.SURF0.reaction[407].equation: 'CH3O3X(270) + XCHXO(36) <=> OC(OH)OHX(136) + XCH2XO(30)' vs 'OC(O)[O][Pt](270) + XCHXO(36) <=> OC(OH)OHX(136) + XCH2XO(30)'
+  Phase 'SURF0': reaction 408 equation differs: 'CH3O3X(270) + XOC(OH)O(129) <=> 2 OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XOC(OH)O(129) <=> 2 OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[408].equation: 'CH3O3X(270) + XOC(OH)O(129) <=> 2 OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XOC(OH)O(129) <=> 2 OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 409 equation differs: 'CH3O3X(270) + XOCH3(25) <=> CH3OHX(45) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XOCH3(25) <=> CH3OHX(45) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[409].equation: 'CH3O3X(270) + XOCH3(25) <=> CH3OHX(45) + OC(OH)OHX(136)' vs 'OC(O)[O][Pt](270) + XOCH3(25) <=> CH3OHX(45) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 410 equation differs: '2 CH3O3X(270) <=> OC(O)O.[Pt](276) + OC(OH)OHX(136)' vs '2 OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + OC(OH)OHX(136)'
+  Value mismatch at phase.SURF0.reaction[410].equation: '2 CH3O3X(270) <=> OC(O)O.[Pt](276) + OC(OH)OHX(136)' vs '2 OC(O)[O][Pt](270) <=> OC(O)O.[Pt](276) + OC(OH)OHX(136)'
+  Phase 'SURF0': reaction 411 equation differs: 'C2H2O4(189) + 2 vacantX(3) <=> XCHO(37) + XOC(OH)O(129)' vs 'O=COC(=O)O(189) + 2 vacantX(3) <=> XCHO(37) + XOC(OH)O(129)'
+  Value mismatch at phase.SURF0.reaction[411].equation: 'C2H2O4(189) + 2 vacantX(3) <=> XCHO(37) + XOC(OH)O(129)' vs 'O=COC(=O)O(189) + 2 vacantX(3) <=> XCHO(37) + XOC(OH)O(129)'
+  Phase 'SURF0': reaction 413 equation differs: 'C2H2O5(254) + 2 vacantX(3) <=> XCOOH(58) + XOC(OH)O(129)' vs 'O=C(O)OC(=O)O(254) + 2 vacantX(3) <=> XCOOH(58) + XOC(OH)O(129)'
+  Value mismatch at phase.SURF0.reaction[413].equation: 'C2H2O5(254) + 2 vacantX(3) <=> XCOOH(58) + XOC(OH)O(129)' vs 'O=C(O)OC(=O)O(254) + 2 vacantX(3) <=> XCOOH(58) + XOC(OH)O(129)'
