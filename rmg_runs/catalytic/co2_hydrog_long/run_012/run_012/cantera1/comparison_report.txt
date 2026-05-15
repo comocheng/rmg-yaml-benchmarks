@@ -1,0 +1,48 @@
+Loading /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_012/cantera_from_ck/chem.yaml...
+Loading /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_012/cantera1/chem.yaml...
+Cantera YAML comparison failed for /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_012/cantera_from_ck/chem.yaml vs /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_012/cantera1/chem.yaml
+Traceback (most recent call last):
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 140, in load_phases
+    solution = ct.Solution(self.file_path, name=phase_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "build/python/cantera/solutionbase.pyx", line 41, in cantera.solutionbase._SolutionBase.__cinit__
+  File "build/python/cantera/solutionbase.pyx", line 79, in cantera.solutionbase._SolutionBase._cinit
+  File "build/python/cantera/solutionbase.pyx", line 164, in cantera.solutionbase._SolutionBase._init_yaml
+cantera._utils.CanteraError: 
+*******************************************************************************
+CanteraError thrown by addReactions:
+
+*******************************************************************************
+InputFileError thrown by Reaction::setParameters:
+Error on line 1140 of /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_012/cantera1/chem.yaml:
+Reaction 'COOH_X(54) + vacantX(6) <=> CO2(2) + HX(20) + vacantX(6)' specifies efficiency parameters
+but does not involve third body colliders.
+|  Line |
+|  1135 |   rate-constant: {A: 4.18e+20, b: 0.0, Ea: 86785833.68803968}
+|  1136 | - equation: COOH_X(54) + vacantX(6) <=> CO2.X(17) + HX(20)
+|  1137 |   rate-constant: {A: 4.27e+18, b: 0.549, Ea: 4184000.0}
+|  1138 | - equation: H2O.X(21) + OCX(19) <=> COOH_X(54) + HX(20)
+|  1139 |   rate-constant: {A: 4.43e+18, b: 0.492, Ea: 99160800.0}
+>  1140 > - equation: COOH_X(54) + vacantX(6) <=> CO2(2) + HX(20) + vacantX(6)
+            ^
+|  1141 |   rate-constant: {A: 3.73e+19, b: 0.475, Ea: 33600000.0}
+|  1142 |   efficiencies: {vacantX(6): 1.0}
+|  1143 | - equation: COOH_X(54) + OCX(19) <=> CO2.X(17) + CXHO(25)
+*******************************************************************************
+*******************************************************************************
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 365, in compare_yaml_files_and_report
+    differences = compare_yaml_files(file1, file2, atol, rtol)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 273, in compare_yaml_files
+    model2 = CanteraModel(file2)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 70, in __init__
+    self.load_phases(phase_names)
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 143, in load_phases
+    raise RuntimeError(f"Failed to load phase '{phase_name}' from {self.file_path}") from e
+RuntimeError: Failed to load phase 'surface' from /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_012/cantera1/chem.yaml
