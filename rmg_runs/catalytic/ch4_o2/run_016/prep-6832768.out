@@ -1,0 +1,50 @@
+Created run directory: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_016
+Your branch is up to date with 'upstream/yaml_fix'.
+HEAD is now at 6ae9f2ce2 Skip empty Cantera YAML 'elements' blocks to match ck2yaml output
+Wrote RMG git info to /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_016/rmg_git_info.txt
+
+Checking vital dependencies...
+
+Package        Version        Location
+Cantera        3.2.0          /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/cantera/__init__.py
+OpenBabel      3.1.0          /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/openbabel/openbabel.py
+pydqed         1.0.4          /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/pydqed.cpython-311-x86_64-linux-gnu.so
+RDKit          2025.03.6      /home/lucey.da/miniforge3/envs/rmg_env2/lib/python3.11/site-packages/rdkit/__init__.py
+symmetry       1.16           /home/lucey.da/miniforge3/envs/rmg_env2/bin/symmetry
+
+Everything was found :)
+
+
+Checking for solvers before compiling...
+
+DASPK solver found. Compiling with DASPK and sensitivity analysis capability...
+
+python setup.py build_ext --inplace
+running build_ext
+copying build/lib.linux-x86_64-cpython-311/rmgpy/kinetics/arrhenius.cpython-311-x86_64-linux-gnu.so -> rmgpy/kinetics
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/atomtype.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/group.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/molecule.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/symmetry.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/converter.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/translator.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/inchi.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/resonance.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/molecule/kekulize.cpython-311-x86_64-linux-gnu.so -> rmgpy/molecule
+copying build/lib.linux-x86_64-cpython-311/rmgpy/statmech/conformer.cpython-311-x86_64-linux-gnu.so -> rmgpy/statmech
+copying build/lib.linux-x86_64-cpython-311/rmgpy/thermo/thermodata.cpython-311-x86_64-linux-gnu.so -> rmgpy/thermo
+copying build/lib.linux-x86_64-cpython-311/rmgpy/thermo/nasa.cpython-311-x86_64-linux-gnu.so -> rmgpy/thermo
+copying build/lib.linux-x86_64-cpython-311/rmgpy/thermo/wilhoit.cpython-311-x86_64-linux-gnu.so -> rmgpy/thermo
+copying build/lib.linux-x86_64-cpython-311/rmgpy/quantity.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/reaction.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/species.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/chemkin.cpython-311-x86_64-linux-gnu.so -> rmgpy
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/base.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/simple.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/liquid.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/mbSampled.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+copying build/lib.linux-x86_64-cpython-311/rmgpy/solver/surface.cpython-311-x86_64-linux-gnu.so -> rmgpy/solver
+Submitting RMG job...
+Submitted RMG job: 6833030
+Submitting analysis job...
+Submitted analysis job: 6833031

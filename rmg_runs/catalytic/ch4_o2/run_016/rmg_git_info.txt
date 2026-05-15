@@ -1,0 +1,24 @@
+branch: yaml_fix
+remote_used: upstream
+remote_branch_used: upstream/yaml_fix
+commit_hash: 6ae9f2ce2e5be0ed771a1a0fbbc4ce2b4cfd8b26
+short_hash: 6ae9f2ce2
+commit_date: 2026-05-15 09:58:23 -0400
+commit_message: Skip empty Cantera YAML 'elements' blocks to match ck2yaml output
+upstream_yaml_fix_hash: 6ae9f2ce2e5be0ed771a1a0fbbc4ce2b4cfd8b26
+origin_yaml_fix_hash: origin/yaml_fix
+UNKNOWN
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/ch4_o2
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/ch4_o2/run_016
+prep_slurm_job_id: 6832768
+prep_slurm_node: d0110
+
+rmg_slurm_job_id: 6833030
+analysis_slurm_job_id: 6833031
+actual_rmg_slurm_job_id: 6833030
+actual_rmg_slurm_node: d0110
+actual_rmg_started_at: 2026-05-15T10:57:00-04:00
+analysis_completed: true
+analysis_job_id: 6833031
+analysis_finished_at: 2026-05-15T10:58:09-04:00
