@@ -82,27 +82,27 @@ conda activate "$CONDA_ENV"
 cd "$RMG_PATH"
 
 git fetch upstream
-git checkout yaml_writer_addition
-git reset --hard upstream/yaml_writer_addition
+git checkout yaml_fix
+git reset --hard upstream/yaml_fix
 
 RMG_HASH=$(git rev-parse HEAD)
 RMG_SHORT=$(git rev-parse --short HEAD)
 RMG_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 RMG_DATE=$(git log -1 --pretty=%ci)
 RMG_MESSAGE=$(git log -1 --pretty=%s)
-RMG_UPSTREAM_HASH=$(git rev-parse upstream/yaml_writer_addition)
-RMG_ORIGIN_HASH=$(git rev-parse origin/yaml_writer_addition 2>/dev/null || echo UNKNOWN)
+RMG_UPSTREAM_HASH=$(git rev-parse upstream/yaml_fix)
+RMG_ORIGIN_HASH=$(git rev-parse origin/yaml_fix 2>/dev/null || echo UNKNOWN)
 
 cat > "${RUN_DIR}/rmg_git_info.txt" <<EOF
 branch: ${RMG_BRANCH}
 remote_used: upstream
-remote_branch_used: upstream/yaml_writer_addition
+remote_branch_used: upstream/yaml_fix
 commit_hash: ${RMG_HASH}
 short_hash: ${RMG_SHORT}
 commit_date: ${RMG_DATE}
 commit_message: ${RMG_MESSAGE}
-upstream_yaml_writer_addition_hash: ${RMG_UPSTREAM_HASH}
-origin_yaml_writer_addition_hash: ${RMG_ORIGIN_HASH}
+upstream_yaml_fix_hash: ${RMG_UPSTREAM_HASH}
+origin_yaml_fix_hash: ${RMG_ORIGIN_HASH}
 rmg_path: ${RMG_PATH}
 benchmark: ${BENCHMARK}
 run_dir: ${RUN_DIR}
