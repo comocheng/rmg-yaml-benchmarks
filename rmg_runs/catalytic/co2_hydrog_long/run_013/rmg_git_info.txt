@@ -1,0 +1,26 @@
+branch: yaml_fix
+remote_used: upstream
+remote_branch_used: upstream/yaml_fix
+commit_hash: 20e5e953955f1ab311800770db8cb7528a47b419
+short_hash: 20e5e9539
+commit_date: 2026-05-16 00:33:43 -0400
+commit_message: Strip spurious efficiencies in yaml_cantera1 writer
+upstream_yaml_fix_hash: 20e5e953955f1ab311800770db8cb7528a47b419
+origin_yaml_fix_hash: origin/yaml_fix
+UNKNOWN
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/co2_hydrog_long
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_013
+prep_slurm_job_id: 6889261
+prep_slurm_node: d0139
+
+rmg_slurm_job_id: 6889263
+analysis_slurm_job_id: 6889264
+actual_rmg_slurm_job_id: 6889263
+actual_rmg_slurm_node: c0637
+actual_rmg_started_at: 2026-05-18T08:19:14-04:00
+actual_rmg_finished_at: 2026-05-18T10:08:23-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6889264
+analysis_finished_at: 2026-05-18T10:09:01-04:00
