@@ -1,0 +1,53 @@
+Loading /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_013/cantera_from_ck/chem.yaml...
+Cantera YAML comparison failed for /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_013/cantera_from_ck/chem.yaml vs /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_013/cantera2/chem.yaml
+Traceback (most recent call last):
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 140, in load_phases
+    solution = ct.Solution(self.file_path, name=phase_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "build/python/cantera/solutionbase.pyx", line 41, in cantera.solutionbase._SolutionBase.__cinit__
+  File "build/python/cantera/solutionbase.pyx", line 79, in cantera.solutionbase._SolutionBase._cinit
+  File "build/python/cantera/solutionbase.pyx", line 164, in cantera.solutionbase._SolutionBase._init_yaml
+cantera._utils.CanteraError: 
+*******************************************************************************
+CanteraError thrown by addReactions:
+
+*******************************************************************************
+InputFileError thrown by PlogRate::validate:
+Error on line 3709 of /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_013/cantera_from_ck/chem.yaml:
+
+Invalid rate coefficient for reaction 'CH2CHOO(45) <=> CH3(18) + CO2(4)'
+at P = 1.0132e+07, T = 500.0
+
+To fix this error, remove this reaction or contact the author of the
+reaction/mechanism in question, because the rate expression is
+mathematically unsound at the temperatures and pressures noted above.
+
+|  Line |
+|  3704 |   - {P: 10.0 atm, A: 1270.0, b: 1.44, Ea: 18.66}
+|  3705 |   - {P: 31.6 atm, A: 6.86e+44, b: -10.04, Ea: 47.03}
+|  3706 |   - {P: 31.6 atm, A: 1.97e+17, b: -2.23, Ea: 28.59}
+|  3707 |   - {P: 100.0 atm, A: -1.07e+04, b: 1.33, Ea: 15.62}
+|  3708 |   - {P: 100.0 atm, A: 1.16e-07, b: 4.81, Ea: 12.01}
+>  3709 > - equation: CH2CHOO(45) <=> CO2(4) + CH3(18)  # Reaction 567
+            ^
+|  3710 |   type: pressure-dependent-Arrhenius
+|  3711 |   rate-constants:
+|  3712 |   - {P: 0.01 atm, A: 5.09e+33, b: -7.95, Ea: 31.29}
+*******************************************************************************
+*******************************************************************************
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 365, in compare_yaml_files_and_report
+    differences = compare_yaml_files(file1, file2, atol, rtol)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 270, in compare_yaml_files
+    model1 = CanteraModel(file1)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 70, in __init__
+    self.load_phases(phase_names)
+  File "/home/lucey.da/RMG-Py/rmgpy/tools/compare_cantera_yaml.py", line 143, in load_phases
+    raise RuntimeError(f"Failed to load phase '{phase_name}' from {self.file_path}") from e
+RuntimeError: Failed to load phase 'gas' from /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_013/cantera_from_ck/chem.yaml

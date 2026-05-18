@@ -1,0 +1,26 @@
+branch: yaml_fix
+remote_used: upstream
+remote_branch_used: upstream/yaml_fix
+commit_hash: 20e5e953955f1ab311800770db8cb7528a47b419
+short_hash: 20e5e9539
+commit_date: 2026-05-16 00:33:43 -0400
+commit_message: Strip spurious efficiencies in yaml_cantera1 writer
+upstream_yaml_fix_hash: 20e5e953955f1ab311800770db8cb7528a47b419
+origin_yaml_fix_hash: origin/yaml_fix
+UNKNOWN
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: gas_phase/ethane_pyrolysis_oxidation
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/gas_phase/ethane_pyrolysis_oxidation/run_013
+prep_slurm_job_id: 6889257
+prep_slurm_node: c0587
+
+rmg_slurm_job_id: 6889259
+analysis_slurm_job_id: 6889260
+actual_rmg_slurm_job_id: 6889259
+actual_rmg_slurm_node: d0139
+actual_rmg_started_at: 2026-05-18T08:18:14-04:00
+actual_rmg_finished_at: 2026-05-18T14:12:56-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6889260
+analysis_finished_at: 2026-05-18T14:14:06-04:00
