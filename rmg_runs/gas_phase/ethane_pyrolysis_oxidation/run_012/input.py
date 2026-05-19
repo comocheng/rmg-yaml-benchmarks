@@ -149,8 +149,8 @@ options(
     saveEdgeSpecies=True,
     verboseComments=True,
     saveSimulationProfiles=True,
-    generateChemkin={'verboseComments':True},
+    generateChemkin=True,
     generateRMSYAML={'saveInterval':1},
-    generateCanteraYAML1={'verboseComments':True, 'saveEdge':False},
-    generateCanteraYAML2={'verboseComments':True, 'saveEdge':False},
+    generateCanteraYAML1={'saveEdge':False},
+    generateCanteraYAML2={'saveEdge':False},
 )

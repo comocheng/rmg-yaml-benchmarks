@@ -87,8 +87,8 @@ options(
     generatePlots=False, # Enable to make plots of core and edge size etc. But takes a lot of the total runtime!
     saveEdgeSpecies=True,
     saveSimulationProfiles=True,
-    generateChemkin={'verboseComments':True},
+    generateChemkin=True,
     generateRMSYAML={'saveInterval':1},
-    generateCanteraYAML1={'verboseComments':True, 'saveEdge':False},
-    generateCanteraYAML2={'verboseComments':True, 'saveEdge':False},
+    generateCanteraYAML1={'saveEdge':False},
+    generateCanteraYAML2={'saveEdge':False},
 )
