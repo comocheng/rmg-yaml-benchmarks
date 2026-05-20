@@ -1,0 +1,26 @@
+branch: yaml_fix
+remote_used: upstream
+remote_branch_used: upstream/yaml_fix
+commit_hash: 570299d01a54f55f46fe1ed3722a0e8a08233854
+short_hash: 570299d01
+commit_date: 2026-05-18 22:29:07 -0400
+commit_message: Suppress CodeQL ReDoS alert on wrapped-flow note regex
+upstream_yaml_fix_hash: 570299d01a54f55f46fe1ed3722a0e8a08233854
+origin_yaml_fix_hash: origin/yaml_fix
+UNKNOWN
+rmg_path: /home/lucey.da/RMG-Py
+benchmark: catalytic/co2_hydrog_long
+run_dir: /home/lucey.da/rmg/rmg-yaml-benchmarks/rmg_runs/catalytic/co2_hydrog_long/run_017
+prep_slurm_job_id: 6917780
+prep_slurm_node: d0003
+
+rmg_slurm_job_id: 6917803
+analysis_slurm_job_id: 6917804
+actual_rmg_slurm_job_id: 6917803
+actual_rmg_slurm_node: d0038
+actual_rmg_started_at: 2026-05-19T11:38:58-04:00
+actual_rmg_finished_at: 2026-05-19T13:06:30-04:00
+rmg_completed: true
+analysis_completed: true
+analysis_job_id: 6917804
+analysis_finished_at: 2026-05-19T13:06:57-04:00
